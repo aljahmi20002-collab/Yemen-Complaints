@@ -1,0 +1,58 @@
+{
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "issingle": 1,
+  "module": "Complaints2",
+  "name": "Complaint AI Settings",
+  "field_order": [
+    "enable_ai",
+    "default_provider",
+    "request_timeout",
+    "temperature",
+    "section_openai",
+    "openai_api_key",
+    "openai_model",
+    "openai_endpoint",
+    "section_deepseek",
+    "deepseek_api_key",
+    "deepseek_model",
+    "deepseek_endpoint",
+    "section_gemini",
+    "gemini_api_key",
+    "gemini_model",
+    "gemini_endpoint",
+    "section_assistant",
+    "enable_intake_assistant",
+    "assistant_system_prompt"
+  ],
+  "fields": [
+    {"fieldname": "enable_ai", "fieldtype": "Check", "label": "Enable AI", "default": 0},
+    {"fieldname": "default_provider", "fieldtype": "Select", "label": "Default Provider", "options": "ChatGPT\nDeepSeek\nGemini", "default": "ChatGPT", "reqd": 1},
+    {"fieldname": "request_timeout", "fieldtype": "Int", "label": "Request Timeout (Seconds)", "default": 60},
+    {"fieldname": "temperature", "fieldtype": "Float", "label": "Temperature", "default": 0.2},
+
+    {"fieldname": "section_openai", "fieldtype": "Section Break", "label": "ChatGPT / OpenAI"},
+    {"fieldname": "openai_api_key", "fieldtype": "Password", "label": "OpenAI API Key"},
+    {"fieldname": "openai_model", "fieldtype": "Data", "label": "OpenAI Model", "default": "gpt-4o-mini"},
+    {"fieldname": "openai_endpoint", "fieldtype": "Data", "label": "OpenAI Endpoint", "default": "https://api.openai.com/v1/chat/completions"},
+
+    {"fieldname": "section_deepseek", "fieldtype": "Section Break", "label": "DeepSeek"},
+    {"fieldname": "deepseek_api_key", "fieldtype": "Password", "label": "DeepSeek API Key"},
+    {"fieldname": "deepseek_model", "fieldtype": "Data", "label": "DeepSeek Model", "default": "deepseek-chat"},
+    {"fieldname": "deepseek_endpoint", "fieldtype": "Data", "label": "DeepSeek Endpoint", "default": "https://api.deepseek.com/chat/completions"},
+
+    {"fieldname": "section_gemini", "fieldtype": "Section Break", "label": "Gemini"},
+    {"fieldname": "gemini_api_key", "fieldtype": "Password", "label": "Gemini API Key"},
+    {"fieldname": "gemini_model", "fieldtype": "Data", "label": "Gemini Model", "default": "gemini-2.5-flash"},
+    {"fieldname": "gemini_endpoint", "fieldtype": "Data", "label": "Gemini Endpoint", "default": "https://generativelanguage.googleapis.com/v1beta/models"},
+
+    {"fieldname": "section_assistant", "fieldtype": "Section Break", "label": "Smart Intake Assistant"},
+    {"fieldname": "enable_intake_assistant", "fieldtype": "Check", "label": "Enable Intake Assistant", "default": 1},
+    {"fieldname": "assistant_system_prompt", "fieldtype": "Text Editor", "label": "Assistant System Prompt"}
+  ],
+  "permissions": [
+    {"role": "Complaint System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "report": 1, "export": 1}
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

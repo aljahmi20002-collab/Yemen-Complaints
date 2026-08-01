@@ -1,0 +1,7 @@
+{
+  "title_ar": "داشبورد القيادة العليا",
+  "title_en": "Executive Leadership Dashboard",
+  "route": "/app/executive-leadership-dashboard",
+  "runtime_page_path": "yemen_complaints/yemen_complaints/complaints2/page/executive_leadership_dashboard/",
+  "purpose": "لوحة قيادية عليا شاملة لقياس الأداء ودعم القرار ومراقبة المؤشرات التنفيذية والاستراتيجية."
+}

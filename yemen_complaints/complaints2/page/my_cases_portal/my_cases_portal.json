@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "my_cases_portal",
+  "page_name": "my_cases_portal",
+  "title": "طلباتي",
+  "module": "Complaints2",
+  "standard": "Yes",
+  "system_page": 0
+}

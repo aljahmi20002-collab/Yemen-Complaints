@@ -1,0 +1,135 @@
+<div class="tc-page">
+  <div class="tc-shell">
+    <section class="tc-hero">
+      <div class="tc-hero-inner">
+        <div>
+          <div class="tc-badge">خدمة عامة للتحقق والمتابعة</div>
+          <h1>متابعة الشكوى أو التظلم بسهولة وأمان</h1>
+          <p>
+            أدخل رقم الحالة مع وسيلة التحقق التي استخدمتها عند التقديم، لعرض الحالة الحالية،
+            والجهة المعنية، وآخر تحديث، وموعد المعالجة المستهدف، وخلاصة المعالجة إذا كانت الحالة قد أغلقت.
+          </p>
+        </div>
+        <div class="tc-hero-side">
+          <div>
+            <h3>قبل أن تبدأ</h3>
+            <ul>
+              <li>تأكد من كتابة رقم الحالة بشكل صحيح.</li>
+              <li>استخدم البريد الإلكتروني أو رقم الهاتف المسجل عند التقديم.</li>
+              <li>إذا كانت الحالة مغلقة ستظهر لك خلاصة المعالجة إن كانت متاحة.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tc-card">
+      <div class="tc-toolbar">
+        <div>
+          <h2>نموذج التتبع</h2>
+          <p>يمكنك إدخال وسيلة تحقق واحدة أو الاثنتين معاً لزيادة فرص المطابقة.</p>
+        </div>
+        <a class="tc-btn tc-btn-outline" href="/verify-identity">فتح شاشة التحقق</a>
+      </div>
+
+      <div class="tc-form">
+        <div class="tc-field">
+          <label>رقم الحالة</label>
+          <input id="case_id" class="form-control" placeholder="مثال: CMP-2026-00001" />
+        </div>
+        <div class="tc-field">
+          <label>البريد الإلكتروني</label>
+          <input id="email" class="form-control" placeholder="name@example.com" />
+        </div>
+        <div class="tc-field">
+          <label>رقم الهاتف</label>
+          <input id="mobile" class="form-control" placeholder="7xxxxxxxx" />
+        </div>
+        <div class="tc-field">
+          <label>إجراء</label>
+          <button class="tc-btn tc-btn-primary" style="width:100%;" onclick="trackComplaint()">عرض الحالة</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="tc-card tc-result"></section>
+  </div>
+</div>
+
+<script>
+function escapeHtml(value) {
+  const div = document.createElement('div');
+  div.textContent = value || '';
+  return div.innerHTML;
+}
+
+function trackComplaint() {
+  const case_id = document.getElementById('case_id').value;
+  const email = document.getElementById('email').value;
+  const mobile = document.getElementById('mobile').value;
+  const result = document.getElementById('result');
+  result.style.display = 'block';
+  result.innerHTML = '<div class="tc-empty" style="display:block;color:#1d4ed8;border-style:solid;">جارٍ التحقق من البيانات وتحميل الحالة...</div>';
+
+  frappe.call({
+    method: 'yemen_complaints.api.track_case',
+    args: { case_id, email, mobile },
+    callback: (r) => {
+      const d = r.message;
+      result.innerHTML = `
+        <div class="tc-result-head">
+          <div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              <span class="tc-chip tc-chip-type">${escapeHtml(d.case_type || '')}</span>
+              <span class="tc-chip tc-chip-status">${escapeHtml(d.status || '')}</span>
+              <span class="tc-chip tc-chip-priority">${escapeHtml(d.priority || '')}</span>
+            </div>
+            <div class="tc-result-title">${escapeHtml(d.subject || '')}</div>
+            <div style="font-size:13px;color:#6b7280;margin-top:4px;">رقم الحالة: <b>${escapeHtml(d.name || '')}</b></div>
+          </div>
+          <div style="min-width:220px;color:#374151;font-size:13px;line-height:2;">
+            <div><b>الجهة المعنية:</b> ${escapeHtml(d.government_entity || '—')}</div>
+            <div><b>الأولوية:</b> ${escapeHtml(d.priority || '—')}</div>
+            <div><b>الحالة الحالية:</b> ${escapeHtml(d.status || '—')}</div>
+          </div>
+        </div>
+
+        <div class="tc-grid">
+          <div class="tc-box">
+            <small>الجهة المعنية</small>
+            <strong>${escapeHtml(d.government_entity || '—')}</strong>
+          </div>
+          <div class="tc-box">
+            <small>الأولوية</small>
+            <strong>${escapeHtml(d.priority || '—')}</strong>
+          </div>
+          <div class="tc-box">
+            <small>موعد المعالجة المستهدف</small>
+            <strong>${escapeHtml(d.target_resolution_date || '—')}</strong>
+          </div>
+        </div>
+
+        <div class="tc-note">
+          <b>آخر تحديث ظاهر للمواطن</b>
+          <div>${d.last_public_update ? d.last_public_update : 'لا توجد تحديثات عامة بعد.'}</div>
+        </div>
+
+        ${d.resolution_summary ? `
+          <div class="tc-resolution">
+            <b>خلاصة المعالجة</b>
+            <div>${d.resolution_summary}</div>
+          </div>
+        ` : ''}
+
+        <div class="tc-links">
+          <a class="tc-btn tc-btn-outline" href="/track-complaint">تتبع حالة أخرى</a>
+          <a class="tc-btn tc-btn-outline" href="/submit-complaint">تقديم شكوى جديدة</a>
+        </div>
+      `;
+    },
+    error: () => {
+      result.innerHTML = '<div class="tc-empty" style="display:block;color:#b91c1c;border-style:solid;">تعذر عرض الحالة. تأكد من رقم الطلب وبيانات التحقق.</div>';
+    }
+  });
+}
+</script>

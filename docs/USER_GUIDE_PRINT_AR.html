@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دليل الاستخدام الكامل - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {
+      font-family: 'DroidArabicKufi';
+      src: url('../yemen_complaints/public/fonts/DroidKufi-Regular.ttf') format('truetype');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'DroidArabicKufi';
+      src: url('../yemen_complaints/public/fonts/DroidKufi-Bold.ttf') format('truetype');
+      font-weight: 700;
+    }
+    body{margin:0;background:#f8fafc;color:#111827;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;line-height:1.95}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{background:linear-gradient(135deg,#9b1c1c,#c2410c);color:#fff;padding:26px;border-radius:24px}
+    .hero h1{margin:0 0 8px;font-size:30px}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+    .btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827;cursor:pointer}
+    .btn.primary{background:#9b1c1c;color:#fff;border-color:#9b1c1c}
+    .section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:20px}
+    h2{margin:0 0 10px;color:#9b1c1c}
+    h3{margin:16px 0 8px}
+    ul,ol{padding-right:22px}
+    li{margin:5px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .card{padding:14px;border:1px solid #e5e7eb;border-radius:16px;background:#fff}
+    @media print {.toolbar{display:none}.section,.hero{box-shadow:none}}
+  
+    .page-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:14px 16px;box-shadow:0 10px 25px rgba(15,23,42,.04)}
+    .page-brand img{width:88px;max-width:22vw;height:auto}
+    .page-brand .brand-title{font-size:18px;font-weight:700;margin-bottom:4px}
+    .page-brand .brand-sub{font-size:13px;color:#6b7280;line-height:1.8}
+    .print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print{.print-footer{display:block;position:fixed;bottom:0;right:0;left:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">منصة اليمن للشكاوى والتظلمات — وثائق النظام — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <div class="page-brand">
+      <img src="../yemen_complaints/public/images/official_emblem.png" alt="Official Emblem" />
+      <div>
+        <div class="brand-title">منصة اليمن للشكاوى والتظلمات</div>
+        <div class="brand-sub">نسخة توثيق رسمية معتمدة للاستخدام الداخلي والطباعة</div>
+      </div>
+    </div>
+    <section class="hero">
+      <h1>دليل الاستخدام الكامل</h1>
+      <p>نسخة HTML قابلة للطباعة والاستخدام اليومي للمواطن، المستشار، موظف الجهة، المتابع، ومدير النظام.</p>
+    </section>
+
+    <div class="toolbar">
+      <button class="btn primary" onclick="window.print()">طباعة الدليل</button>
+      <a class="btn" href="DOCUMENTATION_INDEX_AR.html">العودة إلى فهرس الوثائق</a>
+      <a class="btn" href="DOCUMENTATION_PORTAL_AR.html">فتح الوثيقة الشاملة</a>
+    </div>
+
+    <section class="section">
+      <h2>1. دليل المواطن</h2>
+      <h3>تقديم شكوى</h3>
+      <ol>
+        <li>افتح الرابط <code>/submit-complaint</code>.</li>
+        <li>أدخل البيانات الأساسية وبيانات الاتصال.</li>
+        <li>اختر قناة التحقق من الهوية.</li>
+        <li>أرسل رمز التحقق وأكّده.</li>
+        <li>أكمل موضوع الشكوى وتفاصيلها والجهة والتصنيف.</li>
+        <li>أرسل الطلب.</li>
+      </ol>
+      <h3>تقديم تظلم</h3>
+      <ol>
+        <li>افتح <code>/submit-appeal</code>.</li>
+        <li>أدخل المرجع السابق وسبب التظلم.</li>
+        <li>تحقق من الهوية ثم أرسل الطلب.</li>
+      </ol>
+      <h3>المتابعة</h3>
+      <ul>
+        <li>من الصفحة العامة: <code>/track-complaint</code></li>
+        <li>من البوابة: <code>/my-cases</code></li>
+        <li>من الخط الزمني: <code>/case-timeline</code></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>2. دليل المستشار Advisor</h2>
+      <ol>
+        <li>افتح Workspace: <b>Advisor Complaint Desk</b>.</li>
+        <li>راجع الحالات الجديدة وقيد المراجعة.</li>
+        <li>افتح الحالة وراجع الموضوع والتفاصيل والمرفقات.</li>
+        <li>شغّل <b>Smart Intake Assistant</b> عند الحاجة.</li>
+        <li>راجِع التوصيات ثم طبق ما يلزم بواسطة <b>Apply AI Recommendations</b>.</li>
+        <li>قم بالإحالة إلى المستخدم أو الجهة المناسبة.</li>
+      </ol>
+      <h3>أدوات الذكاء الاصطناعي النصية</h3>
+      <div class="grid">
+        <div class="card">ترجمة نص / تلخيص نص / تحسين الكتابة</div>
+        <div class="card">إصلاح الإملاء والنحو / تبسيط اللغة / جعل النص رسمي</div>
+        <div class="card">تحليل نص / تصنيف الموضوع / البحث عن عناصر النص</div>
+        <div class="card">اقتراح رد / صياغة رسالة / خلاصة نص</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>3. دليل موظف الجهة</h2>
+      <ol>
+        <li>افتح Workspace: <b>Agency Officer Desk</b>.</li>
+        <li>ابدأ معالجة الحالة عبر <code>In Progress</code>.</li>
+        <li>أضف التحديثات والردود.</li>
+        <li>إذا احتجت بيانات من المواطن، انقل الحالة إلى <code>Waiting Citizen</code>.</li>
+        <li>أضف <code>Resolution Summary</code> عند الحسم.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>4. دليل موظف المتابعة</h2>
+      <ol>
+        <li>افتح Workspace: <b>Follow-up Desk</b>.</li>
+        <li>راقب الحالات المتأخرة والرسوم التحليلية.</li>
+        <li>استخدم تقرير <b>SLA Breaches</b>.</li>
+        <li>تابع التحريك أو الإغلاق حسب صلاحياتك.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>5. دليل مدير النظام</h2>
+      <h3>إعداد الإشعارات</h3>
+      <ul>
+        <li>افتح <code>Complaint Notification Settings</code>.</li>
+        <li>فعّل القنوات المناسبة: Email / SMS / WhatsApp / Telegram.</li>
+        <li>اضبط إعدادات OTP والتحقق من الهوية.</li>
+      </ul>
+      <h3>إعداد AI</h3>
+      <ul>
+        <li>افتح <code>Complaint AI Settings</code>.</li>
+        <li>فعّل AI وأدخل API Key وModel وEndpoint.</li>
+      </ul>
+      <h3>السجلات المهمة</h3>
+      <ul>
+        <li>Complaint AI Log</li>
+        <li>Complaint Identity Verification</li>
+        <li>Error Log</li>
+        <li>Scheduler / Jobs</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>6. المشاكل الشائعة</h2>
+      <h3>لم يصل رمز التحقق</h3>
+      <ul>
+        <li>تحقق من القناة المختارة.</li>
+        <li>تحقق من البريد أو الرقم أو معرف تيليجرام.</li>
+        <li>تأكد من أن إعدادات المزود مكتملة.</li>
+        <li>انتظر انتهاء العدّاد ثم أعد الإرسال.</li>
+      </ul>
+      <h3>لم يعمل الذكاء الاصطناعي</h3>
+      <ul>
+        <li>تحقق من تفعيل AI.</li>
+        <li>راجع API Key وModel وEndpoint.</li>
+        <li>افحص <code>Complaint AI Log</code>.</li>
+      </ul>
+      <h3>لا تظهر لوحة العمل</h3>
+      <ul>
+        <li>تأكد من الدور المعطى للمستخدم.</li>
+        <li>نفّذ <code>migrate</code> و<code>build</code>.</li>
+        <li>تحقق من الـ fixtures أو الـ workspace definitions.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>7. أفضل الممارسات</h2>
+      <ul>
+        <li>راجع مخرجات الذكاء الاصطناعي قبل اعتمادها.</li>
+        <li>لا تغلق أي حالة بدون <code>Resolution Summary</code>.</li>
+        <li>حدّث الحالة والتعليقات أولاً بأول.</li>
+        <li>راقب محاولات OTP للحالات غير الطبيعية.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "workspaces": [
+    "complaints2/workspace/citizen_complaints_portal/",
+    "complaints2/workspace/advisor_complaint_desk/",
+    "complaints2/workspace/agency_officer_desk/",
+    "complaints2/workspace/follow_up_desk/",
+    "complaints2/workspace/yemen_complaints_manager_desk/",
+    "complaints2/workspace/yemen_complaints_command_center/"
+  ],
+  "cards": [
+    "complaints2/card/العمليات_والكيانات_الأساسية/",
+    "complaints2/card/التقارير_التنفيذية/",
+    "complaints2/card/الإعدادات_والضبط/",
+    "complaints2/card/الواجهات_والبوابات/"
+  ]
+}

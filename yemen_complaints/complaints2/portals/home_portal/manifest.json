@@ -1,0 +1,8 @@
+{
+  "title_ar": "الصفحة الرئيسية للمواطن",
+  "title_en": "Citizen Home Page",
+  "runtime_www_path": "yemen_complaints/yemen_complaints/www/index.html",
+  "runtime_py_path": "yemen_complaints/yemen_complaints/www/index.py",
+  "public_route": "/",
+  "purpose": "واجهة المواطن الرئيسية وتجمع الروابط الأساسية للخدمات."
+}

@@ -1,0 +1,43 @@
+{% from "yemen_complaints/templates/includes/print_macros.html" import cell %}
+<div class="yc-print-shell" style="direction:rtl;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;padding:18px;background:#fff;color:#111827;">
+  <div style="border:1px solid #e5e7eb;border-radius:20px;overflow:hidden;">
+    <div style="background:linear-gradient(135deg,#111827,#374151);color:#fff;padding:22px;">
+      <div style="font-size:24px;font-weight:800;">بطاقة الجهة الحكومية</div>
+      <div style="margin-top:6px;font-size:13px;opacity:.9;">Government Entity Master Record</div>
+    </div>
+    <div style="padding:18px;">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+        {{ cell('الاسم العربي', doc.entity_name_ar) }}
+        {{ cell('الاسم الإنجليزي', doc.entity_name_en) }}
+        {{ cell('الرمز', doc.entity_code) }}
+        {{ cell('النوع', doc.entity_type) }}
+        {{ cell('الجهة الأعلى', doc.parent_entity) }}
+        {{ cell('المحافظة', doc.governorate) }}
+        {{ cell('المديرية', doc.district) }}
+        {{ cell('الحالة', 'نشطة' if doc.active else 'غير نشطة') }}
+      </div>
+
+      <div style="font-size:16px;font-weight:800;color:#111827;margin:18px 0 10px;">معلومات الاتصال والتصعيد</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;">
+        {{ cell('البريد الإلكتروني', doc.contact_email) }}
+        {{ cell('الهاتف', doc.contact_phone) }}
+        {{ cell('المسؤول الافتراضي', doc.default_officer) }}
+        {{ cell('مسؤول التصعيد', doc.escalation_user) }}
+      </div>
+
+      {% if doc.address %}
+      <div style="margin-top:14px;padding:16px;border:1px solid #e5e7eb;border-radius:16px;background:#fafafa;">
+        <div style="font-size:15px;font-weight:800;margin-bottom:8px;">العنوان</div>
+        <div style="line-height:1.9;font-size:13px;">{{ doc.address }}</div>
+      </div>
+      {% endif %}
+
+      {% if doc.description %}
+      <div style="margin-top:12px;padding:16px;border:1px solid #e5e7eb;border-radius:16px;background:#fff;">
+        <div style="font-size:15px;font-weight:800;margin-bottom:8px;">الوصف</div>
+        <div style="line-height:1.9;font-size:13px;">{{ doc.description }}</div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

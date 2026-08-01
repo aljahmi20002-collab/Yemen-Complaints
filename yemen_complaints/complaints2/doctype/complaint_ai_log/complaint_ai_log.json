@@ -1,0 +1,47 @@
+{
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "module": "Complaints2",
+  "name": "Complaint AI Log",
+  "field_order": [
+    "provider",
+    "action_key",
+    "action_label",
+    "reference_doctype",
+    "reference_name",
+    "source_field",
+    "target_field",
+    "status",
+    "user",
+    "executed_on",
+    "prompt_excerpt",
+    "response_excerpt",
+    "error_message",
+    "metadata_json"
+  ],
+  "fields": [
+    {"fieldname":"provider","fieldtype":"Data","label":"Provider","in_list_view":1},
+    {"fieldname":"action_key","fieldtype":"Data","label":"Action Key","in_list_view":1},
+    {"fieldname":"action_label","fieldtype":"Data","label":"Action Label","in_list_view":1},
+    {"fieldname":"reference_doctype","fieldtype":"Data","label":"Reference DocType","in_list_view":1},
+    {"fieldname":"reference_name","fieldtype":"Data","label":"Reference Name","in_list_view":1},
+    {"fieldname":"source_field","fieldtype":"Data","label":"Source Field"},
+    {"fieldname":"target_field","fieldtype":"Data","label":"Target Field"},
+    {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Success\nError","default":"Success","in_list_view":1},
+    {"fieldname":"user","fieldtype":"Link","label":"User","options":"User","in_list_view":1},
+    {"fieldname":"executed_on","fieldtype":"Datetime","label":"Executed On","in_list_view":1},
+    {"fieldname":"prompt_excerpt","fieldtype":"Small Text","label":"Prompt Excerpt"},
+    {"fieldname":"response_excerpt","fieldtype":"Small Text","label":"Response Excerpt"},
+    {"fieldname":"error_message","fieldtype":"Small Text","label":"Error Message"},
+    {"fieldname":"metadata_json","fieldtype":"Code","label":"Metadata JSON","options":"JSON"}
+  ],
+  "permissions": [
+    {"role":"Complaint System Manager","read":1,"write":1,"create":1,"delete":1,"report":1,"export":1},
+    {"role":"Advisor","read":1,"report":1}
+  ],
+  "search_fields":"provider,action_key,reference_doctype,reference_name,user",
+  "sort_field":"creation",
+  "sort_order":"DESC",
+  "title_field":"action_label",
+  "track_changes":1
+}

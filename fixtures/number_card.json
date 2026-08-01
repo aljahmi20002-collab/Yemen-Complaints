@@ -1,0 +1,58 @@
+[
+  {
+    "doctype": "Number Card",
+    "name": "Open Complaint Cases",
+    "label": "الحالات المفتوحة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "New Intake Cases",
+    "label": "حالات جديدة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Under Review Cases",
+    "label": "قيد المراجعة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Waiting Citizen Cases",
+    "label": "بانتظار المواطن",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Overdue Complaint Cases",
+    "label": "الحالات المتأخرة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Resolved Complaint Cases",
+    "label": "الحالات المحسومة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "High Priority Complaint Cases",
+    "label": "الحالات عالية الأولوية",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Appeal Cases",
+    "label": "طلبات التظلم",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "title_ar": "بوابة طلباتي",
+  "title_en": "My Cases Portal",
+  "runtime_www_path": "yemen_complaints/yemen_complaints/www/my_cases.html",
+  "public_route": "/my-cases",
+  "desk_page_ref": "complaints2/page/my_cases_portal/",
+  "purpose": "عرض طلبات المواطن المربوطة بحسابه مع الفلاتر والبحث."
+}

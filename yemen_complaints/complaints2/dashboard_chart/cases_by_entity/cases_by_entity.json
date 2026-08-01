@@ -1,0 +1,15 @@
+{
+  "doctype": "Dashboard Chart",
+  "name": "Cases by Entity",
+  "chart_name": "Cases by Entity",
+  "label": "الحالات حسب الجهة",
+  "source": "Document Type",
+  "document_type": "Complaint Case",
+  "chart_type": "Group By",
+  "type": "Bar",
+  "based_on": "government_entity",
+  "group_by_type": "Count",
+  "number_of_groups": 12,
+  "is_public": 1,
+  "module": "Complaints2"
+}

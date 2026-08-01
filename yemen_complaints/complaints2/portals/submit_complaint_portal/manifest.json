@@ -1,0 +1,7 @@
+{
+  "title_ar": "تقديم شكوى",
+  "title_en": "Submit Complaint",
+  "public_route": "/submit-complaint",
+  "desk_page_ref": "complaints2/page/submit_complaint_portal/",
+  "purpose": "نقطة دخول تقديم الشكوى عبر Web Form."
+}

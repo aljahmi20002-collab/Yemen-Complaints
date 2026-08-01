@@ -1,0 +1,24 @@
+[
+  {
+    "doctype": "Web Form",
+    "name": "Citizen Complaint Submission",
+    "title": "تقديم شكوى",
+    "module": "Complaints2",
+    "doc_type": "Complaint Case",
+    "route": "submit-complaint",
+    "published": 1,
+    "anonymous": 1,
+    "show_attachments": 1
+  },
+  {
+    "doctype": "Web Form",
+    "name": "Citizen Appeal Submission",
+    "title": "تقديم تظلم",
+    "module": "Complaints2",
+    "doc_type": "Complaint Case",
+    "route": "submit-appeal",
+    "published": 1,
+    "anonymous": 1,
+    "show_attachments": 1
+  }
+]

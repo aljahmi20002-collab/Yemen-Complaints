@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "track_complaint_portal",
+  "page_name": "track_complaint_portal",
+  "title": "تتبع شكوى",
+  "module": "Complaints2",
+  "standard": "Yes",
+  "system_page": 0
+}

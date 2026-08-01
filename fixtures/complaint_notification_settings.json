@@ -1,0 +1,11 @@
+[
+  {
+    "doctype": "Complaint Notification Settings",
+    "name": "Complaint Notification Settings",
+    "enable_email": 1,
+    "enable_sms": 0,
+    "enable_whatsapp": 0,
+    "enable_telegram": 0,
+    "enforce_identity_verification": 1
+  }
+]

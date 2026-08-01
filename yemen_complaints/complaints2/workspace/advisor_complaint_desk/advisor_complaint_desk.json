@@ -1,0 +1,141 @@
+{
+ "app": "yemen_complaints",
+ "charts": [],
+ "content": "[{\"id\": \"Advisor Complaint Desk-hero\", \"type\": \"header\", \"data\": {\"text\": \"Advisor Complaint Desk\", \"col\": 12}}, {\"id\": \"Advisor Complaint Desk-shortcuts-header\", \"type\": \"header\", \"data\": {\"text\": \"\u0627\u0644\u0627\u062e\u062a\u0635\u0627\u0631\u0627\u062a \u0627\u0644\u0633\u0631\u064a\u0639\u0629\", \"col\": 12}}, {\"id\": \"Advisor Complaint Desk-shortcut-internal-dashboard\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\u0627\u0644\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0627\u0644\u062f\u0627\u062e\u0644\u064a\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-shortcut-1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\u062d\u0627\u0644\u0627\u062a \u0627\u0644\u0634\u0643\u0627\u0648\u0649\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-shortcut-2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\u0645\u0644\u062e\u0635 \u0627\u0644\u0634\u0643\u0627\u0648\u0649\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-shortcut-3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\u062a\u062c\u0627\u0648\u0632\u0627\u062a SLA\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-shortcut-4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\u0633\u062c\u0644\u0627\u062a AI\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-shortcut-5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\u0628\u0648\u0627\u0628\u0629 \u0627\u0644\u062a\u0648\u062b\u064a\u0642\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-cards-header\", \"type\": \"header\", \"data\": {\"text\": \"\u0627\u0644\u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u0633\u0631\u064a\u0639\u0629\", \"col\": 12}}, {\"id\": \"Advisor Complaint Desk-New Intake Cases\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"New Intake Cases\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-Under Review Cases\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Under Review Cases\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-High Priority Complaint Cases\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"High Priority Complaint Cases\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-Appeal Cases\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Appeal Cases\", \"col\": 3}}, {\"id\": \"Advisor Complaint Desk-links-header\", \"type\": \"header\", \"data\": {\"text\": \"\u0627\u0644\u0631\u0648\u0627\u0628\u0637 \u0627\u0644\u0633\u0631\u064a\u0639\u0629\", \"col\": 12}}, {\"id\": \"Advisor Complaint Desk-charts-header\", \"type\": \"header\", \"data\": {\"text\": \"\u0627\u0644\u0631\u0633\u0648\u0645 \u0648\u0627\u0644\u062a\u062d\u0644\u064a\u0644\u0627\u062a\", \"col\": 12}}, {\"id\": \"Advisor Complaint Desk-Cases by Status\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Cases by Status\", \"col\": 6}}, {\"id\": \"Advisor Complaint Desk-Cases by Priority\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Cases by Priority\", \"col\": 6}}, {\"id\": \"Advisor Complaint Desk-Cases by Type\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Cases by Type\", \"col\": 6}}]",
+ "creation": "2026-06-22 15:14:48.914737",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "blue",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Advisor Complaint Desk",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u0627\u0644\u0625\u062f\u0627\u0631\u0629 \u0648\u0627\u0644\u0627\u0633\u062a\u0642\u0628\u0627\u0644",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u062d\u0627\u0644\u0627\u062a \u0627\u0644\u0634\u0643\u0627\u0648\u0649 \u0648\u0627\u0644\u062a\u0638\u0644\u0645\u0627\u062a",
+   "link_count": 0,
+   "link_to": "Complaint Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u062a\u0635\u0646\u064a\u0641\u0627\u062a \u0627\u0644\u0634\u0643\u0627\u0648\u0649",
+   "link_count": 0,
+   "link_to": "Complaint Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u0627\u0644\u062c\u0647\u0627\u062a \u0627\u0644\u062d\u0643\u0648\u0645\u064a\u0629",
+   "link_count": 0,
+   "link_to": "Government Entity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u0633\u062c\u0644\u0627\u062a \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a",
+   "link_count": 0,
+   "link_to": "Complaint AI Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "\u0625\u0639\u062f\u0627\u062f\u0627\u062a \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a",
+   "link_count": 0,
+   "link_to": "Complaint AI Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-22 15:17:19.741202",
+ "modified_by": "Administrator",
+ "module": "Complaints2",
+ "name": "Advisor Complaint Desk",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Advisor"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "\u0627\u0644\u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0627\u0644\u062f\u0627\u062e\u0644\u064a",
+   "link_to": "internal_operations_dashboard",
+   "stats_filter": "",
+   "type": "Page"
+  },
+  {
+   "doc_view": "List",
+   "label": "\u062d\u0627\u0644\u0627\u062a \u0627\u0644\u0634\u0643\u0627\u0648\u0649",
+   "link_to": "Complaint Case",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "\u0645\u0644\u062e\u0635 \u0627\u0644\u0634\u0643\u0627\u0648\u0649",
+   "link_to": "Complaint Summary",
+   "report_ref_doctype": "Complaint Case",
+   "stats_filter": "",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "\u062a\u062c\u0627\u0648\u0632\u0627\u062a SLA",
+   "link_to": "SLA Breaches",
+   "report_ref_doctype": "Complaint Case",
+   "stats_filter": "",
+   "type": "Report"
+  },
+  {
+   "doc_view": "List",
+   "label": "\u0633\u062c\u0644\u0627\u062a AI",
+   "link_to": "Complaint AI Log",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "\u0628\u0648\u0627\u0628\u0629 \u0627\u0644\u062a\u0648\u062b\u064a\u0642",
+   "link_to": "docs_center",
+   "stats_filter": "",
+   "type": "Page"
+  }
+ ],
+ "title": "Advisor Complaint Desk",
+ "type": "Workspace"
+}

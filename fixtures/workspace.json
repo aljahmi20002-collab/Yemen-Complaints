@@ -1,0 +1,83 @@
+[
+  {
+    "doctype": "Workspace",
+    "name": "Citizen Complaints Portal",
+    "title": "Citizen Complaints Portal",
+    "module": "Complaints2",
+    "public": 0,
+    "roles": [
+      {
+        "role": "Citizen"
+      }
+    ]
+  },
+  {
+    "doctype": "Workspace",
+    "name": "Advisor Complaint Desk",
+    "title": "Advisor Complaint Desk",
+    "module": "Complaints2",
+    "public": 0,
+    "roles": [
+      {
+        "role": "Advisor"
+      }
+    ]
+  },
+  {
+    "doctype": "Workspace",
+    "name": "Agency Officer Desk",
+    "title": "Agency Officer Desk",
+    "module": "Complaints2",
+    "public": 0,
+    "roles": [
+      {
+        "role": "Agency Officer"
+      }
+    ]
+  },
+  {
+    "doctype": "Workspace",
+    "name": "Follow-up Desk",
+    "title": "Follow-up Desk",
+    "module": "Complaints2",
+    "public": 0,
+    "roles": [
+      {
+        "role": "Follow-up Officer"
+      }
+    ]
+  },
+  {
+    "doctype": "Workspace",
+    "name": "Yemen Complaints Manager Desk",
+    "title": "Yemen Complaints Manager Desk",
+    "module": "Complaints2",
+    "public": 0,
+    "roles": [
+      {
+        "role": "Complaint System Manager"
+      }
+    ]
+  },
+  {
+    "doctype": "Workspace",
+    "name": "Yemen Complaints Command Center",
+    "title": "Yemen Complaints Command Center",
+    "module": "Complaints2",
+    "public": 0,
+    "roles": [
+      {
+        "role": "Advisor"
+      },
+      {
+        "role": "Agency Officer"
+      },
+      {
+        "role": "Follow-up Officer"
+      },
+      {
+        "role": "Complaint System Manager"
+      }
+    ]
+  }
+]

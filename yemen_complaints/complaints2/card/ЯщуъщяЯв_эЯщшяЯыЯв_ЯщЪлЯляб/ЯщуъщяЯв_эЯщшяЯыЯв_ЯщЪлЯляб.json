@@ -1,0 +1,97 @@
+{
+  "doctype": "Workspace Link",
+  "name": "العمليات والكيانات الأساسية",
+  "label": "العمليات والكيانات الأساسية",
+  "type": "Card Break",
+  "module": "Complaints2",
+  "links": [
+    {
+      "label": "حالات الشكاوى والتظلمات",
+      "type": "Link",
+      "link_to": "Complaint Case",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "الجهات الحكومية",
+      "type": "Link",
+      "link_to": "Government Entity",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "تصنيفات الشكاوى",
+      "type": "Link",
+      "link_to": "Complaint Category",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "سجلات التحقق من الهوية",
+      "type": "Link",
+      "link_to": "Complaint Identity Verification",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "سجلات الذكاء الاصطناعي",
+      "type": "Link",
+      "link_to": "Complaint AI Log",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "المحافظات اليمنية",
+      "type": "Link",
+      "link_to": "Yemen Governorate",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "المديريات اليمنية",
+      "type": "Link",
+      "link_to": "Yemen District",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "التنسيقات الطباعية",
+      "type": "Link",
+      "link_to": "Print Format",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    }
+  ]
+}

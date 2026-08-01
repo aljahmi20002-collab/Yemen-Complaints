@@ -1,0 +1,259 @@
+[
+  {
+    "doctype": "Workflow",
+    "name": "Complaint Case Workflow",
+    "workflow_name": "Complaint Case Workflow",
+    "document_type": "Complaint Case",
+    "workflow_state_field": "status",
+    "is_active": 1,
+    "send_email_alert": 0,
+    "override_status": 1,
+    "states": [
+      {
+        "state": "New",
+        "doc_status": 0,
+        "allow_edit": "Advisor",
+        "update_field": "status",
+        "update_value": "New"
+      },
+      {
+        "state": "Under Review",
+        "doc_status": 0,
+        "allow_edit": "Advisor",
+        "update_field": "status",
+        "update_value": "Under Review"
+      },
+      {
+        "state": "Assigned",
+        "doc_status": 0,
+        "allow_edit": "Agency Officer",
+        "update_field": "status",
+        "update_value": "Assigned"
+      },
+      {
+        "state": "In Progress",
+        "doc_status": 0,
+        "allow_edit": "Agency Officer",
+        "update_field": "status",
+        "update_value": "In Progress"
+      },
+      {
+        "state": "Waiting Citizen",
+        "doc_status": 0,
+        "allow_edit": "Agency Officer",
+        "update_field": "status",
+        "update_value": "Waiting Citizen"
+      },
+      {
+        "state": "Resolved",
+        "doc_status": 0,
+        "allow_edit": "Follow-up Officer",
+        "update_field": "status",
+        "update_value": "Resolved"
+      },
+      {
+        "state": "Rejected",
+        "doc_status": 0,
+        "allow_edit": "Advisor",
+        "update_field": "status",
+        "update_value": "Rejected"
+      },
+      {
+        "state": "Closed",
+        "doc_status": 0,
+        "allow_edit": "Complaint System Manager",
+        "update_field": "status",
+        "update_value": "Closed"
+      },
+      {
+        "state": "Overdue",
+        "doc_status": 0,
+        "allow_edit": "Agency Officer",
+        "update_field": "status",
+        "update_value": "Overdue"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "New",
+        "action": "Review",
+        "next_state": "Under Review",
+        "allowed": "Advisor"
+      },
+      {
+        "state": "New",
+        "action": "Review",
+        "next_state": "Under Review",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Under Review",
+        "action": "Assign",
+        "next_state": "Assigned",
+        "allowed": "Advisor"
+      },
+      {
+        "state": "Under Review",
+        "action": "Assign",
+        "next_state": "Assigned",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Under Review",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "Advisor"
+      },
+      {
+        "state": "Under Review",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Assigned",
+        "action": "Start Processing",
+        "next_state": "In Progress",
+        "allowed": "Agency Officer"
+      },
+      {
+        "state": "Assigned",
+        "action": "Start Processing",
+        "next_state": "In Progress",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Assigned",
+        "action": "Return to Review",
+        "next_state": "Under Review",
+        "allowed": "Advisor"
+      },
+      {
+        "state": "Assigned",
+        "action": "Return to Review",
+        "next_state": "Under Review",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "In Progress",
+        "action": "Request Citizen Input",
+        "next_state": "Waiting Citizen",
+        "allowed": "Agency Officer"
+      },
+      {
+        "state": "In Progress",
+        "action": "Request Citizen Input",
+        "next_state": "Waiting Citizen",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "In Progress",
+        "action": "Mark Resolved",
+        "next_state": "Resolved",
+        "allowed": "Agency Officer"
+      },
+      {
+        "state": "In Progress",
+        "action": "Mark Resolved",
+        "next_state": "Resolved",
+        "allowed": "Follow-up Officer"
+      },
+      {
+        "state": "In Progress",
+        "action": "Mark Resolved",
+        "next_state": "Resolved",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Waiting Citizen",
+        "action": "Resume Processing",
+        "next_state": "In Progress",
+        "allowed": "Agency Officer"
+      },
+      {
+        "state": "Waiting Citizen",
+        "action": "Resume Processing",
+        "next_state": "In Progress",
+        "allowed": "Follow-up Officer"
+      },
+      {
+        "state": "Waiting Citizen",
+        "action": "Resume Processing",
+        "next_state": "In Progress",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Waiting Citizen",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "Advisor"
+      },
+      {
+        "state": "Waiting Citizen",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Resolved",
+        "action": "Close Case",
+        "next_state": "Closed",
+        "allowed": "Follow-up Officer"
+      },
+      {
+        "state": "Resolved",
+        "action": "Close Case",
+        "next_state": "Closed",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Resolved",
+        "action": "Reopen for Processing",
+        "next_state": "In Progress",
+        "allowed": "Follow-up Officer"
+      },
+      {
+        "state": "Resolved",
+        "action": "Reopen for Processing",
+        "next_state": "In Progress",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Overdue",
+        "action": "Resume Work",
+        "next_state": "In Progress",
+        "allowed": "Agency Officer"
+      },
+      {
+        "state": "Overdue",
+        "action": "Resume Work",
+        "next_state": "In Progress",
+        "allowed": "Follow-up Officer"
+      },
+      {
+        "state": "Overdue",
+        "action": "Resume Work",
+        "next_state": "In Progress",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Overdue",
+        "action": "Escalated Closure",
+        "next_state": "Closed",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Rejected",
+        "action": "Reopen",
+        "next_state": "Under Review",
+        "allowed": "Complaint System Manager"
+      },
+      {
+        "state": "Closed",
+        "action": "Reopen",
+        "next_state": "Under Review",
+        "allowed": "Complaint System Manager"
+      }
+    ]
+  }
+]

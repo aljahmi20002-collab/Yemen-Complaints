@@ -1,0 +1,18 @@
+<div style="direction:rtl;font-family:Tahoma,Arial,sans-serif;color:#1f2937;line-height:1.9;">
+  <div style="background:linear-gradient(135deg,#b91c1c,#ef4444);padding:18px;border-radius:16px;color:#fff;">
+    <div style="font-size:20px;font-weight:800;">تنبيه تصعيد SLA</div>
+    <div style="font-size:13px;margin-top:6px;opacity:.92;">حالة متأخرة أو قريبة من التأخير</div>
+  </div>
+  <div style="padding:18px 4px;">
+    <p>الحالة <b>{{ doc.name }}</b> بعنوان <b>{{ doc.subject }}</b> تتطلب متابعة عاجلة.</p>
+    <p>
+      <b>الجهة:</b> {{ doc.government_entity or '—' }}<br>
+      <b>الحالة:</b> {{ doc.status }}<br>
+      <b>الأولوية:</b> {{ doc.priority }}<br>
+      <b>تاريخ الاستحقاق:</b> {{ doc.target_resolution_date or '—' }}
+    </p>
+    {% if days_overdue is not none %}
+    <p><b>عدد أيام التأخير:</b> {{ days_overdue }}</p>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,39 @@
+{
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "category_name_ar",
+    "category_name_en",
+    "default_priority",
+    "sla_first_response_hours",
+    "sla_resolution_days",
+    "default_entity",
+    "allows_appeal",
+    "is_active",
+    "description"
+  ],
+  "fields": [
+    {"fieldname": "category_name_ar", "fieldtype": "Data", "label": "Category Name (AR)", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "category_name_en", "fieldtype": "Data", "label": "Category Name (EN)", "in_list_view": 1},
+    {"fieldname": "default_priority", "fieldtype": "Select", "label": "Default Priority", "options": "Low\nMedium\nHigh\nCritical", "default": "Medium", "in_list_view": 1},
+    {"fieldname": "sla_first_response_hours", "fieldtype": "Int", "label": "First Response SLA (Hours)", "default": 24, "in_list_view": 1},
+    {"fieldname": "sla_resolution_days", "fieldtype": "Int", "label": "Resolution SLA (Days)", "default": 7, "in_list_view": 1},
+    {"fieldname": "default_entity", "fieldtype": "Link", "label": "Default Entity", "options": "Government Entity"},
+    {"fieldname": "allows_appeal", "fieldtype": "Check", "label": "Allows Appeal", "default": 1},
+    {"fieldname": "is_active", "fieldtype": "Check", "label": "Is Active", "default": 1, "in_list_view": 1},
+    {"fieldname": "description", "fieldtype": "Text", "label": "Description"}
+  ],
+  "module": "Complaints2",
+  "name": "Complaint Category",
+  "permissions": [
+    {"role": "Complaint System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "report": 1, "export": 1},
+    {"role": "Advisor", "read": 1, "report": 1},
+    {"role": "Agency Officer", "read": 1, "report": 1},
+    {"role": "Follow-up Officer", "read": 1, "report": 1}
+  ],
+  "quick_entry": 1,
+  "search_fields": "category_name_ar,category_name_en",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "category_name_ar"
+}

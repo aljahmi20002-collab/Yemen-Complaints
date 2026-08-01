@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture Map - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Regular.ttf') format('truetype');font-weight:400;}
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Bold.ttf') format('truetype');font-weight:700;}
+    :root{--brand:#9b1c1c;--accent:#c2410c;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--bg:#f8fafc;--card:#fff;--shadow:0 14px 34px rgba(15,23,42,.06)}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#fff,var(--bg));font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;color:var(--ink);line-height:1.9}
+    .wrap{max-width:1350px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,#111827,#9b1c1c 55%,#c2410c);color:#fff;border-radius:28px;padding:30px;box-shadow:0 24px 60px rgba(15,23,42,.18)}
+    .brand{display:flex;align-items:center;gap:16px;margin-bottom:18px}.brand img{width:84px;height:auto}.brand .t1{font-size:18px;font-weight:700}.brand .t2{font-size:13px;opacity:.92}
+    .hero h1{margin:0 0 8px;font-size:34px}.hero p{margin:0;max-width:980px;color:rgba(255,255,255,.94)}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827;cursor:pointer}.btn.primary{background:#9b1c1c;color:#fff;border-color:#9b1c1c}
+    .section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+    h2{margin:0 0 12px;color:var(--brand);font-size:24px}.muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}.overview{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .card{border:1px solid var(--line);border-radius:20px;padding:18px;background:var(--card)} .card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .chip{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fef2f2;color:var(--brand);font-size:12px;font-weight:700;margin-bottom:8px}
+    .map{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+    .layer{border:1px solid var(--line);border-radius:22px;padding:18px;background:#fff;box-shadow:var(--shadow);position:relative}
+    .layer h3{margin:0 0 10px;font-size:20px}.layer ul{margin:0;padding-right:20px}.layer li{margin:6px 0}
+    .layer.core{border-color:#fecaca;background:linear-gradient(180deg,#fff,#fef2f2)}
+    .layer.runtime{border-color:#bfdbfe;background:linear-gradient(180deg,#fff,#eff6ff)}
+    .layer.org{border-color:#bbf7d0;background:linear-gradient(180deg,#fff,#f0fdf4)}
+    .flow{display:flex;justify-content:center;align-items:center;color:#9b1c1c;font-size:30px;font-weight:700}
+    .subgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.mini{border:1px solid var(--line);border-radius:18px;padding:14px;background:#fafafa}.mini b{display:block;margin-bottom:6px}
+    .tree{background:#0f172a;color:#e5e7eb;padding:16px;border-radius:20px;overflow:auto;direction:ltr;text-align:left;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.8}
+    .routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.route-box{border:1px solid var(--line);border-radius:18px;padding:14px;background:#fff}.route-box code{display:block;background:#f8fafc;border:1px solid #eef2f7;border-radius:12px;padding:8px;margin-top:8px;direction:ltr;text-align:left}
+    .legend{display:flex;gap:10px;flex-wrap:wrap}.legend span{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#374151}.dot{width:12px;height:12px;border-radius:999px;display:inline-block}.d1{background:#ef4444}.d2{background:#3b82f6}.d3{background:#22c55e}
+    @media (max-width:1100px){.map{grid-template-columns:1fr}.flow{transform:rotate(90deg);height:18px}.subgrid{grid-template-columns:1fr}}
+    @page{size:A4 landscape;margin:12mm}@media print{.toolbar{display:none}.section,.hero{box-shadow:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="brand">
+        <img src="/assets/yemen_complaints/images/official_emblem.png" alt="Official Emblem" />
+        <div>
+          <div class="t1">منصة اليمن للشكاوى والتظلمات</div>
+          <div class="t2">خريطة معمارية تفاعلية للموديول Complaints2</div>
+        </div>
+      </div>
+      <h1>Architecture Map</h1>
+      <p>خريطة مرجعية تشرح الطبقات المعمارية للمشروع، ومواقع الملفات، ومسارات التشغيل، والروابط بين واجهات المواطن والـ Workspaces والـ Dashboards وطبقة الذكاء الاصطناعي والأمن والحماية.</p>
+    </section>
+
+    <div class="toolbar">
+      <button class="btn primary" onclick="window.print()">طباعة الخريطة</button>
+      <a class="btn" href="/master-delivery-index">Master Delivery Index</a>
+      <a class="btn" href="/executive-delivery-pack">Executive Delivery Pack</a>
+    </div>
+
+    <section class="section">
+      <h2>1) ملخص الطبقات</h2>
+      <div class="legend">
+        <span><i class="dot d1"></i> طبقة الأعمال الأساسية Core Business Layer</span>
+        <span><i class="dot d2"></i> طبقة التشغيل Runtime Layer</span>
+        <span><i class="dot d3"></i> طبقة التنظيم المرجعي Organizational Layer</span>
+      </div>
+      <div class="grid overview" style="margin-top:14px">
+        <div class="card"><span class="chip">Core</span><h3>دوكتايبات ومنطق الأعمال</h3><p>تشمل ملفات الشكاوى، الإحالات، التحديثات، الإشعارات، التحقق، الذكاء الاصطناعي، والبيانات المرجعية.</p></div>
+        <div class="card"><span class="chip">Runtime</span><h3>صفحات ومؤشرات وتشغيل</h3><p>تشمل pages, www routes, workspaces, charts, cards, reports، والواجهات التفاعلية للمستخدمين.</p></div>
+        <div class="card"><span class="chip">Organization</span><h3>فهارس وخرائط تنظيمية</h3><p>تشمل dashboards/, portals/, docs_pages/, taxonomy/ وغيرها لتسهيل الفهم والتسليم والصيانة.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>2) الخريطة المعمارية الرئيسية</h2>
+      <div class="map">
+        <div class="layer core">
+          <h3>Core Business Layer</h3>
+          <ul>
+            <li><b>complaints2/doctype/</b>
+              <ul>
+                <li>complaint_case</li>
+                <li>complaint_assignment</li>
+                <li>complaint_update</li>
+                <li>government_entity</li>
+                <li>complaint_category</li>
+                <li>complaint_identity_verification</li>
+                <li>complaint_ai_log</li>
+                <li>complaint_ai_settings</li>
+                <li>complaint_notification_settings</li>
+                <li>complaint_security_event</li>
+                <li>yemen_governorate</li>
+                <li>yemen_district</li>
+              </ul>
+            </li>
+            <li><b>ai.py</b> — أدوات AI والمساعد الذكي</li>
+            <li><b>verification.py</b> — OTP verification flow</li>
+            <li><b>messaging.py</b> — Email/SMS/WhatsApp/Telegram</li>
+            <li><b>security.py</b> — rate limiting + abuse protection</li>
+            <li><b>permissions.py</b> — الصلاحيات المخصصة</li>
+            <li><b>tasks.py</b> — scheduler & SLA reminders</li>
+          </ul>
+        </div>
+        <div class="flow">➜</div>
+        <div class="layer runtime">
+          <h3>Runtime Layer</h3>
+          <ul>
+            <li><b>complaints2/page/</b>
+              <ul>
+                <li>internal_operations_dashboard</li>
+                <li>executive_leadership_dashboard</li>
+                <li>security_monitoring_dashboard</li>
+                <li>docs_center / application_docs</li>
+                <li>guide / portal pages</li>
+              </ul>
+            </li>
+            <li><b>complaints2/workspace/</b> — Workspaces</li>
+            <li><b>complaints2/dashboard_chart/</b> — Dashboard Charts</li>
+            <li><b>complaints2/card/</b> — Workspace link cards</li>
+            <li><b>complaints2/report/</b> — Script Reports</li>
+            <li><b>www/</b>
+              <ul>
+                <li>index (home)</li>
+                <li>my-cases</li>
+                <li>track-complaint</li>
+                <li>case-timeline</li>
+                <li>verify-identity</li>
+                <li>docs / executive-delivery-pack / master-delivery-index</li>
+              </ul>
+            </li>
+            <li><b>public/css</b> و <b>public/js</b> — واجهات وأصول UI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map" style="margin-top:16px">
+        <div class="layer org" style="grid-column:1 / -1">
+          <h3>Organizational / Reference Layer</h3>
+          <div class="subgrid">
+            <div class="mini"><b>complaints2/dashboards/</b><span class="muted">مرجع تنظيمي للداشبوردات مع manifests وREADME files.</span></div>
+            <div class="mini"><b>complaints2/portals/</b><span class="muted">مرجع صفحات المواطن والبوابات العامة.</span></div>
+            <div class="mini"><b>complaints2/docs_pages/</b><span class="muted">مرجع صفحات التوثيق وDesk pages المرتبطة بها.</span></div>
+            <div class="mini"><b>complaints2/ai/</b><span class="muted">مرجع مكونات الذكاء الاصطناعي.</span></div>
+            <div class="mini"><b>complaints2/security/</b><span class="muted">مرجع مكونات الأمن والحماية والـ abuse protection.</span></div>
+            <div class="mini"><b>complaints2/reference_data/</b><span class="muted">مرجع المحافظات والمديريات والكيانات والتصنيفات.</span></div>
+            <div class="mini"><b>complaints2/reporting/</b><span class="muted">مرجع التقارير والرسوم والبطاقات.</span></div>
+            <div class="mini"><b>complaints2/workspaces_index/</b><span class="muted">فهرس Workspaces والبطاقات المرتبطة بها.</span></div>
+            <div class="mini"><b>complaints2/taxonomy/</b><span class="muted">الخريطة التنظيمية العليا للموديول.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>3) مسارات التشغيل الرئيسية</h2>
+      <div class="routes">
+        <div class="route-box"><b>واجهات المواطن العامة</b><code>/</code><code>/submit-complaint</code><code>/submit-appeal</code><code>/track-complaint</code><code>/verify-identity</code><code>/my-cases</code><code>/case-timeline</code></div>
+        <div class="route-box"><b>لوحات القيادة داخل Desk</b><code>/app/internal-operations-dashboard</code><code>/app/executive-leadership-dashboard</code><code>/app/security-monitoring-dashboard</code></div>
+        <div class="route-box"><b>بوابة التوثيق والتسليم</b><code>/docs</code><code>/application-docs</code><code>/executive-delivery-pack</code><code>/master-delivery-index</code></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4) خطوط تدفق رئيسية</h2>
+      <div class="grid overview">
+        <div class="card"><span class="chip">Citizen Flow</span><h3>المواطن</h3><p>Home → OTP Verification → Submit Complaint/Appeal → Track/Portal → Timeline</p></div>
+        <div class="card"><span class="chip">Advisor Flow</span><h3>المستشار</h3><p>Workspace → Complaint Case → Smart Intake Assistant → Assign / Review → Reports</p></div>
+        <div class="card"><span class="chip">Executive Flow</span><h3>القيادة العليا</h3><p>Executive Dashboard → KPI / Alerts / Trends → Decision Support → Reports / Lists</p></div>
+        <div class="card"><span class="chip">Security Flow</span><h3>الأمن والحماية</h3><p>Security Events → Monitoring Dashboard → Alerts → Review / Action</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5) شجرة مبسطة للموديول</h2>
+      <div class="tree">complaints2/
+├── doctype/
+│   ├── complaint_case/
+│   ├── complaint_identity_verification/
+│   ├── complaint_ai_log/
+│   ├── complaint_ai_settings/
+│   ├── complaint_notification_settings/
+│   ├── complaint_security_event/
+│   ├── government_entity/
+│   ├── complaint_category/
+│   ├── yemen_governorate/
+│   └── yemen_district/
+├── report/
+│   ├── complaint_summary/
+│   ├── sla_breaches/
+│   ├── officer_workload/
+│   └── citizen_satisfaction/
+├── workspace/
+├── dashboard_chart/
+├── card/
+├── page/
+│   ├── internal_operations_dashboard/
+│   ├── executive_leadership_dashboard/
+│   ├── security_monitoring_dashboard/
+│   └── portal/documentation helper pages/
+├── dashboards/
+├── portals/
+├── docs_pages/
+├── ai/
+├── security/
+├── reference_data/
+├── reporting/
+├── workspaces_index/
+└── taxonomy/</div>
+    </section>
+
+    <section class="section">
+      <h2>6) ملاحظات معمارية مهمة</h2>
+      <ul>
+        <li>ملفات التشغيل الفعلية التي تعتمد عليها Frappe بقيت في المسارات القياسية مثل <code>doctype/</code> و<code>page/</code> و<code>workspace/</code>.</li>
+        <li>المجلدات التنظيمية العليا أضيفت كطبقة مرجعية لا تكسر Frappe لكنها تسهّل الفهم والتسليم والصيانة.</li>
+        <li>الداشبوردات الثلاثة (الداخلي، التنفيذي، الأمني) ترتبط بطبقات API/CSS/Pages/Workspaces.</li>
+        <li>OTP وAI والحماية الأمنية أصبحت أجزاء مترابطة ضمن طبقة تشغيلية + طبقة مراقبة + طبقة تقارير.</li>
+      </ul>
+    </section>
+
+    <div class="footer">Architecture Map — Complaints2 Module</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "doctype": "Dashboard Chart",
+  "name": "Cases by Governorate",
+  "chart_name": "Cases by Governorate",
+  "label": "الحالات حسب المحافظة",
+  "source": "Document Type",
+  "document_type": "Complaint Case",
+  "chart_type": "Group By",
+  "type": "Bar",
+  "based_on": "citizen_governorate",
+  "group_by_type": "Count",
+  "number_of_groups": 15,
+  "is_public": 1,
+  "module": "Complaints2"
+}

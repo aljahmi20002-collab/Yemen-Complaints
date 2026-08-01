@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile.app
+    container_name: yemen_complaints_app
+    volumes:
+      - ..:/workspace/apps/yemen_complaints
+    command: bash -lc "python -m compileall /workspace/apps/yemen_complaints/yemen_complaints && sleep infinity"

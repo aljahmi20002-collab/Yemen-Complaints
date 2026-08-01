@@ -1,0 +1,11 @@
+[
+  {
+    "doctype": "Complaint AI Settings",
+    "name": "Complaint AI Settings",
+    "enable_ai": 0,
+    "default_provider": "ChatGPT",
+    "request_timeout": 60,
+    "temperature": 0.2,
+    "enable_intake_assistant": 1
+  }
+]

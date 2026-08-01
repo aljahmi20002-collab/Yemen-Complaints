@@ -1,0 +1,14 @@
+{
+  "name": "yemen_complaints",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Frontend utilities for the Yemen Complaints Frappe app",
+  "scripts": {
+    "lint": "eslint yemen_complaints/public/js --ext .js",
+    "format": "prettier --write \"**/*.{js,json,css,md,html}\""
+  },
+  "devDependencies": {
+    "eslint": "^9.15.0",
+    "prettier": "^3.3.3"
+  }
+}

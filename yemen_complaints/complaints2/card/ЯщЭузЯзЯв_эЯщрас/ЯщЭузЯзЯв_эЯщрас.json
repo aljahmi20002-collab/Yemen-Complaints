@@ -1,0 +1,97 @@
+{
+  "doctype": "Workspace Link",
+  "name": "الإعدادات والضبط",
+  "label": "الإعدادات والضبط",
+  "type": "Card Break",
+  "module": "Complaints2",
+  "links": [
+    {
+      "label": "إعدادات الإشعارات",
+      "type": "Link",
+      "link_to": "Complaint Notification Settings",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "إعدادات الذكاء الاصطناعي",
+      "type": "Link",
+      "link_to": "Complaint AI Settings",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "لوحات العمل Workspaces",
+      "type": "Link",
+      "link_to": "Workspace",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "البطاقات الرقمية Number Cards",
+      "type": "Link",
+      "link_to": "Number Card",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "الرسوم البيانية Dashboard Charts",
+      "type": "Link",
+      "link_to": "Dashboard Chart",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "مسارات العمل Workflows",
+      "type": "Link",
+      "link_to": "Workflow",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "التقارير Reports",
+      "type": "Link",
+      "link_to": "Report",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "سجلات الأمن والحماية",
+      "type": "Link",
+      "link_to": "Complaint Security Event",
+      "link_type": "DocType",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    }
+  ]
+}

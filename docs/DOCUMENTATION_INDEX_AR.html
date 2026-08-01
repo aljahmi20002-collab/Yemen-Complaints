@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فهرس وثائق منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {
+      font-family: 'DroidArabicKufi';
+      src: url('../yemen_complaints/public/fonts/DroidKufi-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'DroidArabicKufi';
+      src: url('../yemen_complaints/public/fonts/DroidKufi-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root {
+      --brand:#9b1c1c;
+      --brand-2:#c2410c;
+      --ink:#111827;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --line:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;background:linear-gradient(180deg,#fff,var(--bg));color:var(--ink)}
+    .wrap{max-width:1150px;margin:0 auto;padding:24px}
+    .hero{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;padding:28px;border-radius:24px;box-shadow:0 18px 48px rgba(155,28,28,.2)}
+    .hero h1{margin:0 0 8px;font-size:30px}
+    .hero p{margin:0;opacity:.95;line-height:1.9}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid transparent}
+    .btn-light{background:#fff;color:var(--brand)}
+    .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+    .section{margin-top:22px}
+    .section h2{font-size:22px;margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 10px 30px rgba(15,23,42,.05)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0 0 12px;color:var(--muted);line-height:1.85;font-size:14px}
+    .list{margin:0;padding-right:18px;line-height:2}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#fef2f2;color:var(--brand);font-size:12px;font-weight:700;margin-bottom:10px}
+    .footer{margin:28px 0 10px;color:var(--muted);font-size:13px;text-align:center}
+  
+    .page-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:14px 16px;box-shadow:0 10px 25px rgba(15,23,42,.04)}
+    .page-brand img{width:88px;max-width:22vw;height:auto}
+    .page-brand .brand-title{font-size:18px;font-weight:700;margin-bottom:4px}
+    .page-brand .brand-sub{font-size:13px;color:#6b7280;line-height:1.8}
+    .print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print{.print-footer{display:block;position:fixed;bottom:0;right:0;left:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">منصة اليمن للشكاوى والتظلمات — وثائق النظام — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <div class="page-brand">
+      <img src="../yemen_complaints/public/images/official_emblem.png" alt="Official Emblem" />
+      <div>
+        <div class="brand-title">منصة اليمن للشكاوى والتظلمات</div>
+        <div class="brand-sub">نسخة توثيق رسمية معتمدة للاستخدام الداخلي والطباعة</div>
+      </div>
+    </div>
+    <section class="hero">
+      <h1>فهرس وثائق منصة اليمن للشكاوى والتظلمات</h1>
+      <p>بوابة وثائق مرجعية سريعة تجمع بين الوثيقة الشاملة، دليل الاستخدام، ملفات التشغيل، الذكاء الاصطناعي، التحقق من الهوية، ومراجعة الجاهزية الإنتاجية.</p>
+      <div class="toolbar">
+        <a class="btn btn-light" href="DOCUMENTATION_PORTAL_AR.html">فتح الوثيقة الشاملة HTML</a>
+        <a class="btn btn-outline" href="USER_GUIDE_PRINT_AR.html">فتح دليل الاستخدام HTML</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>أهم الوثائق</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="badge">غلاف رسمي</div>
+          <h3>غلاف الوثائق الرسمية</h3>
+          <p>غلاف منسق لحزمة التوثيق يمكن استخدامه في الطباعة أو الإدراج ضمن ملف تسليم رسمي.</p>
+          <a class="btn btn-light" href="OFFICIAL_COVER_AR.html">عرض HTML</a>
+        </article>
+        <article class="card">
+          <div class="badge">وثيقة رئيسية</div>
+          <h3>الوثيقة الشاملة للتطبيق</h3>
+          <p>تتضمن نظرة معمارية ووظيفية كاملة عن النظام، الوحدات، الأدوار، سير العمل، الذكاء الاصطناعي، التحقق OTP، التقارير، والبنية التشغيلية.</p>
+          <a class="btn btn-light" href="DOCUMENTATION_PORTAL_AR.html">عرض HTML</a>
+        </article>
+        <article class="card">
+          <div class="badge">استخدام عملي</div>
+          <h3>دليل الاستخدام الكامل</h3>
+          <p>دليل خطوة بخطوة للمواطن، المستشار، موظف الجهة، المتابع، ومدير النظام، مع المشاكل الشائعة وأفضل الممارسات.</p>
+          <a class="btn btn-light" href="USER_GUIDE_PRINT_AR.html">عرض HTML</a>
+        </article>
+        <article class="card">
+          <div class="badge">بدء سريع</div>
+          <h3>Quick Start</h3>
+          <p>أوامر التثبيت السريعة، الروابط الأساسية، الإعدادات الأولية، والملفات المرجعية التي يجب البدء بها مباشرة.</p>
+          <a class="btn btn-light" href="QUICK_START_AR.md">عرض الملف</a>
+        </article>
+        <article class="card">
+          <div class="badge">مواطن</div>
+          <h3>دليل المواطن</h3>
+          <p>نسخة مبسطة ومركزة على خطوات التقديم، التحقق من الهوية، والمتابعة.</p>
+          <a class="btn btn-light" href="CITIZEN_GUIDE_AR.html">عرض HTML</a>
+        </article>
+        <article class="card">
+          <div class="badge">إداري</div>
+          <h3>الدليل الإداري</h3>
+          <p>مرجع عملي لمدير النظام، الإعدادات، التشغيل، المراقبة، والجاهزية الإنتاجية.</p>
+          <a class="btn btn-light" href="ADMIN_GUIDE_AR.html">عرض HTML</a>
+        </article>
+        <article class="card">
+          <div class="badge">تنفيذي</div>
+          <h3>الملخص التنفيذي</h3>
+          <p>عرض مختصر عالي المستوى للقيمة المؤسسية والمكونات والقرارات المطلوبة قبل الإطلاق.</p>
+          <a class="btn btn-light" href="EXECUTIVE_BRIEF_AR.html">عرض HTML</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>وثائق تخصصية</h2>
+      <div class="grid">
+        <article class="card"><h3>AI Integration</h3><p>شرح تكامل ChatGPT وDeepSeek وGemini، أدوات النص، والمساعد الذكي لمستشار الاستقبال.</p><a class="btn btn-light" href="AI_INTEGRATION_AR.md">فتح</a></article>
+        <article class="card"><h3>Identity Verification</h3><p>آلية OTP عبر البريد وSMS وWhatsApp وTelegram، مع شاشة مستقلة وسجل محاولات.</p><a class="btn btn-light" href="IDENTITY_VERIFICATION_AR.md">فتح</a></article>
+        <article class="card"><h3>Production Review</h3><p>قائمة فحص الجاهزية الإنتاجية، الأمان، الإشعارات، AI، والسجلات.</p><a class="btn btn-light" href="PRODUCTION_REVIEW_AR.md">فتح</a></article>
+        <article class="card"><h3>AI Next & Fixtures</h3><p>ملخص الإضافات الأخيرة الخاصة بالذكاء الاصطناعي والـ fixtures المرئية في بنية المشروع.</p><a class="btn btn-light" href="AI_NEXT_AND_FIXTURES_AR.md">فتح</a></article>
+        <article class="card"><h3>Font & Yemen Location</h3><p>اعتماد الخط الرسمي Droid Arabic Kufi وإضافة المحافظات والمديريات اليمنية إلى النماذج والدوكتايبات.</p><a class="btn btn-light" href="FONT_AND_YEMEN_LOCATION_AR.md">فتح</a></article>
+        <article class="card"><h3>Privacy Policy</h3><p>سياسة الخصوصية الخاصة بالبيانات الشخصية وبيانات الشكاوى والتكاملات الخارجية.</p><a class="btn btn-light" href="PRIVACY_POLICY_AR.html">فتح</a></article>
+        <article class="card"><h3>Terms of Use</h3><p>شروط استخدام المنصة للمواطنين والموظفين والإدارة.</p><a class="btn btn-light" href="TERMS_OF_USE_AR.html">فتح</a></article>
+        <article class="card"><h3>API Integration Guide</h3><p>مرجع لنقاط التكامل الحالية للتتبع والتحقق والذكاء الاصطناعي.</p><a class="btn btn-light" href="API_INTEGRATION_GUIDE_AR.html">فتح</a></article>
+        <article class="card"><h3>Executive Brief (EN)</h3><p>نسخة إنجليزية مختصرة لعرض إداري سريع باللغة الإنجليزية.</p><a class="btn btn-light" href="EXECUTIVE_BRIEF_EN.html">فتح</a></article>
+        <article class="card"><h3>Deployment</h3><p>ملاحظات نشر وتشغيل Production وإعداد Bench وHTTPS والنسخ الاحتياطي.</p><a class="btn btn-light" href="../deployment/DEPLOYMENT_PRODUCTION_AR.md">فتح</a></article>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>اقتراح ترتيب القراءة</h2>
+      <ol class="list">
+        <li>ابدأ بـ <strong>Quick Start</strong></li>
+        <li>ثم اقرأ <strong>الوثيقة الشاملة للتطبيق</strong></li>
+        <li>بعدها راجع <strong>دليل الاستخدام الكامل</strong></li>
+        <li>إذا كنت مسؤول تشغيل أو مدير نظام، اقرأ <strong>Production Review</strong></li>
+        <li>إذا كنت ستفعل OTP أو AI، راجع الوثائق التخصصية المقابلة</li>
+      </ol>
+    </section>
+
+    <div class="footer">تم توليد هذه البوابة داخل المشروع لتسهيل التصفح والطباعة والتنزيل.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "posted_on",
+    "author",
+    "update_type",
+    "visibility",
+    "new_status",
+    "message",
+    "attachment"
+  ],
+  "fields": [
+    {"fieldname": "posted_on", "fieldtype": "Datetime", "label": "Posted On", "in_list_view": 1},
+    {"fieldname": "author", "fieldtype": "Link", "label": "Author", "options": "User", "in_list_view": 1},
+    {"fieldname": "update_type", "fieldtype": "Select", "label": "Update Type", "options": "Citizen Note\nInternal Note\nStatus Change\nReminder\nSystem", "in_list_view": 1, "reqd": 1},
+    {"fieldname": "visibility", "fieldtype": "Select", "label": "Visibility", "options": "Public\nInternal", "default": "Internal", "in_list_view": 1},
+    {"fieldname": "new_status", "fieldtype": "Data", "label": "New Status"},
+    {"fieldname": "message", "fieldtype": "Text Editor", "label": "Message", "reqd": 1},
+    {"fieldname": "attachment", "fieldtype": "Attach", "label": "Attachment"}
+  ],
+  "istable": 1,
+  "module": "Complaints2",
+  "name": "Complaint Update",
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

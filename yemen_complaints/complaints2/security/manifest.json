@@ -1,0 +1,20 @@
+{
+  "server_logic": [
+    "yemen_complaints/yemen_complaints/security.py",
+    "yemen_complaints/yemen_complaints/verification.py"
+  ],
+  "doctypes": [
+    "complaints2/doctype/complaint_identity_verification/",
+    "complaints2/doctype/complaint_security_event/",
+    "complaints2/doctype/complaint_notification_settings/"
+  ],
+  "dashboards": [
+    "complaints2/page/security_monitoring_dashboard/"
+  ],
+  "main_topics": [
+    "rate limiting",
+    "otp verification",
+    "abuse protection",
+    "security logging"
+  ]
+}

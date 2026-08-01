@@ -1,0 +1,33 @@
+{% from "yemen_complaints/templates/includes/print_macros.html" import cell %}
+<div class="yc-print-shell" style="direction:rtl;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;padding:18px;background:#fff;color:#111827;">
+  <div style="border:1px solid #e5e7eb;border-radius:20px;overflow:hidden;">
+    <div style="background:linear-gradient(135deg,#0f766e,#0ea5a4);color:#fff;padding:22px;">
+      <div style="font-size:24px;font-weight:800;">بطاقة تصنيف الشكوى</div>
+      <div style="margin-top:6px;font-size:13px;opacity:.92;">Complaint Category SLA Profile</div>
+    </div>
+    <div style="padding:18px;">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+        {{ cell('الاسم العربي', doc.category_name_ar) }}
+        {{ cell('الاسم الإنجليزي', doc.category_name_en) }}
+        {{ cell('الأولوية الافتراضية', doc.default_priority) }}
+        {{ cell('SLA أول رد', (doc.sla_first_response_hours ~ ' ساعة') if doc.sla_first_response_hours else '—') }}
+        {{ cell('SLA المعالجة', (doc.sla_resolution_days ~ ' يوم') if doc.sla_resolution_days else '—') }}
+        {{ cell('يسمح بالتظلم', 'نعم' if doc.allows_appeal else 'لا') }}
+        {{ cell('الجهة الافتراضية', doc.default_entity) }}
+        {{ cell('الحالة', 'نشط' if doc.is_active else 'غير نشط') }}
+        {{ cell('رمز التصنيف', doc.name) }}
+      </div>
+
+      {% if doc.description %}
+      <div style="margin-top:14px;padding:16px;border:1px solid #e5e7eb;border-radius:16px;background:#fafafa;">
+        <div style="font-size:15px;font-weight:800;margin-bottom:8px;color:#0f766e;">الوصف</div>
+        <div style="line-height:1.9;font-size:13px;">{{ doc.description }}</div>
+      </div>
+      {% endif %}
+
+      <div style="margin-top:16px;padding:14px;border:1px dashed #99f6e4;border-radius:16px;background:#f0fdfa;font-size:12px;color:#115e59;">
+        يستخدم هذا التصنيف لتحديد أولوية الطلب ومسارات SLA الافتراضية والتوجيه المرجعي للجهة المختصة.
+      </div>
+    </div>
+  </div>
+</div>

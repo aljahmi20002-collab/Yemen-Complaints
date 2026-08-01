@@ -1,0 +1,200 @@
+<div class="tl-page">
+  <div class="tl-shell">
+    <section class="tl-hero">
+      <div class="tl-hero-inner">
+        <div>
+          <div class="tl-badge">عرض زمني واضح لكل حالة</div>
+          <h1>الخط الزمني للحالة</h1>
+          <p>
+            اعرض التسلسل الزمني للتحديثات العامة، واطلع على الحالة الحالية، والجهة، وبيانات الإحالة إذا كانت متاحة،
+            ويمكن للمواطن المسجل إضافة ملاحظة أو استفسار على الحالة نفسها.
+          </p>
+        </div>
+        <div class="tl-side">
+          <div>
+            <h3>ما الذي ستجده هنا؟</h3>
+            <ul>
+              <li>آخر التحديثات العامة على الحالة.</li>
+              <li>بيانات الحالة الحالية والأولوية والجهة.</li>
+              <li>سجل الإحالات إذا كان العرض مخصصًا للطاقم الداخلي.</li>
+              <li>إمكانية إضافة ملاحظة من المواطن على الحالات المخولة.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if is_guest %}
+    <section class="tl-card">
+      <div class="tl-empty" style="display:block;color:#374151;border-style:solid;">
+        <h3 style="margin:0 0 8px;">يلزم تسجيل الدخول</h3>
+        <div style="line-height:1.95;">لعرض الخط الزمني الداخلي للحالة أو إضافة ملاحظة، يرجى تسجيل الدخول أولاً.</div>
+        <div style="margin-top:14px;">
+          <a class="tl-btn tl-btn-primary" href="/login?redirect-to=/case-timeline?case_id={{ case_id or '' }}">تسجيل الدخول</a>
+        </div>
+      </div>
+    </section>
+    {% else %}
+    <section class="tl-card">
+      <div class="tl-toolbar">
+        <div>
+          <h2>عرض بيانات الحالة</h2>
+          <p>أدخل رقم الحالة لعرض تفاصيلها الزمنية وتحديثاتها.</p>
+        </div>
+        <a class="tl-btn tl-btn-outline" href="/my-cases">العودة إلى طلباتي</a>
+      </div>
+      <div class="tl-form">
+        <div class="tl-field">
+          <label>رقم الحالة</label>
+          <input id="timeline-case-id" class="form-control" value="{{ case_id or '' }}" placeholder="CMP-2026-00001" />
+        </div>
+        <div class="tl-field">
+          <label>إجراء</label>
+          <button class="tl-btn tl-btn-primary" style="width:100%;" onclick="loadCaseTimeline()">عرض الحالة</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline-shell" class="tl-card tl-shell-card"></section>
+
+    <section id="timeline-note-box" class="tl-card tl-note-box" style="display:none;">
+      <div class="tl-toolbar" style="margin-bottom:0;">
+        <div>
+          <h3>إضافة ملاحظة أو استفسار</h3>
+          <p>يمكنك إرسال رسالة مرتبطة بالحالة ليتم تسجيلها ضمن التحديثات العامة.</p>
+        </div>
+      </div>
+      <textarea id="timeline-note-message" class="form-control" rows="5" placeholder="اكتب رسالتك هنا..."></textarea>
+      <div style="display:flex;justify-content:flex-end;margin-top:12px;">
+        <button class="tl-btn tl-btn-primary" onclick="submitCitizenNote()">إرسال الملاحظة</button>
+      </div>
+    </section>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+let currentCaseId = '{{ case_id or '' }}';
+
+function escapeHtml(value) {
+  const div = document.createElement('div');
+  div.textContent = value || '';
+  return div.innerHTML;
+}
+
+function renderTimeline(data) {
+  currentCaseId = data.case.name;
+  const shell = document.getElementById('timeline-shell');
+  const noteBox = document.getElementById('timeline-note-box');
+  shell.style.display = 'block';
+  noteBox.style.display = data.viewer_mode === 'citizen' ? 'block' : 'none';
+
+  const assignments = (data.assignments || []).map((row) => `
+    <div class="tl-assignment">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;">
+        <span class="tl-chip tl-chip-type">${escapeHtml(row.role_type || '')}</span>
+        <span class="tl-chip tl-chip-priority">${escapeHtml(row.status || '')}</span>
+      </div>
+      <small>المكلّف</small>
+      <strong>${escapeHtml(row.assigned_to || '—')}</strong>
+      <div style="margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <div><small>تاريخ الإحالة</small><strong>${escapeHtml(row.assigned_on || '—')}</strong></div>
+        <div><small>الاستحقاق</small><strong>${escapeHtml(row.due_date || '—')}</strong></div>
+      </div>
+      ${row.instructions ? `<div style="margin-top:10px;color:#4b5563;line-height:1.85;">${escapeHtml(row.instructions)}</div>` : ''}
+    </div>
+  `).join('');
+
+  const updates = (data.updates || []).map((row) => `
+    <article class="tl-item">
+      <div class="tl-item-head">
+        <div class="tl-item-meta">
+          <span class="tl-chip tl-chip-type">${escapeHtml(row.update_type || 'Update')}</span>
+          <span class="tl-chip tl-chip-status">${escapeHtml(row.visibility || '')}</span>
+          ${row.new_status ? `<span class="tl-chip tl-chip-priority">${escapeHtml(row.new_status)}</span>` : ''}
+        </div>
+        <div class="tl-item-date">${escapeHtml(row.posted_on || '')}</div>
+      </div>
+      <div class="tl-item-message">${row.message || ''}</div>
+      <div class="tl-item-author">${escapeHtml(row.author || '')}</div>
+    </article>
+  `).join('');
+
+  shell.innerHTML = `
+    <div class="tl-case-head">
+      <div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+          <span class="tl-chip tl-chip-type">${escapeHtml(data.case.case_type || '')}</span>
+          <span class="tl-chip tl-chip-status">${escapeHtml(data.case.status || '')}</span>
+          <span class="tl-chip tl-chip-priority">${escapeHtml(data.case.priority || '')}</span>
+          <span class="tl-chip tl-chip-mode">${escapeHtml(data.viewer_mode || '')}</span>
+        </div>
+        <div class="tl-case-title">${escapeHtml(data.case.subject || '')}</div>
+        <div style="font-size:13px;color:#6b7280;margin-top:4px;">رقم الحالة: <b>${escapeHtml(data.case.name || '')}</b></div>
+      </div>
+      <div style="min-width:240px;color:#374151;font-size:13px;line-height:2;">
+        <div><b>الجهة:</b> ${escapeHtml(data.case.government_entity || '—')}</div>
+        <div><b>موعد المعالجة المستهدف:</b> ${escapeHtml(data.case.target_resolution_date || '—')}</div>
+      </div>
+    </div>
+
+    <div class="tl-meta-grid">
+      <div class="tl-box"><small>نوع الطلب</small><strong>${escapeHtml(data.case.case_type || '—')}</strong></div>
+      <div class="tl-box"><small>الحالة الحالية</small><strong>${escapeHtml(data.case.status || '—')}</strong></div>
+      <div class="tl-box"><small>الأولوية</small><strong>${escapeHtml(data.case.priority || '—')}</strong></div>
+    </div>
+
+    ${assignments ? `
+      <div class="tl-section-title">الإحالات</div>
+      <div class="tl-assignments">${assignments}</div>
+    ` : ''}
+
+    <div class="tl-section-title">التحديثات</div>
+    <div class="tl-timeline">
+      ${updates || '<div class="tl-empty" style="display:block;">لا توجد تحديثات حتى الآن.</div>'}
+    </div>
+  `;
+}
+
+function loadCaseTimeline() {
+  const caseId = document.getElementById('timeline-case-id').value;
+  if (!caseId) return;
+
+  frappe.call({
+    method: 'yemen_complaints.api.get_case_timeline',
+    args: { case_id: caseId },
+    callback: (r) => renderTimeline(r.message),
+    error: () => {
+      const shell = document.getElementById('timeline-shell');
+      shell.style.display = 'block';
+      shell.innerHTML = '<div class="tl-empty" style="display:block;color:#b91c1c;border-style:solid;">تعذر تحميل الخط الزمني. تأكد من الصلاحية أو رقم الحالة.</div>';
+    }
+  });
+}
+
+function submitCitizenNote() {
+  const message = document.getElementById('timeline-note-message').value;
+  if (!currentCaseId || !message) return;
+
+  frappe.call({
+    method: 'yemen_complaints.complaints2.doctype.complaint_case.complaint_case.add_public_update',
+    args: {
+      docname: currentCaseId,
+      message,
+      visibility: 'Public',
+      update_type: 'Citizen Note'
+    },
+    callback: () => {
+      document.getElementById('timeline-note-message').value = '';
+      loadCaseTimeline();
+    },
+    error: () => frappe.msgprint('تعذر إرسال الملاحظة')
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('timeline-case-id')?.value) {
+    loadCaseTimeline();
+  }
+});
+</script>

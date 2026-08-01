@@ -1,0 +1,7 @@
+{
+  "title_ar": "الداشبورد الداخلي للعمليات",
+  "title_en": "Internal Operations Dashboard",
+  "route": "/app/internal-operations-dashboard",
+  "runtime_page_path": "yemen_complaints/yemen_complaints/complaints2/page/internal_operations_dashboard/",
+  "purpose": "لوحة تشغيلية للمستشار والموظفين والمتابعة تعرض مؤشرات العمل اليومية وقوائم المهام والتحليلات التشغيلية."
+}

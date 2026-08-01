@@ -1,0 +1,8 @@
+{
+  "title_ar": "تتبع الشكوى",
+  "title_en": "Track Complaint",
+  "runtime_www_path": "yemen_complaints/yemen_complaints/www/track_complaint.html",
+  "public_route": "/track-complaint",
+  "desk_page_ref": "complaints2/page/track_complaint_portal/",
+  "purpose": "تتبع عام للحالة باستخدام رقم الحالة ووسيلة التحقق."
+}

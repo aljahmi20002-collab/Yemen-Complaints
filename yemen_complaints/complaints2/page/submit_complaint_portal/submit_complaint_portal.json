@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "submit_complaint_portal",
+  "page_name": "submit_complaint_portal",
+  "title": "تقديم شكوى",
+  "module": "Complaints2",
+  "standard": "Yes",
+  "system_page": 0
+}

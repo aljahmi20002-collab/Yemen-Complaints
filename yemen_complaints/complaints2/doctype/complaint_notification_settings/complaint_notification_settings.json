@@ -1,0 +1,291 @@
+{
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "issingle": 1,
+  "module": "Complaints2",
+  "name": "Complaint Notification Settings",
+  "field_order": [
+    "enable_email",
+    "enable_sms",
+    "enable_whatsapp",
+    "enable_telegram",
+    "default_country_code",
+    "section_verification",
+    "enforce_identity_verification",
+    "allow_email_verification",
+    "allow_sms_verification",
+    "allow_whatsapp_verification",
+    "allow_telegram_verification",
+    "verification_code_length",
+    "verification_expiry_minutes",
+    "verification_resend_cooldown_seconds",
+    "verification_max_attempts",
+    "verification_email_subject",
+    "section_citizen",
+    "allow_citizen_sms",
+    "allow_citizen_whatsapp",
+    "allow_citizen_telegram",
+    "section_staff",
+    "allow_staff_sms",
+    "allow_staff_whatsapp",
+    "allow_staff_telegram",
+    "section_sms",
+    "sms_endpoint",
+    "sms_api_key",
+    "sms_auth_header",
+    "sms_timeout",
+    "section_whatsapp",
+    "whatsapp_endpoint",
+    "whatsapp_token",
+    "whatsapp_auth_header",
+    "whatsapp_template_name",
+    "whatsapp_timeout",
+    "section_telegram",
+    "telegram_endpoint",
+    "telegram_token",
+    "telegram_auth_header",
+    "telegram_timeout"
+  ],
+  "fields": [
+    {
+      "fieldname": "enable_email",
+      "fieldtype": "Check",
+      "label": "Enable Email",
+      "default": 1
+    },
+    {
+      "fieldname": "enable_sms",
+      "fieldtype": "Check",
+      "label": "Enable SMS",
+      "default": 0
+    },
+    {
+      "fieldname": "enable_whatsapp",
+      "fieldtype": "Check",
+      "label": "Enable WhatsApp",
+      "default": 0
+    },
+    {
+      "fieldname": "enable_telegram",
+      "fieldtype": "Check",
+      "label": "Enable Telegram",
+      "default": 0
+    },
+    {
+      "fieldname": "default_country_code",
+      "fieldtype": "Data",
+      "label": "Default Country Code",
+      "description": "Example: +967"
+    },
+    {
+      "fieldname": "section_verification",
+      "fieldtype": "Section Break",
+      "label": "Identity Verification"
+    },
+    {
+      "fieldname": "enforce_identity_verification",
+      "fieldtype": "Check",
+      "label": "Enforce Identity Verification",
+      "default": 1
+    },
+    {
+      "fieldname": "allow_email_verification",
+      "fieldtype": "Check",
+      "label": "Allow Email Verification",
+      "default": 1
+    },
+    {
+      "fieldname": "allow_sms_verification",
+      "fieldtype": "Check",
+      "label": "Allow SMS Verification",
+      "default": 1
+    },
+    {
+      "fieldname": "allow_whatsapp_verification",
+      "fieldtype": "Check",
+      "label": "Allow WhatsApp Verification",
+      "default": 0
+    },
+    {
+      "fieldname": "allow_telegram_verification",
+      "fieldtype": "Check",
+      "label": "Allow Telegram Verification",
+      "default": 0
+    },
+    {
+      "fieldname": "verification_code_length",
+      "fieldtype": "Int",
+      "label": "Verification Code Length",
+      "default": 6
+    },
+    {
+      "fieldname": "verification_expiry_minutes",
+      "fieldtype": "Int",
+      "label": "Verification Expiry (Minutes)",
+      "default": 10
+    },
+    {
+      "fieldname": "verification_resend_cooldown_seconds",
+      "fieldtype": "Int",
+      "label": "Verification Resend Cooldown (Seconds)",
+      "default": 60
+    },
+    {
+      "fieldname": "verification_max_attempts",
+      "fieldtype": "Int",
+      "label": "Verification Max Attempts",
+      "default": 5
+    },
+    {
+      "fieldname": "verification_email_subject",
+      "fieldtype": "Data",
+      "label": "Verification Email Subject",
+      "default": "رمز التحقق لهوية مقدم الشكوى"
+    },
+    {
+      "fieldname": "section_citizen",
+      "fieldtype": "Section Break",
+      "label": "Citizen Channels"
+    },
+    {
+      "fieldname": "allow_citizen_sms",
+      "fieldtype": "Check",
+      "label": "Allow Citizen SMS",
+      "default": 0
+    },
+    {
+      "fieldname": "allow_citizen_whatsapp",
+      "fieldtype": "Check",
+      "label": "Allow Citizen WhatsApp",
+      "default": 0
+    },
+    {
+      "fieldname": "allow_citizen_telegram",
+      "fieldtype": "Check",
+      "label": "Allow Citizen Telegram",
+      "default": 0
+    },
+    {
+      "fieldname": "section_staff",
+      "fieldtype": "Section Break",
+      "label": "Staff Channels"
+    },
+    {
+      "fieldname": "allow_staff_sms",
+      "fieldtype": "Check",
+      "label": "Allow Staff SMS",
+      "default": 0
+    },
+    {
+      "fieldname": "allow_staff_whatsapp",
+      "fieldtype": "Check",
+      "label": "Allow Staff WhatsApp",
+      "default": 0
+    },
+    {
+      "fieldname": "allow_staff_telegram",
+      "fieldtype": "Check",
+      "label": "Allow Staff Telegram",
+      "default": 0
+    },
+    {
+      "fieldname": "section_sms",
+      "fieldtype": "Section Break",
+      "label": "SMS Provider"
+    },
+    {
+      "fieldname": "sms_endpoint",
+      "fieldtype": "Data",
+      "label": "SMS Endpoint"
+    },
+    {
+      "fieldname": "sms_api_key",
+      "fieldtype": "Password",
+      "label": "SMS API Key"
+    },
+    {
+      "fieldname": "sms_auth_header",
+      "fieldtype": "Data",
+      "label": "SMS Auth Header",
+      "default": "Authorization"
+    },
+    {
+      "fieldname": "sms_timeout",
+      "fieldtype": "Int",
+      "label": "SMS Timeout (Seconds)",
+      "default": 10
+    },
+    {
+      "fieldname": "section_whatsapp",
+      "fieldtype": "Section Break",
+      "label": "WhatsApp Provider"
+    },
+    {
+      "fieldname": "whatsapp_endpoint",
+      "fieldtype": "Data",
+      "label": "WhatsApp Endpoint"
+    },
+    {
+      "fieldname": "whatsapp_token",
+      "fieldtype": "Password",
+      "label": "WhatsApp Token"
+    },
+    {
+      "fieldname": "whatsapp_auth_header",
+      "fieldtype": "Data",
+      "label": "WhatsApp Auth Header",
+      "default": "Authorization"
+    },
+    {
+      "fieldname": "whatsapp_template_name",
+      "fieldtype": "Data",
+      "label": "WhatsApp Template Name"
+    },
+    {
+      "fieldname": "whatsapp_timeout",
+      "fieldtype": "Int",
+      "label": "WhatsApp Timeout (Seconds)",
+      "default": 10
+    },
+    {
+      "fieldname": "section_telegram",
+      "fieldtype": "Section Break",
+      "label": "Telegram Provider"
+    },
+    {
+      "fieldname": "telegram_endpoint",
+      "fieldtype": "Data",
+      "label": "Telegram Endpoint"
+    },
+    {
+      "fieldname": "telegram_token",
+      "fieldtype": "Password",
+      "label": "Telegram Token"
+    },
+    {
+      "fieldname": "telegram_auth_header",
+      "fieldtype": "Data",
+      "label": "Telegram Auth Header",
+      "default": "Authorization"
+    },
+    {
+      "fieldname": "telegram_timeout",
+      "fieldtype": "Int",
+      "label": "Telegram Timeout (Seconds)",
+      "default": 10
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Complaint System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

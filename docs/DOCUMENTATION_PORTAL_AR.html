@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الوثيقة الشاملة - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {
+      font-family: 'DroidArabicKufi';
+      src: url('../yemen_complaints/public/fonts/DroidKufi-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'DroidArabicKufi';
+      src: url('../yemen_complaints/public/fonts/DroidKufi-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    :root{
+      --brand:#9b1c1c; --brand2:#c2410c; --ink:#111827; --muted:#6b7280; --line:#e5e7eb; --soft:#fff7ed; --bg:#f8fafc; --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#fff,var(--bg));font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;color:var(--ink);line-height:1.95}
+    .page{display:grid;grid-template-columns:320px 1fr;gap:22px;max-width:1400px;margin:0 auto;padding:22px}
+    .sidebar{position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 12px 30px rgba(15,23,42,.06)}
+    .content{min-width:0}
+    .hero{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:28px;border-radius:24px;box-shadow:0 18px 48px rgba(155,28,28,.2)}
+    .hero h1{margin:0 0 8px;font-size:32px}
+    .hero p{margin:0;opacity:.95}
+    .hero .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .chip{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18)}
+    .section{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 10px 28px rgba(15,23,42,.04)}
+    h2{margin:0 0 12px;font-size:24px;color:var(--brand)}
+    h3{margin:18px 0 8px;font-size:18px}
+    p{margin:0 0 10px}
+    ul,ol{margin:8px 0 0;padding-right:22px}
+    li{margin:4px 0}
+    .toc h3{margin-top:0}
+    .toc a{display:block;color:var(--ink);text-decoration:none;padding:8px 10px;border-radius:12px;font-size:14px}
+    .toc a:hover{background:#fef2f2;color:var(--brand)}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .mini{padding:14px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .mini b{display:block;margin-bottom:6px}
+    .callout{padding:14px 16px;border-radius:16px;background:#fff7ed;border:1px solid #fdba74;color:#7c2d12}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    pre{background:#0f172a;color:#e5e7eb;padding:14px;border-radius:16px;overflow:auto;direction:ltr;text-align:left}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{border:1px solid var(--line);padding:10px;text-align:right;vertical-align:top}
+    th{background:#f8fafc}
+    .print-only{display:none}
+    @media (max-width: 980px){.page{grid-template-columns:1fr}.sidebar{position:static;height:auto}}
+    @media print {
+      body{background:#fff}
+      .page{display:block;max-width:none;padding:0}
+      .sidebar,.toolbar{display:none !important}
+      .section,.hero{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
+      .print-only{display:block}
+    }
+  
+    .page-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:14px 16px;box-shadow:0 10px 25px rgba(15,23,42,.04)}
+    .page-brand img{width:88px;max-width:22vw;height:auto}
+    .page-brand .brand-title{font-size:18px;font-weight:700;margin-bottom:4px}
+    .page-brand .brand-sub{font-size:13px;color:#6b7280;line-height:1.8}
+    .print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print{.print-footer{display:block;position:fixed;bottom:0;right:0;left:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">منصة اليمن للشكاوى والتظلمات — وثائق النظام — صفحة <span class="page-number"></span></div>
+  <div class="page">
+    <div style="grid-column:1/-1" class="page-brand">
+      <img src="../yemen_complaints/public/images/official_emblem.png" alt="Official Emblem" />
+      <div>
+        <div class="brand-title">منصة اليمن للشكاوى والتظلمات</div>
+        <div class="brand-sub">نسخة توثيق رسمية معتمدة للاستخدام الداخلي والطباعة</div>
+      </div>
+    </div>
+    <aside class="sidebar toc">
+      <div class="toolbar">
+        <button class="btn primary" onclick="window.print()">طباعة الوثيقة</button>
+        <a class="btn" href="DOCUMENTATION_INDEX_AR.html">فهرس الوثائق</a>
+      </div>
+      <h3>محتويات الوثيقة</h3>
+      <a href="#intro">1. مقدمة</a>
+      <a href="#goals">2. الأهداف</a>
+      <a href="#scope">3. نطاق التطبيق</a>
+      <a href="#roles">4. الأدوار</a>
+      <a href="#modules">5. الوحدات الرئيسية</a>
+      <a href="#flow">6. تدفق العمل</a>
+      <a href="#workflow">7. الـ Workflow</a>
+      <a href="#verification">8. التحقق من الهوية</a>
+      <a href="#ai">9. الذكاء الاصطناعي</a>
+      <a href="#notifications">10. الإشعارات</a>
+      <a href="#webforms">11. Web Forms</a>
+      <a href="#portal">12. البوابات والواجهات</a>
+      <a href="#workspaces">13. Workspaces</a>
+      <a href="#reports">14. التقارير والتحليلات</a>
+      <a href="#print">15. Print Formats</a>
+      <a href="#yemen">16. البيانات اليمنية المرجعية</a>
+      <a href="#project">17. بنية المشروع</a>
+      <a href="#install">18. التثبيت والتهيئة</a>
+      <a href="#security">19. الأمان والتشغيل</a>
+      <a href="#future">20. التوصيات المستقبلية</a>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <div class="print-only" style="font-size:12px;margin-bottom:8px">نسخة قابلة للطباعة</div>
+        <h1>الوثيقة الشاملة للتطبيق</h1>
+        <p>منصة اليمن للشكاوى والتظلمات — وثيقة تنفيذية ووظيفية وتشغيلية تغطي مكونات النظام، تدفق العمل، الذكاء الاصطناعي، التحقق من الهوية، وأدلة التشغيل الأساسية.</p>
+        <div class="meta">
+          <span class="chip">اسم التطبيق: yemen_complaints</span>
+          <span class="chip">الإطار: Frappe Framework</span>
+          <span class="chip">اللغة: العربية</span>
+          <span class="chip">نوع الوثيقة: مرجع شامل + قابل للطباعة</span>
+        </div>
+      </section>
+
+      <section class="section" id="intro">
+        <h2>1. مقدمة</h2>
+        <p>منصة اليمن للشكاوى والتظلمات هي نظام إلكتروني متكامل لاستقبال الشكاوى والتظلمات من المواطنين اليمنيين داخل اليمن وخارجه، مع إمكانيات التحقق من الهوية، الإحالة، المتابعة، التقارير، المؤشرات، الطباعة، والإشعارات، إضافة إلى قدرات ذكاء اصطناعي مساعدة لموظفي الاستقبال والمعالجة.</p>
+        <p>المنصة مبنية على <b>Frappe Framework</b> ومهيأة للتوسع المؤسسي مع واجهات عربية احترافية وخط رسمي موحد.</p>
+      </section>
+
+      <section class="section" id="goals">
+        <h2>2. أهداف النظام</h2>
+        <div class="grid">
+          <div class="mini"><b>الهدف الرئيسي</b><span>تمكين المواطن اليمني من تقديم شكوى أو تظلم ومتابعته إلكترونياً من أي مكان في العالم.</span></div>
+          <div class="mini"><b>التحقق</b><span>ضمان التحقق من هوية مقدم الشكوى قبل الإرسال.</span></div>
+          <div class="mini"><b>التشغيل</b><span>تمكين الجهات المختصة من الفرز والإحالة والمتابعة بكفاءة.</span></div>
+          <div class="mini"><b>التحليل</b><span>توفير تقارير تشغيلية ومؤشرات أداء ودعم قرار ذكي.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="scope">
+        <h2>3. نطاق التطبيق</h2>
+        <ul>
+          <li>تقديم الشكاوى والتظلمات عبر Web Forms.</li>
+          <li>التحقق من الهوية عبر Email / SMS / WhatsApp / Telegram.</li>
+          <li>إدارة ملفات الشكاوى، الإحالات، التحديثات، والتقارير.</li>
+          <li>Workspaces، Number Cards، Dashboard Charts، وتقارير Script Reports.</li>
+          <li>تكامل AI مع ChatGPT وDeepSeek وGemini.</li>
+          <li>شاشة مستقلة للتحقق OTP وبيانات مرجعية للمحافظات والمديريات اليمنية.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="roles">
+        <h2>4. الأدوار والصلاحيات</h2>
+        <table>
+          <thead><tr><th>الدور</th><th>الوصف</th><th>أبرز الصلاحيات</th></tr></thead>
+          <tbody>
+            <tr><td>Citizen</td><td>المواطن مقدم الشكوى أو التظلم</td><td>التقديم، التحقق من الهوية، المتابعة، عرض التحديثات العامة</td></tr>
+            <tr><td>Advisor</td><td>مستشار استقبال الشكاوى</td><td>الفرز، التصنيف، تشغيل المساعد الذكي، الإحالة</td></tr>
+            <tr><td>Agency Officer</td><td>موظف الجهة المختصة</td><td>المعالجة، تحديث الحالة، طلب استكمال</td></tr>
+            <tr><td>Follow-up Officer</td><td>موظف المتابعة</td><td>مراقبة SLA، متابعة التأخير، المساهمة في الإغلاق</td></tr>
+            <tr><td>Complaint System Manager</td><td>مدير النظام</td><td>إدارة الإعدادات، الإشراف الكامل، مراجعة الذكاء الاصطناعي والإشعارات</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section" id="modules">
+        <h2>5. الوحدات الوظيفية الرئيسية</h2>
+        <div class="grid">
+          <div class="mini"><b>Complaint Case</b><span>الملف الرئيسي للشكوى أو التظلم.</span></div>
+          <div class="mini"><b>Complaint Assignment</b><span>سجل الإحالات والمهام.</span></div>
+          <div class="mini"><b>Complaint Update</b><span>التحديثات العامة والداخلية.</span></div>
+          <div class="mini"><b>Government Entity</b><span>مرجع الجهات الحكومية المختصة.</span></div>
+          <div class="mini"><b>Complaint Category</b><span>التصنيف والأولوية وSLA.</span></div>
+          <div class="mini"><b>Complaint Identity Verification</b><span>طلبات التحقق OTP وسجل المحاولات.</span></div>
+          <div class="mini"><b>Complaint AI Settings / Log</b><span>إعدادات AI وسجل العمليات.</span></div>
+          <div class="mini"><b>Yemen Governorate / District</b><span>بيانات المحافظات والمديريات اليمنية.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="flow">
+        <h2>6. تدفق العمل التشغيلي</h2>
+        <ol>
+          <li>المواطن يفتح نموذج الشكوى أو التظلم.</li>
+          <li>يملأ البيانات الأساسية ويختار قناة التحقق.</li>
+          <li>يتم إرسال رمز OTP وتأكيد الهوية.</li>
+          <li>تُنشأ الحالة في النظام.</li>
+          <li>المستشار يراجع ويصنف ويشغّل المساعد الذكي عند الحاجة.</li>
+          <li>تُحال الحالة إلى الجهة أو المسؤول المختص.</li>
+          <li>تتم المعالجة والتحديثات والمتابعة ثم الحسم أو الإغلاق.</li>
+        </ol>
+      </section>
+
+      <section class="section" id="workflow">
+        <h2>7. Workflow الرسمي</h2>
+        <div class="callout">الحالات: New → Under Review → Assigned → In Progress → Waiting Citizen → Resolved / Rejected / Closed / Overdue</div>
+        <ul>
+          <li>لا يسمح بالحسم أو الإغلاق بدون <code>Resolution Summary</code>.</li>
+          <li>لا يسمح بالانتقال إلى <code>Assigned</code> دون مسؤول أو إحالة.</li>
+          <li>التحولات مضبوطة حسب الدور، مع صلاحيات أوسع لمدير النظام.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="verification">
+        <h2>8. التحقق من الهوية قبل الإرسال</h2>
+        <h3>القنوات المدعومة</h3>
+        <ul>
+          <li>Email</li><li>SMS</li><li>WhatsApp</li><li>Telegram</li>
+        </ul>
+        <h3>المسارات</h3>
+        <ul>
+          <li><code>/verify-identity</code> شاشة مستقلة وجميلة للتحقق OTP</li>
+          <li>دمج مباشر داخل Web Forms للشكوى والتظلم</li>
+        </ul>
+        <h3>المزايا</h3>
+        <ul>
+          <li>إرسال الرمز، تأكيده، إعادة الإرسال، عداد زمني، وسجل أحداث ومحاولات واضح.</li>
+          <li>تعليم الرمز كـ <code>Used</code> بعد استخدامه بنجاح مع شكوى حقيقية.</li>
+          <li>تقييد الإرسال حتى تصبح الحالة <code>Verified</code>.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="ai">
+        <h2>9. الذكاء الاصطناعي</h2>
+        <h3>المزوّدات</h3>
+        <ul><li>ChatGPT / OpenAI</li><li>DeepSeek</li><li>Gemini</li></ul>
+        <h3>الأدوات النصية</h3>
+        <div class="grid">
+          <div class="mini"><b>تحرير وتحسين</b><span>ترجمة، تلخيص، تحسين كتابة، إصلاح الإملاء والنحو، تبسيط اللغة، جعل النص رسمي.</span></div>
+          <div class="mini"><b>تحليل واستخراج</b><span>تحليل نص، تصنيف الموضوع، البحث عن عناصر النص، خلاصة نص.</span></div>
+          <div class="mini"><b>مخرجات تشغيلية</b><span>اقتراح رد، صياغة رسالة، اختصار، كتابة بالتفصيل.</span></div>
+          <div class="mini"><b>مساعد الاستقبال</b><span>Smart Intake Assistant مع تطبيق التوصيات وسجل AI Log.</span></div>
+        </div>
+        <h3>مخرجات المساعد الذكي</h3>
+        <ul>
+          <li>ملخص الحالة</li>
+          <li>تصنيف مقترح</li>
+          <li>أولوية وجهة مقترحتان</li>
+          <li>مؤشرات خطورة وعناصر مهمة</li>
+          <li>رد ورسالة مواطن مقترحان</li>
+        </ul>
+      </section>
+
+      <section class="section" id="notifications">
+        <h2>10. الإشعارات والتواصل</h2>
+        <table>
+          <thead><tr><th>الفئة</th><th>الأمثلة</th><th>القنوات</th></tr></thead>
+          <tbody>
+            <tr><td>المواطن</td><td>استلام الطلب، OTP، تحديث الحالة، التحديثات العامة</td><td>Email / SMS / WhatsApp / Telegram</td></tr>
+            <tr><td>الموظفون</td><td>الإحالات، التنبيهات، SLA reminders</td><td>Email / SMS / WhatsApp / Telegram حسب الإعداد</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section" id="webforms">
+        <h2>11. Web Forms</h2>
+        <ul>
+          <li><code>/submit-complaint</code></li>
+          <li><code>/submit-appeal</code></li>
+        </ul>
+        <p>تم تصميم النماذج باحترافية، مع RTL، خط Droid Arabic Kufi، وحقول الموقع اليمني، والتحقق من الهوية قبل الإرسال.</p>
+      </section>
+
+      <section class="section" id="portal">
+        <h2>12. الواجهات العامة والبوابات</h2>
+        <div class="grid">
+          <div class="mini"><b>/track-complaint</b><span>صفحة عامة لتتبع الحالة باستخدام رقمها وبيانات التحقق.</span></div>
+          <div class="mini"><b>/my-cases</b><span>بوابة المواطن لعرض طلباته، البحث، الفلترة، ومراجعة التحديثات.</span></div>
+          <div class="mini"><b>/case-timeline</b><span>عرض الخط الزمني للحالة والتحديثات، مع إظهار التفاصيل الملائمة حسب الدور.</span></div>
+          <div class="mini"><b>/verify-identity</b><span>شاشة OTP المستقلة مع إعادة الإرسال والعداد الزمني.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="workspaces">
+        <h2>13. Workspaces</h2>
+        <ul>
+          <li>Citizen Complaints Portal</li>
+          <li>Advisor Complaint Desk</li>
+          <li>Agency Officer Desk</li>
+          <li>Follow-up Desk</li>
+          <li>Yemen Complaints Manager Desk</li>
+        </ul>
+        <p>كل Workspace يحتوي على مؤشرات سريعة ورسوم وتحليلات مخصصة حسب الدور.</p>
+      </section>
+
+      <section class="section" id="reports">
+        <h2>14. التقارير والتحليلات</h2>
+        <h3>Number Cards</h3>
+        <ul>
+          <li>Open Complaint Cases</li>
+          <li>New Intake Cases</li>
+          <li>Under Review Cases</li>
+          <li>Waiting Citizen Cases</li>
+          <li>Overdue Complaint Cases</li>
+          <li>Resolved Complaint Cases</li>
+          <li>High Priority Complaint Cases</li>
+          <li>Appeal Cases</li>
+        </ul>
+        <h3>Dashboard Charts</h3>
+        <ul>
+          <li>Cases by Status</li>
+          <li>Cases by Priority</li>
+          <li>Monthly Complaint Trend</li>
+          <li>Cases by Country</li>
+          <li>Cases by Governorate</li>
+          <li>Cases by Type</li>
+          <li>Cases by Entity</li>
+        </ul>
+        <h3>Reports</h3>
+        <ul>
+          <li>Complaint Summary</li>
+          <li>SLA Breaches</li>
+          <li>Officer Workload</li>
+          <li>Citizen Satisfaction</li>
+        </ul>
+      </section>
+
+      <section class="section" id="print">
+        <h2>15. Print Formats</h2>
+        <ul>
+          <li>Complaint Case Professional</li>
+          <li>Government Entity Professional</li>
+          <li>Complaint Category Professional</li>
+        </ul>
+        <p>تم تصميمها بصياغة رسمية مناسبة للطباعة وPDF، مع إبراز المعلومات الأساسية وسجل الإحالات وخلاصة المعالجة.</p>
+      </section>
+
+      <section class="section" id="yemen">
+        <h2>16. البيانات اليمنية المرجعية</h2>
+        <p>تمت إضافة <b>22 محافظة</b> و<b>335 مديرية</b> مرجعية، وتستخدم في النماذج والدوكتايبات والتحليلات والربط المنطقي بين المحافظة والمديرية.</p>
+      </section>
+
+      <section class="section" id="project">
+        <h2>17. بنية المشروع</h2>
+        <pre>yemen_complaints/
+├── fixtures/
+├── docs/
+├── deployment/
+├── README_AR.md
+└── yemen_complaints/
+    ├── ai.py
+    ├── api.py
+    ├── messaging.py
+    ├── verification.py
+    ├── setup/install.py
+    ├── complaints/doctype/
+    ├── public/
+    ├── templates/
+    └── www/</pre>
+      </section>
+
+      <section class="section" id="install">
+        <h2>18. التثبيت والتهيئة</h2>
+        <pre>bench --site your-site install-app yemen_complaints
+bench --site your-site migrate
+bench build</pre>
+        <p>بعد ذلك افتح:</p>
+        <ul>
+          <li><code>Complaint Notification Settings</code> لضبط القنوات وOTP</li>
+          <li><code>Complaint AI Settings</code> لتفعيل الذكاء الاصطناعي</li>
+        </ul>
+      </section>
+
+      <section class="section" id="security">
+        <h2>19. الأمان والتشغيل</h2>
+        <ul>
+          <li>تقييد الوصول بالأدوار المناسبة.</li>
+          <li>منع المواطن من تغيير الحالة مباشرة.</li>
+          <li>منع استخدام OTP أكثر من مرة.</li>
+          <li>مراقبة AI Log وIdentity Verification records باستمرار.</li>
+          <li>حفظ مفاتيح API بصورة آمنة والاختبار أولاً على بيئة staging.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="future">
+        <h2>20. التوصيات المستقبلية</h2>
+        <ul>
+          <li>إضافة rate limiting وabuse protection على واجهات OTP وAI.</li>
+          <li>إضافة لوحة مراقبة لسجلات AI وOTP.</li>
+          <li>إضافة مراقبة تكلفة الذكاء الاصطناعي واستهلاك المزود.</li>
+          <li>ربط Telegram/WhatsApp/SMS بمزوّدات فعلية أو بوابة حكومية داخلية.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

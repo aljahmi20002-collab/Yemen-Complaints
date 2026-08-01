@@ -1,0 +1,37 @@
+{
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "module": "Complaints2",
+  "name": "Yemen Governorate",
+  "field_order": [
+    "governorate_name_ar",
+    "governorate_name_en",
+    "reference_name",
+    "country_code",
+    "center_lat",
+    "center_lon",
+    "is_active"
+  ],
+  "fields": [
+    {"fieldname": "governorate_name_ar", "fieldtype": "Data", "label": "Governorate Name (AR)", "reqd": 1, "in_list_view": 1},
+    {"fieldname": "governorate_name_en", "fieldtype": "Data", "label": "Governorate Name (EN)", "in_list_view": 1},
+    {"fieldname": "reference_name", "fieldtype": "Data", "label": "Reference Name"},
+    {"fieldname": "country_code", "fieldtype": "Data", "label": "Country Code", "read_only": 1},
+    {"fieldname": "center_lat", "fieldtype": "Float", "label": "Center Latitude", "read_only": 1},
+    {"fieldname": "center_lon", "fieldtype": "Float", "label": "Center Longitude", "read_only": 1},
+    {"fieldname": "is_active", "fieldtype": "Check", "label": "Is Active", "default": 1, "in_list_view": 1}
+  ],
+  "permissions": [
+    {"role": "Guest", "read": 1},
+    {"role": "Citizen", "read": 1},
+    {"role": "Advisor", "read": 1, "report": 1},
+    {"role": "Agency Officer", "read": 1, "report": 1},
+    {"role": "Follow-up Officer", "read": 1, "report": 1},
+    {"role": "Complaint System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "report": 1, "export": 1}
+  ],
+  "quick_entry": 1,
+  "search_fields": "governorate_name_ar,governorate_name_en,reference_name",
+  "sort_field": "governorate_name_ar",
+  "sort_order": "ASC",
+  "title_field": "governorate_name_ar"
+}

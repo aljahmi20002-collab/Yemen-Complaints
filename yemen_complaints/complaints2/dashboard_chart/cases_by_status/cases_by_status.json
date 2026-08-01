@@ -1,0 +1,15 @@
+{
+  "doctype": "Dashboard Chart",
+  "name": "Cases by Status",
+  "chart_name": "Cases by Status",
+  "label": "الحالات حسب الحالة",
+  "source": "Document Type",
+  "document_type": "Complaint Case",
+  "chart_type": "Group By",
+  "type": "Donut",
+  "based_on": "status",
+  "group_by_type": "Count",
+  "number_of_groups": 10,
+  "is_public": 1,
+  "module": "Complaints2"
+}

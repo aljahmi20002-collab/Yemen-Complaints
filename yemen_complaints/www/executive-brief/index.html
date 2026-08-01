@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الملخص التنفيذي - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Regular.ttf') format('truetype');font-weight:400;}
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Bold.ttf') format('truetype');font-weight:700;}
+    body{margin:0;background:#f8fafc;color:#111827;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;line-height:1.95}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{background:linear-gradient(135deg,#9b1c1c,#c2410c);color:#fff;border-radius:24px;padding:28px}
+    .hero h1{margin:0 0 8px;font-size:30px}.section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:20px}
+    h2{margin:0 0 10px;color:#9b1c1c}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.card{padding:14px;border:1px solid #e5e7eb;border-radius:16px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827}.btn.primary{background:#9b1c1c;color:#fff;border-color:#9b1c1c}
+    @media print {.toolbar{display:none}}
+  
+    .page-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:14px 16px;box-shadow:0 10px 25px rgba(15,23,42,.04)}
+    .page-brand img{width:88px;max-width:22vw;height:auto}
+    .page-brand .brand-title{font-size:18px;font-weight:700;margin-bottom:4px}
+    .page-brand .brand-sub{font-size:13px;color:#6b7280;line-height:1.8}
+    .print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print{.print-footer{display:block;position:fixed;bottom:0;right:0;left:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">منصة اليمن للشكاوى والتظلمات — وثائق النظام — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <div class="page-brand">
+      <img src="/assets/yemen_complaints/images/official_emblem.png" alt="Official Emblem" />
+      <div>
+        <div class="brand-title">منصة اليمن للشكاوى والتظلمات</div>
+        <div class="brand-sub">بوابة وثائق رسمية داخل التطبيق</div>
+      </div>
+    </div>
+    <section class="hero">
+      <h1>الملخص التنفيذي</h1>
+      <p>ملخص إداري سريع يوضح القيمة المؤسسية، مكونات الحل، وعناصر الجاهزية التشغيلية لمنصة اليمن للشكاوى والتظلمات.</p>
+    </section>
+    <div class="toolbar">
+      <button class="btn primary" onclick="window.print()">طباعة</button>
+      <a class="btn" href="/docs">فهرس الوثائق</a>
+    </div>
+    <section class="section"><h2>القيمة المؤسسية</h2><ul><li>تمكين المواطن اليمني من التقديم والمتابعة من أي مكان.</li><li>رقمنة الفرز والإحالة والمعالجة والإغلاق.</li><li>رفع جودة القرار عبر المساعد الذكي والاستدلالات النصية.</li><li>تحسين الرقابة والشفافية عبر السجلات والتقارير ولوحات المعلومات.</li></ul></section>
+    <section class="section"><h2>المكونات الرئيسية</h2><div class="grid"><div class="card"><b>استقبال رقمي</b><div>نماذج ويب للشكاوى والتظلمات مع التحقق من الهوية.</div></div><div class="card"><b>إدارة دورة الحياة</b><div>Workflow رسمي، إحالات، تحديثات، ومتابعة SLA.</div></div><div class="card"><b>ذكاء اصطناعي</b><div>ChatGPT وDeepSeek وGemini مع Smart Intake Assistant.</div></div><div class="card"><b>تحقق الهوية</b><div>OTP عبر البريد وSMS وWhatsApp وTelegram.</div></div><div class="card"><b>تقارير ولوحات</b><div>Workspaces، Number Cards، Dashboard Charts، وتقارير تنفيذية.</div></div><div class="card"><b>مرجعية يمنية</b><div>محافظات ومديريات يمنية مضمنة في النماذج والتحليلات.</div></div></div></section>
+    <section class="section"><h2>مؤشرات الجاهزية</h2><ul><li>دعم أدوار متعددة وصلاحيات تشغيلية واضحة.</li><li>توثيق شامل بالعربية + أدلة استخدام + صفحات HTML للطباعة.</li><li>Fixtures مرئية للعناصر الإدارية الأساسية.</li><li>تكاملات قابلة للتهيئة للإشعارات وAI وOTP.</li></ul></section>
+    <section class="section"><h2>ما يحتاج قراراً قبل الإطلاق النهائي</h2><ul><li>اختيار مزوّد فعلي لـ SMS وWhatsApp وTelegram.</li><li>تفعيل AI بمفاتيح إنتاجية وضبط السياسات الداخلية للاستخدام.</li><li>إتمام UAT واختبارات الأحمال والأمان.</li><li>اعتماد سياسة حفظ السجلات والنسخ الاحتياطي.</li></ul></section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "citizen_guide_portal",
+  "page_name": "citizen_guide_portal",
+  "title": "دليل المواطن",
+  "module": "Complaints2",
+  "standard": "Yes",
+  "system_page": 0
+}

@@ -1,0 +1,8 @@
+{
+  "title_ar": "التحقق من الهوية",
+  "title_en": "Verify Identity",
+  "runtime_www_path": "yemen_complaints/yemen_complaints/www/verify_identity.html",
+  "public_route": "/verify-identity",
+  "desk_page_ref": "complaints2/page/verify_identity_portal/",
+  "purpose": "شاشة OTP مستقلة لإرسال وتأكيد وإعادة إرسال رموز التحقق."
+}

@@ -1,0 +1,11 @@
+{
+  "doctypes": [
+    "complaints2/doctype/yemen_governorate/",
+    "complaints2/doctype/yemen_district/",
+    "complaints2/doctype/government_entity/",
+    "complaints2/doctype/complaint_category/"
+  ],
+  "data_files": [
+    "yemen_complaints/yemen_complaints/data/yemen_admin_units.json"
+  ]
+}

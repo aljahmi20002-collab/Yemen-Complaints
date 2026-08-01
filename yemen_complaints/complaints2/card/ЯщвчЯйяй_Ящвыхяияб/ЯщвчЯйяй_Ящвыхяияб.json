@@ -1,0 +1,53 @@
+{
+  "doctype": "Workspace Link",
+  "name": "التقارير التنفيذية",
+  "label": "التقارير التنفيذية",
+  "type": "Card Break",
+  "module": "Complaints2",
+  "links": [
+    {
+      "label": "ملخص الشكاوى",
+      "type": "Link",
+      "link_to": "Complaint Summary",
+      "link_type": "Report",
+      "dependencies": "Complaint Case",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "تجاوزات SLA",
+      "type": "Link",
+      "link_to": "SLA Breaches",
+      "link_type": "Report",
+      "dependencies": "Complaint Case",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "عبء العمل",
+      "type": "Link",
+      "link_to": "Officer Workload",
+      "link_type": "Report",
+      "dependencies": "Complaint Case",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "رضا المواطنين",
+      "type": "Link",
+      "link_to": "Citizen Satisfaction",
+      "link_type": "Report",
+      "dependencies": "Complaint Case",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    }
+  ]
+}

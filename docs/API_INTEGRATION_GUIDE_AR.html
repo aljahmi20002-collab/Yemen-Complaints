@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دليل تكامل API</title>
+  <style>
+    @font-face {font-family:'DroidArabicKufi';src:url('../yemen_complaints/public/fonts/DroidKufi-Regular.ttf') format('truetype');font-weight:400;}
+    @font-face {font-family:'DroidArabicKufi';src:url('../yemen_complaints/public/fonts/DroidKufi-Bold.ttf') format('truetype');font-weight:700;}
+    body{margin:0;background:#f8fafc;color:#111827;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;line-height:2}.wrap{max-width:1100px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,#0f766e,#0ea5a4);color:#fff;border-radius:24px;padding:28px}.section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:20px}pre{background:#0f172a;color:#e5e7eb;padding:14px;border-radius:16px;overflow:auto;direction:ltr;text-align:left}code{font-family:ui-monospace,monospace}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827}.btn.primary{background:#0f766e;color:#fff;border-color:#0f766e}@media print {.toolbar{display:none}}
+  
+    .page-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:14px 16px;box-shadow:0 10px 25px rgba(15,23,42,.04)}
+    .page-brand img{width:88px;max-width:22vw;height:auto}
+    .page-brand .brand-title{font-size:18px;font-weight:700;margin-bottom:4px}
+    .page-brand .brand-sub{font-size:13px;color:#6b7280;line-height:1.8}
+    .print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print{.print-footer{display:block;position:fixed;bottom:0;right:0;left:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">منصة اليمن للشكاوى والتظلمات — وثائق النظام — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <div class="page-brand">
+      <img src="../yemen_complaints/public/images/official_emblem.png" alt="Official Emblem" />
+      <div>
+        <div class="brand-title">منصة اليمن للشكاوى والتظلمات</div>
+        <div class="brand-sub">نسخة توثيق رسمية معتمدة للاستخدام الداخلي والطباعة</div>
+      </div>
+    </div>
+    <section class="hero"><h1>دليل تكامل API</h1><p>مرجع سريع لنقاط التكامل الحالية في التطبيق، خاصة التتبع والبوابة والتحقق من الهوية وأدوات الذكاء الاصطناعي.</p></section>
+    <div class="toolbar"><button class="btn primary" onclick="window.print()">طباعة</button><a class="btn" href="DOCUMENTATION_INDEX_AR.html">فهرس الوثائق</a></div>
+    <section class="section"><h2>1. أمثلة على الدوال المتاحة</h2><ul><li><code>yemen_complaints.api.track_case</code></li><li><code>yemen_complaints.api.get_my_cases</code></li><li><code>yemen_complaints.api.get_case_timeline</code></li><li><code>yemen_complaints.verification.send_identity_verification_code</code></li><li><code>yemen_complaints.verification.confirm_identity_verification_code</code></li><li><code>yemen_complaints.ai.perform_text_action</code></li><li><code>yemen_complaints.ai.run_intake_assistant</code></li></ul></section>
+    <section class="section"><h2>2. مثال تتبع حالة</h2><pre>{
+  "method": "yemen_complaints.api.track_case",
+  "args": {
+    "case_id": "CMP-2026-00001",
+    "email": "citizen@example.com"
+  }
+}</pre></section>
+    <section class="section"><h2>3. مثال OTP</h2><pre>{
+  "method": "yemen_complaints.verification.send_identity_verification_code",
+  "args": {
+    "channel": "Email",
+    "contact_value": "citizen@example.com",
+    "citizen_full_name": "اسم المواطن"
+  }
+}</pre></section>
+    <section class="section"><h2>4. مثال AI Text Action</h2><pre>{
+  "method": "yemen_complaints.ai.perform_text_action",
+  "args": {
+    "doctype": "Complaint Case",
+    "docname": "CMP-2026-00001",
+    "source_field": "details",
+    "target_field": "internal_notes",
+    "action_key": "summarize"
+  }
+}</pre></section>
+    <section class="section"><h2>5. ملاحظات</h2><ul><li>بعض الدوال تتطلب صلاحيات مستخدم داخلي.</li><li>بعض الدوال مفعلة للضيف مثل التحقق OTP أو التتبع المشروط.</li><li>يفضل اختبار كل نقطة تكامل في staging أولاً.</li></ul></section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yemen_complaints"
+version = "0.1.0"
+description = "Frappe application for citizen complaints and appeals management"
+readme = "README_AR.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Arena.ai Agent Mode" }
+]
+dependencies = [
+  "pandas>=2.2.0",
+  "openpyxl>=3.1.5",
+  "requests>=2.32.0"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yemen_complaints*"]

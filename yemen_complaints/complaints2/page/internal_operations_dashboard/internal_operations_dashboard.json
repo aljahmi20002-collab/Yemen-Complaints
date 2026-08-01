@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "internal_operations_dashboard",
+  "page_name": "internal-operations-dashboard",
+  "title": "الداشبورد الداخلي للعمليات",
+  "module": "Complaints2",
+  "standard": "Yes",
+  "system_page": 0
+}

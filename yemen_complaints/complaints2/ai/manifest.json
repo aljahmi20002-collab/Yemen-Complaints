@@ -1,0 +1,17 @@
+{
+  "server_logic": [
+    "yemen_complaints/yemen_complaints/ai.py"
+  ],
+  "doctypes": [
+    "complaints2/doctype/complaint_ai_settings/",
+    "complaints2/doctype/complaint_ai_log/"
+  ],
+  "ui_assets": [
+    "yemen_complaints/yemen_complaints/public/js/ai_tools.js"
+  ],
+  "main_functions": [
+    "perform_text_action",
+    "run_intake_assistant",
+    "apply_intake_assistant_recommendations"
+  ]
+}

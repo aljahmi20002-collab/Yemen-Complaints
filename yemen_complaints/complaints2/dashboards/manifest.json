@@ -1,0 +1,12 @@
+{
+  "dashboards": [
+    "complaints2/dashboards/internal_operations_dashboard/",
+    "complaints2/dashboards/executive_leadership_dashboard/",
+    "complaints2/dashboards/security_monitoring_dashboard/"
+  ],
+  "runtime_pages": [
+    "complaints2/page/internal_operations_dashboard/",
+    "complaints2/page/executive_leadership_dashboard/",
+    "complaints2/page/security_monitoring_dashboard/"
+  ]
+}

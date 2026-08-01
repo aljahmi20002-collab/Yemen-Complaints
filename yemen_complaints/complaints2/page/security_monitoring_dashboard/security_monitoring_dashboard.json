@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "security_monitoring_dashboard",
+  "page_name": "security-monitoring-dashboard",
+  "title": "داشبورد مراقبة الأمن والحماية",
+  "module": "Complaints2",
+  "standard": "Yes",
+  "system_page": 0
+}

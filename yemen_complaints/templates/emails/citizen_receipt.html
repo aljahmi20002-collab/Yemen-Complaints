@@ -1,0 +1,16 @@
+<div style="direction:rtl;font-family:Tahoma,Arial,sans-serif;color:#1f2937;line-height:1.9;">
+  <div style="background:linear-gradient(135deg,#9b1c1c,#c2410c);padding:18px;border-radius:16px;color:#fff;">
+    <div style="font-size:20px;font-weight:800;">تم استلام طلبك بنجاح</div>
+    <div style="font-size:13px;margin-top:6px;opacity:.95;">منصة اليمن للشكاوى والتظلمات</div>
+  </div>
+  <div style="padding:18px 4px;">
+    <p>عزيزي/عزيزتي <b>{{ doc.citizen_full_name }}</b>،</p>
+    <p>تم تسجيل طلبك بعنوان <b>{{ doc.subject }}</b> تحت الرقم المرجعي <b>{{ doc.name }}</b>.</p>
+    <p>
+      <b>نوع الطلب:</b> {{ doc.case_type }}<br>
+      <b>الحالة الحالية:</b> {{ doc.status }}<br>
+      <b>الجهة المعنية:</b> {{ doc.government_entity or '—' }}
+    </p>
+    <p>يمكنك استخدام رقم الحالة لمتابعة الطلب عبر المنصة.</p>
+  </div>
+</div>

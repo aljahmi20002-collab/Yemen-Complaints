@@ -1,0 +1,17 @@
+<div style="direction:rtl;font-family:Tahoma,Arial,sans-serif;color:#1f2937;line-height:1.9;">
+  <div style="background:#111827;padding:18px;border-radius:16px;color:#fff;">
+    <div style="font-size:20px;font-weight:800;">إحالة حالة إليك</div>
+    <div style="font-size:13px;margin-top:6px;opacity:.9;">Yemen Complaints Workflow Notification</div>
+  </div>
+  <div style="padding:18px 4px;">
+    <p>تم إسناد الحالة <b>{{ doc.name }}</b> إليك بصفتك <b>{{ role_label }}</b>.</p>
+    {% if previous_assignee %}<p><b>المكلّف السابق:</b> {{ previous_assignee }}</p>{% endif %}
+    <p>
+      <b>الموضوع:</b> {{ doc.subject }}<br>
+      <b>النوع:</b> {{ doc.case_type }}<br>
+      <b>الأولوية:</b> {{ doc.priority }}<br>
+      <b>الحالة الحالية:</b> {{ doc.status }}
+    </p>
+    <p>يرجى مراجعة الملف واتخاذ الإجراء المناسب ضمن المدة المستهدفة.</p>
+  </div>
+</div>

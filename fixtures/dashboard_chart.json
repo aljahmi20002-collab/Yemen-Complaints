@@ -1,0 +1,58 @@
+[
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Cases by Status",
+    "chart_name": "Cases by Status",
+    "label": "الحالات حسب الحالة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Cases by Priority",
+    "chart_name": "Cases by Priority",
+    "label": "الحالات حسب الأولوية",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Monthly Complaint Trend",
+    "chart_name": "Monthly Complaint Trend",
+    "label": "المنحنى الشهري للحالات",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Cases by Country",
+    "chart_name": "Cases by Country",
+    "label": "الحالات حسب الدولة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Cases by Governorate",
+    "chart_name": "Cases by Governorate",
+    "label": "الحالات حسب المحافظة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Cases by Type",
+    "chart_name": "Cases by Type",
+    "label": "الحالات حسب النوع",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  },
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Cases by Entity",
+    "chart_name": "Cases by Entity",
+    "label": "الحالات حسب الجهة",
+    "module": "Complaints2",
+    "document_type": "Complaint Case"
+  }
+]

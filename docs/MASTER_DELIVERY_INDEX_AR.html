@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Delivery Index - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {font-family:'DroidArabicKufi';src:url('../yemen_complaints/public/fonts/DroidKufi-Regular.ttf') format('truetype');font-weight:400;}
+    @font-face {font-family:'DroidArabicKufi';src:url('../yemen_complaints/public/fonts/DroidKufi-Bold.ttf') format('truetype');font-weight:700;}
+    body{margin:0;background:#f8fafc;color:#111827;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;line-height:1.95}
+    .wrap{max-width:1220px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,#111827,#9b1c1c 55%,#c2410c);color:#fff;border-radius:28px;padding:30px;box-shadow:0 24px 60px rgba(15,23,42,.18)}
+    .brand{display:flex;align-items:center;gap:16px;margin-bottom:18px}.brand img{width:88px;height:auto}.brand .t1{font-size:18px;font-weight:700}.brand .t2{font-size:13px;opacity:.92}
+    .hero h1{margin:0 0 8px;font-size:34px}.hero p{margin:0;max-width:940px;color:rgba(255,255,255,.94)}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827;cursor:pointer}.btn.primary{background:#9b1c1c;color:#fff;border-color:#9b1c1c}
+    .section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:22px;box-shadow:0 12px 28px rgba(15,23,42,.04)}
+    h2{margin:0 0 12px;color:#9b1c1c;font-size:24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}.card{border:1px solid #e5e7eb;border-radius:18px;padding:16px;background:#fff}.card b{display:block;margin-bottom:8px}.card a{display:block;padding:8px 0;color:#374151;text-decoration:none}.card a:hover{color:#9b1c1c}.muted{color:#6b7280}.callout{padding:16px;border-radius:18px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412}
+    ul{padding-right:22px}.footer{margin:26px 0 8px;color:#6b7280;font-size:13px;text-align:center}.print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print {.toolbar{display:none}.section,.hero{box-shadow:none}.print-footer{display:block;position:fixed;bottom:0;left:0;right:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">Master Delivery Index — منصة اليمن للشكاوى والتظلمات — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <section class="hero">
+      <div class="brand">
+        <img src="../yemen_complaints/public/images/official_emblem.png" alt="Official Emblem" />
+        <div>
+          <div class="t1">منصة اليمن للشكاوى والتظلمات</div>
+          <div class="t2">الفهرس الرئيسي النهائي للتسليم</div>
+        </div>
+      </div>
+      <h1>Master Delivery Index</h1>
+      <p>نقطة الدخول الموحدة لكل مخرجات المشروع: الروابط، الداشبوردات، الوثائق، الأدلة، أوامر التشغيل، وملفات التسليم، بحيث تكون واجهة التسليم النهائية الوحيدة للمشروع بالكامل.</p>
+    </section>
+
+    <div class="toolbar">
+      <button class="btn primary" onclick="window.print()">طباعة</button>
+      <a class="btn" href="DOCUMENTATION_INDEX_AR.html">فهرس الوثائق</a>
+      <a class="btn" href="EXECUTIVE_DELIVERY_PACK_AR.html">Executive Delivery Pack</a>
+      <a class="btn" href="GO_LIVE_FINAL_PACKAGE_AR.md">Go-Live Package</a>
+    </div>
+
+    <section class="section">
+      <h2>1) روابط النظام الأساسية</h2>
+      <div class="grid">
+        <div class="card"><b>واجهات المواطن</b><a href="/">الصفحة الرئيسية</a><a href="/submit-complaint">تقديم شكوى</a><a href="/submit-appeal">تقديم تظلم</a><a href="/track-complaint">تتبع شكوى</a><a href="/verify-identity">التحقق من الهوية</a><a href="/my-cases">طلباتي</a><a href="/case-timeline">الخط الزمني للحالة</a></div>
+        <div class="card"><b>بوابة التوثيق</b><a href="/docs">فهرس التوثيق</a><a href="/application-docs">الوثيقة الشاملة</a><a href="/user-guide">دليل الاستخدام</a><a href="/citizen-guide">دليل المواطن</a><a href="/admin-guide">الدليل الإداري</a><a href="/executive-brief">الملخص التنفيذي</a><a href="/executive-delivery-pack">Executive Delivery Pack</a></div>
+        <div class="card"><b>لوحات القيادة</b><a href="/app/internal-operations-dashboard">Internal Operations Dashboard</a><a href="/app/executive-leadership-dashboard">Executive Leadership Dashboard</a><a href="/app/security-monitoring-dashboard">Security Monitoring Dashboard</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>2) Workspaces واللوحات</h2>
+      <div class="grid">
+        <div class="card"><b>Workspaces</b><ul><li>Citizen Complaints Portal</li><li>Advisor Complaint Desk</li><li>Agency Officer Desk</li><li>Follow-up Desk</li><li>Yemen Complaints Manager Desk</li><li>Yemen Complaints Command Center</li></ul></div>
+        <div class="card"><b>Dashboards</b><ul><li>Internal Operations Dashboard</li><li>Executive Leadership Dashboard</li><li>Security Monitoring Dashboard</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>3) التقارير والسجلات الرئيسية</h2>
+      <div class="grid">
+        <div class="card"><b>Reports</b><ul><li>Complaint Summary</li><li>SLA Breaches</li><li>Officer Workload</li><li>Citizen Satisfaction</li></ul></div>
+        <div class="card"><b>Key Records</b><ul><li>Complaint Case</li><li>Complaint Identity Verification</li><li>Complaint AI Log</li><li>Complaint Security Event</li><li>Government Entity</li><li>Complaint Category</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4) حزمة التسليم والتشغيل</h2>
+      <div class="grid">
+        <div class="card"><b>وثائق التسليم</b><a href="EXECUTIVE_DELIVERY_PACK_AR.html">Executive Delivery Pack</a><a href="GO_LIVE_FINAL_PACKAGE_AR.md">Go-Live Final Package</a><a href="FINAL_PRODUCTION_AUDIT_AR.md">Final Production Audit</a><a href="RELEASE_NOTES_AR.md">Release Notes</a><a href="ROLLBACK_NOTES_AR.md">Rollback Notes</a></div>
+        <div class="card"><b>وثائق التشغيل والدعم</b><a href="UAT_CHECKLIST_AR.md">UAT Checklist</a><a href="ADMIN_HANDOVER_NOTES_AR.md">Admin Handover Notes</a><a href="SUPPORT_RUNBOOK_SUMMARY_AR.md">Support Runbook Summary</a><a href="RATE_LIMITING_ABUSE_PROTECTION_AR.md">Rate Limiting & Abuse Protection</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5) أوامر التشغيل المرجعية</h2>
+      <div class="callout">
+        <pre>bench --site your-site migrate
+bench build
+bench --site your-site clear-cache
+bench --site your-site clear-website-cache
+bash scripts/rebuild_complaints2_records.sh your-site</pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>6) بنية الملفات المرجعية</h2>
+      <ul>
+        <li><code>complaints2/doctype/</code></li>
+        <li><code>complaints2/report/</code></li>
+        <li><code>complaints2/workspace/</code></li>
+        <li><code>complaints2/dashboard_chart/</code></li>
+        <li><code>complaints2/card/</code></li>
+        <li><code>complaints2/page/</code></li>
+        <li><code>docs/</code></li>
+        <li><code>fixtures/</code></li>
+        <li><code>scripts/</code></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>7) توصية الاستخدام</h2>
+      <p class="muted">استخدم هذا الفهرس باعتباره المرجع الموحد عند التسليم، المراجعة، التشغيل، أو دعم ما بعد الإطلاق. وهو أفضل نقطة بدء سريعة لكل من الإدارة والفريق التشغيلي والفني.</p>
+    </section>
+
+    <div class="footer">Master Delivery Index — منصة اليمن للشكاوى والتظلمات</div>
+  </div>
+</body>
+</html>

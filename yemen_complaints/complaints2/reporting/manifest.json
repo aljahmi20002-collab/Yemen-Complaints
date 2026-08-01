@@ -1,0 +1,27 @@
+{
+  "reports": [
+    "complaints2/report/complaint_summary/",
+    "complaints2/report/sla_breaches/",
+    "complaints2/report/officer_workload/",
+    "complaints2/report/citizen_satisfaction/"
+  ],
+  "dashboard_charts": [
+    "complaints2/dashboard_chart/cases_by_status/",
+    "complaints2/dashboard_chart/cases_by_priority/",
+    "complaints2/dashboard_chart/monthly_complaint_trend/",
+    "complaints2/dashboard_chart/cases_by_country/",
+    "complaints2/dashboard_chart/cases_by_governorate/",
+    "complaints2/dashboard_chart/cases_by_type/",
+    "complaints2/dashboard_chart/cases_by_entity/"
+  ],
+  "number_cards_created_by_install": [
+    "Open Complaint Cases",
+    "New Intake Cases",
+    "Under Review Cases",
+    "Waiting Citizen Cases",
+    "Overdue Complaint Cases",
+    "Resolved Complaint Cases",
+    "High Priority Complaint Cases",
+    "Appeal Cases"
+  ]
+}

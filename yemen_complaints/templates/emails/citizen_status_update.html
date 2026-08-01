@@ -1,0 +1,19 @@
+<div style="direction:rtl;font-family:Tahoma,Arial,sans-serif;color:#1f2937;line-height:1.9;">
+  <div style="background:linear-gradient(135deg,#0f766e,#0ea5a4);padding:18px;border-radius:16px;color:#fff;">
+    <div style="font-size:20px;font-weight:800;">تحديث على حالة الطلب</div>
+    <div style="font-size:13px;margin-top:6px;opacity:.92;">{{ doc.name }}</div>
+  </div>
+  <div style="padding:18px 4px;">
+    <p>تم تحديث حالة طلبك من <b>{{ previous_status }}</b> إلى <b>{{ doc.status }}</b>.</p>
+    <p>
+      <b>عنوان الطلب:</b> {{ doc.subject }}<br>
+      <b>الجهة المعنية:</b> {{ doc.government_entity or '—' }}
+    </p>
+    {% if doc.resolution_summary %}
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:12px;">
+      <b>خلاصة المعالجة:</b><br>
+      {{ doc.resolution_summary }}
+    </div>
+    {% endif %}
+  </div>
+</div>

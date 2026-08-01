@@ -1,0 +1,15 @@
+{
+  "doctype": "Dashboard Chart",
+  "name": "Monthly Complaint Trend",
+  "chart_name": "Monthly Complaint Trend",
+  "label": "المنحنى الشهري للحالات",
+  "source": "Document Type",
+  "document_type": "Complaint Case",
+  "chart_type": "Count",
+  "type": "Line",
+  "based_on": "creation",
+  "time_interval": "Monthly",
+  "timeseries": 1,
+  "is_public": 1,
+  "module": "Complaints2"
+}

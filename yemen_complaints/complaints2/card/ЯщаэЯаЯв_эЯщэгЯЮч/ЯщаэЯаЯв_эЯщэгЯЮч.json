@@ -1,0 +1,130 @@
+{
+  "doctype": "Workspace Link",
+  "name": "الواجهات_والبوابات",
+  "label": "الواجهات والبوابات",
+  "type": "Card Break",
+  "module": "Complaints2",
+  "links": [
+    {
+      "label": "بوابة التوثيق",
+      "type": "Link",
+      "link_to": "docs_center",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "الوثيقة الشاملة",
+      "type": "Link",
+      "link_to": "application_docs",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "دليل الاستخدام",
+      "type": "Link",
+      "link_to": "user_guide_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "دليل المواطن",
+      "type": "Link",
+      "link_to": "citizen_guide_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "الدليل الإداري",
+      "type": "Link",
+      "link_to": "admin_guide_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "الملخص التنفيذي",
+      "type": "Link",
+      "link_to": "executive_brief_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "إرسال شكوى",
+      "type": "Link",
+      "link_to": "submit_complaint_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "إرسال تظلم",
+      "type": "Link",
+      "link_to": "submit_appeal_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "تتبع شكوى",
+      "type": "Link",
+      "link_to": "track_complaint_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "التحقق من الهوية OTP",
+      "type": "Link",
+      "link_to": "verify_identity_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    },
+    {
+      "label": "طلباتي",
+      "type": "Link",
+      "link_to": "my_cases_portal",
+      "link_type": "Page",
+      "dependencies": "",
+      "hidden": 0,
+      "is_query_report": 0,
+      "link_count": 0,
+      "onboard": 0
+    }
+  ]
+}

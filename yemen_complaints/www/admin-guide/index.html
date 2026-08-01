@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدليل الإداري - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Regular.ttf') format('truetype');font-weight:400;}
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Bold.ttf') format('truetype');font-weight:700;}
+    body{margin:0;background:#f8fafc;color:#111827;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;line-height:1.95}.wrap{max-width:1100px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,#111827,#374151);color:#fff;border-radius:24px;padding:28px}.section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:20px}h1,h2{margin:0 0 10px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827}.btn.primary{background:#111827;color:#fff;border-color:#111827}code,pre{font-family:ui-monospace,monospace}pre{background:#0f172a;color:#e5e7eb;padding:14px;border-radius:16px;overflow:auto;direction:ltr;text-align:left}@media print {.toolbar{display:none}}
+  
+    .page-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:14px 16px;box-shadow:0 10px 25px rgba(15,23,42,.04)}
+    .page-brand img{width:88px;max-width:22vw;height:auto}
+    .page-brand .brand-title{font-size:18px;font-weight:700;margin-bottom:4px}
+    .page-brand .brand-sub{font-size:13px;color:#6b7280;line-height:1.8}
+    .print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print{.print-footer{display:block;position:fixed;bottom:0;right:0;left:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">منصة اليمن للشكاوى والتظلمات — وثائق النظام — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <div class="page-brand">
+      <img src="/assets/yemen_complaints/images/official_emblem.png" alt="Official Emblem" />
+      <div>
+        <div class="brand-title">منصة اليمن للشكاوى والتظلمات</div>
+        <div class="brand-sub">بوابة وثائق رسمية داخل التطبيق</div>
+      </div>
+    </div>
+    <section class="hero"><h1>الدليل الإداري</h1><p>مرجع مخصص لمدير النظام والإدارة التشغيلية، يركز على الإعدادات، السجلات، AI، OTP، التشغيل، والمتابعة الإنتاجية.</p></section>
+    <div class="toolbar"><button class="btn primary" onclick="window.print()">طباعة</button><a class="btn" href="/docs">فهرس الوثائق</a></div>
+    <section class="section"><h2>1. الإعدادات الأساسية</h2><ul><li><code>Complaint Notification Settings</code> لضبط القنوات وOTP.</li><li><code>Complaint AI Settings</code> لضبط الذكاء الاصطناعي.</li><li><code>Government Entity</code> و<code>Complaint Category</code> وبيانات المحافظات والمديريات.</li></ul></section>
+    <section class="section"><h2>2. أوامر تشغيل مهمة</h2><pre>bench --site your-site migrate
+bench build
+bench --site your-site export-fixtures
+bench enable-scheduler
+bench doctor</pre></section>
+    <section class="section"><h2>3. عناصر المراجعة الدورية</h2><ul><li>Complaint AI Log</li><li>Complaint Identity Verification</li><li>Error Log</li><li>Scheduler و Jobs</li><li>تقارير SLA والحالات المتأخرة</li></ul></section>
+    <section class="section"><h2>4. ملاحظات تشغيلية</h2><ul><li>راجع صلاحيات الأدوار الخمسة قبل الإطلاق.</li><li>لا تفعّل AI في الإنتاج قبل اختبار staging.</li><li>تأكد من اكتمال مزودات SMS وWhatsApp وTelegram إذا كانت مطلوبة.</li><li>فعّل النسخ الاحتياطي وHTTPS والمراقبة.</li></ul></section>
+    <section class="section"><h2>5. توصيات الإنتاج</h2><ul><li>استخدام بيئة staging قبل الإنتاج.</li><li>اختبارات UAT للأدوار كافة.</li><li>مراقبة التكلفة والحدود للمزودات الذكية.</li><li>مراجعة محاولات OTP الفاشلة والحالات المشبوهة.</li></ul></section>
+  </div>
+</body>
+</html>

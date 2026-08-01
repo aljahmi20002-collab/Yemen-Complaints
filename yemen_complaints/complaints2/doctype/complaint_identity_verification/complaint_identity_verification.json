@@ -1,0 +1,169 @@
+{
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "module": "Complaints2",
+  "name": "Complaint Identity Verification",
+  "field_order": [
+    "verification_purpose",
+    "status",
+    "channel",
+    "contact_value",
+    "citizen_full_name",
+    "email",
+    "mobile_number",
+    "telegram_id",
+    "verification_code_hash",
+    "verification_token",
+    "expires_on",
+    "verified_on",
+    "used_on",
+    "used_for_doctype",
+    "used_for_docname",
+    "attempts",
+    "max_attempts",
+    "last_sent_on",
+    "metadata_json",
+    "event_log_json"
+  ],
+  "fields": [
+    {
+      "fieldname": "verification_purpose",
+      "fieldtype": "Data",
+      "label": "Verification Purpose",
+      "default": "Complaint Submission",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Pending\nVerified\nExpired\nFailed\nUsed",
+      "default": "Pending",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Select",
+      "label": "Channel",
+      "options": "Email\nSMS\nWhatsApp\nTelegram",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "contact_value",
+      "fieldtype": "Data",
+      "label": "Contact Value",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "citizen_full_name",
+      "fieldtype": "Data",
+      "label": "Citizen Full Name"
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "mobile_number",
+      "fieldtype": "Data",
+      "label": "Mobile Number"
+    },
+    {
+      "fieldname": "telegram_id",
+      "fieldtype": "Data",
+      "label": "Telegram ID"
+    },
+    {
+      "fieldname": "verification_code_hash",
+      "fieldtype": "Data",
+      "label": "Verification Code Hash",
+      "hidden": 1
+    },
+    {
+      "fieldname": "verification_token",
+      "fieldtype": "Data",
+      "label": "Verification Token",
+      "hidden": 1
+    },
+    {
+      "fieldname": "expires_on",
+      "fieldtype": "Datetime",
+      "label": "Expires On",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "verified_on",
+      "fieldtype": "Datetime",
+      "label": "Verified On"
+    },
+    {
+      "fieldname": "used_on",
+      "fieldtype": "Datetime",
+      "label": "Used On"
+    },
+    {
+      "fieldname": "used_for_doctype",
+      "fieldtype": "Data",
+      "label": "Used For DocType"
+    },
+    {
+      "fieldname": "used_for_docname",
+      "fieldtype": "Data",
+      "label": "Used For DocName"
+    },
+    {
+      "fieldname": "attempts",
+      "fieldtype": "Int",
+      "label": "Attempts",
+      "default": 0
+    },
+    {
+      "fieldname": "max_attempts",
+      "fieldtype": "Int",
+      "label": "Max Attempts",
+      "default": 5
+    },
+    {
+      "fieldname": "last_sent_on",
+      "fieldtype": "Datetime",
+      "label": "Last Sent On"
+    },
+    {
+      "fieldname": "metadata_json",
+      "fieldtype": "Code",
+      "label": "Metadata JSON",
+      "options": "JSON"
+    },
+    {
+      "fieldname": "event_log_json",
+      "fieldtype": "Code",
+      "label": "Event Log JSON",
+      "options": "JSON"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Complaint System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Advisor",
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "search_fields": "contact_value,email,mobile_number,telegram_id",
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "title_field": "contact_value",
+  "track_changes": 1
+}

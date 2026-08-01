@@ -1,0 +1,275 @@
+Add Public Update,إضافة تحديث عام
+Additional Instruction,تعليمات إضافية
+Advisor,المستشار
+Advisor Queue,قائمة عمل المستشار
+Advisor User,المستشار
+Agency Officer,موظف الجهة
+Agency Officer User,موظف الجهة
+Agency Queue,قائمة عمل موظف الجهة
+AI Analysis JSON,تحليل JSON بالذكاء الاصطناعي
+AI Assistant,مساعد الذكاء الاصطناعي
+AI Case Summary,ملخص الحالة بالذكاء الاصطناعي
+AI Citizen Message,رسالة المواطن المقترحة بالذكاء الاصطناعي
+AI Key Elements,العناصر المستخرجة بالذكاء الاصطناعي
+AI Last Provider,آخر مزوّد ذكاء اصطناعي
+AI Last Run On,آخر تشغيل للذكاء الاصطناعي
+AI Logs,سجلات الذكاء الاصطناعي
+AI operational exceptions detected,تم رصد استثناءات تشغيلية مرتبطة بالذكاء الاصطناعي
+AI processing errors detected,تم رصد أخطاء في معالجة الذكاء الاصطناعي
+AI Reasoning,التعليل بالذكاء الاصطناعي
+AI Recommended Actions,الإجراءات المقترحة بالذكاء الاصطناعي
+AI Risk Flags,مؤشرات الخطورة بالذكاء الاصطناعي
+AI Subject Classification,تصنيف الموضوع بالذكاء الاصطناعي
+AI Suggested Category,التصنيف المقترح بالذكاء الاصطناعي
+AI Suggested Entity,الجهة المقترحة بالذكاء الاصطناعي
+AI Suggested Priority,الأولوية المقترحة بالذكاء الاصطناعي
+AI Suggested Reply,الرد المقترح بالذكاء الاصطناعي
+All Time,كل الفترات
+Allow Citizen SMS,السماح برسائل SMS للمواطن
+Allow Citizen Telegram,السماح بتيليجرام للمواطن
+Allow Citizen WhatsApp,السماح برسائل واتساب للمواطن
+Allow Email Verification,السماح بالتحقق عبر البريد الإلكتروني
+Allow SMS Verification,السماح بالتحقق عبر الرسائل القصيرة
+Allow Staff SMS,السماح برسائل SMS للموظفين
+Allow Staff Telegram,السماح بتيليجرام للموظفين
+Allow Staff WhatsApp,السماح برسائل واتساب للموظفين
+Allow Telegram Verification,السماح بالتحقق عبر تيليجرام
+Allow WhatsApp Verification,السماح بالتحقق عبر واتساب
+Apply AI Recommendations,تطبيق توصيات الذكاء الاصطناعي
+Apply Assistant Fields,تطبيق حقول المساعد
+Apply Filters,تطبيق الفلاتر
+Apply to Source Field,تطبيق على الحقل المصدر
+Apply to Target Field,تطبيق على الحقل الهدف
+Applying AI recommendations...,جارٍ تطبيق توصيات الذكاء الاصطناعي...
+Assign,إحالة
+Assign Case,إحالة الحالة
+Assigned To,مُحال إلى
+Assignments,الإحالات
+Assistant results applied to AI fields,تم تطبيق نتائج المساعد على حقول الذكاء الاصطناعي
+Attempts,المحاولات
+Avg Satisfaction,متوسط الرضا
+Blocked requests observed,تم رصد طلبات محظورة
+Case Type,نوع الطلب
+Cases,الحالات
+Cases in waiting-citizen state may need reminders or closure decisions.,الحالات في وضع انتظار المواطن قد تحتاج تذكيرًا أو قرارًا بالإغلاق.
+Category,التصنيف
+Citizen Channels,قنوات المواطن
+Citizen District,مديرية المواطن
+Citizen Full Name,اسم المواطن
+Citizen Governorate,محافظة المواطن
+Citizen Message,رسالة للمواطن
+Citizen Satisfaction,رضا المواطنين
+Citizen satisfaction appears low; review service quality and closure communications.,يبدو أن رضا المواطنين منخفض؛ يرجى مراجعة جودة الخدمة ورسائل الإغلاق.
+Citizen User,مستخدم المواطن
+Classification,التصنيف
+Complaint AI Log,سجل عمليات الذكاء الاصطناعي
+Complaint AI Settings,إعدادات الذكاء الاصطناعي للشكاوى
+Complaint Case,ملف الشكوى / التظلم
+Complaint Cases,حالات الشكاوى والتظلمات
+Complaint Category,تصنيف الشكوى
+Complaint Identity Verification,التحقق من هوية مقدم الشكوى
+Complaint Notification Settings,إعدادات إشعارات الشكاوى
+Complaint Security Event,حدث أمني للشكاوى
+Complaint Summary,ملخص الشكاوى
+Complaint Summary Report,تقرير ملخص الشكاوى
+Confidentiality Level,مستوى السرية
+"Configure AI providers, models, and intake assistant behavior for complaint operations.",إعداد مزودات الذكاء الاصطناعي والنماذج وسلوك المساعد الذكي لعمليات الشكاوى.
+"Configure email, SMS, and WhatsApp endpoints for complaint notifications.",إعداد البريد الإلكتروني ونقاط ربط الرسائل القصيرة وواتساب لإشعارات الشكاوى.
+"Configure SLA, routing defaults, priority behavior, and AI-assisted classification notes for complaints.",إعداد معايير SLA والتوجيه الافتراضي وسلوك الأولوية وملاحظات التصنيف المدعومة بالذكاء الاصطناعي.
+Contact Value,قيمة جهة الاتصال
+Copied to clipboard,تم النسخ إلى الحافظة
+Copy,نسخ
+Copy to clipboard failed.,تعذر النسخ إلى الحافظة.
+Core leadership indicators are stable within the current dashboard scope.,المؤشرات القيادية الأساسية مستقرة ضمن نطاق الداشبورد الحالي.
+Critical,حرج
+Critical security events detected,تم رصد أحداث أمنية حرجة
+Current Country,الدولة الحالية
+Current resolution SLA rate is {0}% within the selected scope.,نسبة الحسم الحالية ضمن SLA هي {0}% في النطاق المحدد.
+DeepSeek API Key,مفتاح DeepSeek
+DeepSeek Endpoint,رابط DeepSeek
+DeepSeek Model,نموذج DeepSeek
+Default Country Code,رمز الدولة الافتراضي
+Default Provider,المزوّد الافتراضي
+Details,التفاصيل
+Dimension,البعد
+District,المديرية
+District Name (AR),اسم المديرية عربي
+District Name (EN),اسم المديرية إنجليزي
+Due Date,تاريخ الاستحقاق
+Email,البريد الإلكتروني
+Enable AI,تفعيل الذكاء الاصطناعي
+Enable Email,تفعيل البريد الإلكتروني
+Enable SMS,تفعيل الرسائل النصية
+Enable Telegram,تفعيل تيليجرام
+Enable WhatsApp,تفعيل واتساب
+Enforce Identity Verification,إلزام التحقق من الهوية
+Executive Leadership Dashboard,داشبورد القيادة العليا
+Expires On,ينتهي في
+Export Snapshot JSON,تصدير لقطة JSON
+First Response On,تاريخ أول استجابة
+First-response SLA performance needs attention; intake or routing may be slowing down response time.,أداء أول استجابة ضمن SLA يحتاج اهتمامًا؛ قد يكون الاستقبال أو التوجيه يبطئ زمن الاستجابة.
+Focus on overdue cases first to improve SLA performance and reduce escalation risk.,يُنصح بالتركيز أولاً على الحالات المتأخرة لتحسين أداء SLA وتقليل مخاطر التصعيد.
+Follow up waiting citizen cases,تابع الحالات المنتظرة من المواطن
+Follow-up Officer,موظف المتابعة
+Follow-up Queue,قائمة عمل المتابعة
+Follow-up User,المتابع
+From Date,من تاريخ
+Gemini API Key,مفتاح Gemini
+Gemini Endpoint,رابط Gemini
+Gemini Model,نموذج Gemini
+Government Entity,جهة حكومية
+Governorate,المحافظة
+Governorate Name (AR),اسم المحافظة عربي
+Governorate Name (EN),اسم المحافظة إنجليزي
+Group By,تجميع حسب
+High-priority cases need attention,الحالات عالية الأولوية تحتاج إلى اهتمام
+High-priority cases require leadership visibility,الحالات عالية الأولوية تتطلب رؤية قيادية
+Identity Verification,التحقق من الهوية
+Identity Verification Channel,قناة التحقق من الهوية
+Identity Verification Records,سجلات التحقق من الهوية
+Identity Verification Reference,مرجع التحقق من الهوية
+Identity Verification Status,حالة التحقق من الهوية
+Identity Verification Token,رمز التحقق من الهوية
+Identity Verified On,تاريخ التحقق من الهوية
+Incident Date,تاريخ الواقعة
+Incident District,مديرية الواقعة
+Incident Governorate,محافظة الواقعة
+Instructions,تعليمات
+Internal Notes,ملاحظات داخلية
+Internal Operations Dashboard,الداشبورد الداخلي للعمليات
+Internal User,مستخدم داخلي
+Investigate overdue cases,افحص الحالات المتأخرة
+Key Elements,العناصر الأساسية
+Last 30 Days,آخر 30 يومًا
+Last 7 Days,آخر 7 أيام
+Last 90 Days,آخر 90 يومًا
+Last Sent On,آخر إرسال
+Leadership dashboard stable,الداشبورد التنفيذي مستقر
+"Maintain routing defaults, ownership, Yemeni location details, and description quality for complaint assignments.",إدارة التوجيه الافتراضي والملكية وبيانات الموقع اليمنية وجودة الوصف لإسناد الشكاوى.
+"Manage citizen complaints, appeals, routing, SLA commitments, Yemeni location data, and AI-assisted intake.",إدارة شكاوى المواطنين وتظلماتهم والتوجيه والتزامات SLA وبيانات الموقع اليمنية والاستقبال المدعوم بالذكاء الاصطناعي.
+Manager Oversight,إشراف المدير
+Max Attempts,الحد الأقصى للمحاولات
+Message,الرسالة
+Metadata JSON,بيانات إضافية JSON
+Mobile Number,رقم الهاتف
+National ID,الرقم الوطني
+New Status,الحالة الجديدة
+No critical executive alerts were detected in the selected scope.,لم يتم رصد تنبيهات تنفيذية حرجة ضمن النطاق المحدد.
+No critical or blocked security alerts were detected in the selected scope.,لم يتم رصد تنبيهات أمنية حرجة أو محظورة ضمن النطاق المحدد.
+No executive snapshot data available yet.,لا توجد بيانات لقطة تنفيذية متاحة بعد.
+No immediate operational action is required right now.,لا توجد حاجة فورية لإجراء تشغيلي في الوقت الحالي.
+No supported text fields found on this form.,لا توجد حقول نصية مدعومة في هذا النموذج.
+No urgent alerts were detected in the current dashboard scope.,لم يتم رصد تنبيهات عاجلة ضمن نطاق الداشبورد الحالي.
+Officer Workload,عبء العمل
+Officer Workload Report,تقرير عبء العمل
+Open Cases,الحالات المفتوحة
+Open Citizen Portal,فتح بوابة المواطن
+OpenAI API Key,مفتاح OpenAI
+OpenAI Endpoint,رابط OpenAI
+OpenAI Model,نموذج OpenAI
+Operations are stable,العمليات مستقرة
+Operations stable,العمليات مستقرة
+Optional custom instruction for the AI result.,تعليمات مخصصة اختيارية لمخرجات الذكاء الاصطناعي.
+Overdue,متأخر
+Overdue Cases,الحالات المتأخرة
+Overdue cases require escalation or immediate follow-up.,الحالات المتأخرة تتطلب تصعيدًا أو متابعة فورية.
+Overdue cases require immediate follow-up,الحالات المتأخرة تتطلب متابعة فورية
+Overdue operational backlog detected,تم رصد تراكم تشغيلي في الحالات المتأخرة
+Passport Number,رقم الجواز
+Please add a resolution summary before final closure.,يرجى إضافة خلاصة المعالجة قبل الإغلاق النهائي.
+Portal,البوابة
+Preferred Language,اللغة المفضلة
+Print Snapshot,طباعة لقطة
+Priority,الأولوية
+Raw JSON,JSON الخام
+Reasoning,التعليل
+Recent AI logs contain {0} failed operations,تتضمن سجلات الذكاء الاصطناعي الأخيرة {0} عمليات فاشلة
+Recommended Actions,الإجراءات المقترحة
+Reference data for Yemeni districts linked to governorates.,بيانات مرجعية للمديريات اليمنية مرتبطة بالمحافظات.
+Reference data for Yemeni governorates used across complaint forms and location fields.,بيانات مرجعية للمحافظات اليمنية تُستخدم في نماذج الشكاوى وحقول الموقع.
+Refresh,تحديث
+Request Timeout (Seconds),مهلة الطلب بالثواني
+Reset,إعادة ضبط
+Resolution SLA below expected threshold,نسبة الحسم ضمن SLA أقل من المستوى المتوقع
+Resolution SLA rate is below target and may require operational escalation or rebalancing workloads.,نسبة الحسم ضمن SLA أقل من الهدف وقد تتطلب تصعيدًا تشغيليًا أو إعادة توزيع للأعباء.
+Resolution Summary,خلاصة المعالجة
+Resolved Cases,الحالات المحسومة
+Resolved On,تاريخ الحسم
+Responsible User,المستخدم المسؤول
+Result,النتيجة
+Review AI failures,راجع إخفاقات الذكاء الاصطناعي
+Review new intake cases,راجع الحالات الجديدة الواردة
+Risk Flags,مؤشرات المخاطر
+Role Type,نوع الدور
+Run,تشغيل
+Running AI action...,جارٍ تشغيل إجراء الذكاء الاصطناعي...
+Running Smart Intake Assistant...,جارٍ تشغيل المساعد الذكي للاستقبال...
+Save,حفظ
+Security Events,الأحداث الأمنية
+"Security events are generated automatically for throttling, abuse protection, and operational monitoring.",يتم توليد الأحداث الأمنية تلقائيًا لأغراض الحد من المعدل والحماية من الإساءة والمراقبة التشغيلية.
+Security Monitoring Dashboard,داشبورد مراقبة الأمن والحماية
+Security posture stable,الوضع الأمني مستقر
+SLA Breaches,تجاوزات SLA
+SLA Breaches Report,تقرير تجاوزات SLA
+Smart Intake Assistant,المساعد الذكي لاستقبال الشكاوى
+SMS API Key,مفتاح SMS
+SMS Auth Header,ترويسة توثيق SMS
+SMS Endpoint,رابط خدمة SMS
+SMS Provider,مزود الرسائل النصية
+"Some AI operations failed and may need prompt, model, or provider review.",بعض عمليات AI فشلت وقد تحتاج مراجعة الـ prompt أو النموذج أو المزود.
+Source Field,الحقل المصدر
+Staff Channels,قنوات الموظفين
+Status,الحالة
+Stores citizen identity verification requests for complaint submission channels.,يحفظ طلبات التحقق من هوية المواطنين لقنوات تقديم الشكاوى.
+Subject,الموضوع
+Suggested Category,التصنيف المقترح
+Suggested Entity,الجهة المقترحة
+Suggested Priority,الأولوية المقترحة
+Suggested Reply,الرد المقترح
+Summary,الملخص
+System Manager,مدير النظام
+Target Field,الحقل الهدف
+Target Resolution Date,تاريخ المعالجة المستهدف
+Telegram Auth Header,ترويسة توثيق تيليجرام
+Telegram Endpoint,رابط تيليجرام
+Telegram ID,معرّف تيليجرام
+Telegram Provider,مزود تيليجرام
+Telegram Timeout (Seconds),مهلة تيليجرام بالثواني
+Telegram Token,رمز تيليجرام
+Temperature,درجة العشوائية
+There are fresh cases waiting for intake review and triage.,توجد حالات جديدة بانتظار المراجعة الأولية والفرز.
+There are {0} AI failures that may require technical review.,يوجد {0} إخفاقات AI قد تتطلب مراجعة فنية.
+There are {0} blocked security events.,يوجد {0} أحداث أمنية محظورة.
+There are {0} critical security events in the selected scope.,يوجد {0} أحداث أمنية حرجة ضمن النطاق المحدد.
+There are {0} high-priority cases still in the active pipeline.,لا تزال هناك {0} حالات عالية الأولوية ضمن مسار العمل النشط.
+There are {0} high-priority open or visible cases,يوجد {0} حالة عالية الأولوية مفتوحة أو مرئية
+There are {0} overdue cases currently visible to this user,يوجد {0} حالة متأخرة مرئية لهذا المستخدم حاليًا
+There are {0} overdue cases in the current scope.,يوجد {0} حالة متأخرة ضمن النطاق الحالي.
+To Date,إلى تاريخ
+Today,اليوم
+Top affected entity,أكثر جهة متأثرة
+Top IP,أعلى عنوان IP
+Total Cases,إجمالي الحالات
+Unknown,غير معروف
+Unspecified,غير محدد
+Updates,التحديثات
+Used For DocName,مستخدم لصالح اسم مستند
+Used For DocType,مستخدم لصالح نوع مستند
+Used On,استخدم في
+Verification Code Length,طول رمز التحقق
+Verification Email Subject,عنوان رسالة التحقق البريدية
+Verification Expiry (Minutes),انتهاء رمز التحقق بالدقائق
+Verification Max Attempts,الحد الأقصى لمحاولات التحقق
+Verification Purpose,غرض التحقق
+Verification Resend Cooldown (Seconds),فاصل إعادة الإرسال بالثواني
+Verification Token,رمز التحقق
+Verified Contact,جهة الاتصال المتحقق منها
+Verified On,تم التحقق في
+Waiting Citizen Cases,حالات بانتظار المواطن
+WhatsApp Auth Header,ترويسة توثيق واتساب
+WhatsApp Endpoint,رابط خدمة واتساب
+WhatsApp Provider,مزود واتساب
+WhatsApp Template Name,اسم قالب واتساب
+WhatsApp Token,رمز واتساب
+Yemen District,مديرية يمنية
+Yemen Governorate,محافظة يمنية

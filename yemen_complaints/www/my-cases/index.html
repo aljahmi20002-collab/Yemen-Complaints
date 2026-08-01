@@ -1,0 +1,234 @@
+<div class="mc-page">
+  <div class="mc-shell">
+    <section class="mc-hero">
+      <div class="mc-hero-inner">
+        <div class="mc-hero-copy">
+          <div class="mc-badge">بوابة المواطن الرقمية للمتابعة والاطلاع</div>
+          <h1>طلباتي — إدارة ومتابعة الشكاوى والتظلمات من مكان واحد</h1>
+          <p>
+            استعرض جميع طلباتك، وابحث بينها، وراجع آخر التحديثات، وافتح الخط الزمني للحالة،
+            أو ابدأ مباشرة بتقديم شكوى أو تظلم جديد عبر واجهة مصممة لتكون واضحة ومريحة للمستخدم.
+          </p>
+          <div class="mc-hero-actions">
+            <a class="mc-btn mc-btn-primary" href="/submit-complaint">تقديم شكوى</a>
+            <a class="mc-btn mc-btn-primary" href="/submit-appeal">تقديم تظلم</a>
+            <a class="mc-btn mc-btn-outline" href="/track-complaint">التتبع العام</a>
+            <a class="mc-btn mc-btn-outline" href="/verify-identity">التحقق من الهوية</a>
+          </div>
+        </div>
+
+        <div class="mc-hero-side">
+          <div>
+            <h3>خدمات سريعة للمواطن</h3>
+            <p>
+              إذا كنت قد أرسلت طلبًا سابقًا، يمكنك متابعة حالته بسهولة. وإذا كنت مستخدمًا جديدًا،
+              فابدأ بتقديم الشكوى أو التظلم ثم ارجع إلى هذه الصفحة لمراجعة الطلبات وتحديثاتها.
+            </p>
+          </div>
+
+          <div class="mc-mini-grid">
+            <div class="mc-mini-box">
+              <strong>تتبع مركزي</strong>
+              <span>كل الطلبات الخاصة بك في واجهة واحدة.</span>
+            </div>
+            <div class="mc-mini-box">
+              <strong>بحث وفلترة</strong>
+              <span>اعثر بسرعة على الحالة المطلوبة.</span>
+            </div>
+            <div class="mc-mini-box">
+              <strong>خط زمني واضح</strong>
+              <span>تابع التحديثات حسب التسلسل.</span>
+            </div>
+            <div class="mc-mini-box">
+              <strong>دعم مستمر</strong>
+              <span>وصول مباشر للنماذج والأدلة.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% if is_guest %}
+    <section class="mc-card mc-guest">
+      <h2>يلزم تسجيل الدخول لعرض طلباتك</h2>
+      <p>
+        سجل الدخول للوصول إلى جميع الشكاوى والتظلمات المرتبطة بحسابك، مع إمكانية متابعة حالاتها وفتح الخط الزمني لكل حالة.
+      </p>
+      <a class="mc-btn mc-btn-primary" href="/login?redirect-to=/my-cases">تسجيل الدخول</a>
+    </section>
+    {% else %}
+
+    <section class="mc-summary">
+      <div class="mc-stat">
+        <div class="label">إجمالي الطلبات</div>
+        <div class="value">{{ summary.total }}</div>
+        <div class="hint">كل الشكاوى والتظلمات المرتبطة بحسابك.</div>
+      </div>
+      <div class="mc-stat">
+        <div class="label">الطلبات المفتوحة</div>
+        <div class="value" style="color:#1d4ed8;">{{ summary.open }}</div>
+        <div class="hint">طلبات ما زالت قيد المراجعة أو المعالجة أو المتابعة.</div>
+      </div>
+      <div class="mc-stat">
+        <div class="label">الطلبات المحسومة/المغلقة</div>
+        <div class="value" style="color:#166534;">{{ summary.resolved }}</div>
+        <div class="hint">حالات تم إغلاقها أو حسمها نهائياً.</div>
+      </div>
+      <div class="mc-stat">
+        <div class="label">الطلبات المتأخرة</div>
+        <div class="value" style="color:#b91c1c;">{{ summary.overdue }}</div>
+        <div class="hint">طلبات تجاوزت المدة المستهدفة للمعالجة.</div>
+      </div>
+    </section>
+
+    <section class="mc-card">
+      <div class="mc-toolbar">
+        <div>
+          <h2>قائمة الطلبات</h2>
+          <p>المستخدم الحالي: <b>{{ user }}</b></p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <a class="mc-btn mc-btn-primary" href="/submit-complaint">شكوى جديدة</a>
+          <a class="mc-btn mc-btn-outline" href="/submit-appeal">تظلم جديد</a>
+        </div>
+      </div>
+
+      <div class="mc-filters">
+        <div class="mc-field">
+          <label>بحث</label>
+          <input id="case-search" class="form-control" placeholder="ابحث برقم الطلب أو العنوان أو الجهة" />
+        </div>
+        <div class="mc-field">
+          <label>الحالة</label>
+          <select id="case-status-filter" class="form-control">
+            <option value="">الكل</option>
+            <option value="New">New</option>
+            <option value="Under Review">Under Review</option>
+            <option value="Assigned">Assigned</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Waiting Citizen">Waiting Citizen</option>
+            <option value="Resolved">Resolved</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Closed">Closed</option>
+            <option value="Overdue">Overdue</option>
+          </select>
+        </div>
+        <div class="mc-field">
+          <label>نوع الطلب</label>
+          <select id="case-type-filter" class="form-control">
+            <option value="">الكل</option>
+            <option value="Complaint">Complaint</option>
+            <option value="Appeal">Appeal</option>
+            <option value="Inquiry">Inquiry</option>
+          </select>
+        </div>
+        <div class="mc-field">
+          <label>إجراءات</label>
+          <button class="mc-btn mc-btn-outline" style="width:100%;" onclick="resetPortalFilters()">إعادة ضبط</button>
+        </div>
+      </div>
+
+      <div id="portal-empty-state" class="mc-empty">لا توجد نتائج مطابقة للفلاتر الحالية.</div>
+
+      {% if cases %}
+      <div id="portal-case-list" class="mc-list">
+        {% for c in cases %}
+        <article class="mc-case portal-case-card" data-case-id="{{ c.name }}" data-status="{{ c.status }}" data-type="{{ c.case_type }}" data-search="{{ (c.name ~ ' ' ~ c.subject ~ ' ' ~ (c.government_entity or '')) | lower }}">
+          <div class="mc-case-head">
+            <div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                <span class="mc-chip mc-chip-type">{{ c.case_type }}</span>
+                <span class="mc-chip mc-chip-status">{{ c.status }}</span>
+                <span class="mc-chip mc-chip-priority">{{ c.priority }}</span>
+              </div>
+              <div class="mc-case-title">{{ c.subject }}</div>
+              <div style="font-size:13px;color:#6b7280;margin-top:4px;">رقم الطلب: <b>{{ c.name }}</b></div>
+            </div>
+            <div class="mc-case-meta">
+              <div><b>الجهة المعنية:</b> {{ c.government_entity or '—' }}</div>
+              <div><b>تاريخ الإنشاء:</b> {{ frappe.format(c.creation, {'fieldtype': 'Datetime'}) }}</div>
+              <div><b>الاستحقاق المستهدف:</b> {{ frappe.format(c.target_resolution_date, {'fieldtype': 'Date'}) if c.target_resolution_date else '—' }}</div>
+            </div>
+          </div>
+
+          <div class="mc-case-grid">
+            <div class="mc-meta-box">
+              <small>نوع الطلب</small>
+              <strong>{{ c.case_type }}</strong>
+            </div>
+            <div class="mc-meta-box">
+              <small>الحالة</small>
+              <strong>{{ c.status }}</strong>
+            </div>
+            <div class="mc-meta-box">
+              <small>الأولوية</small>
+              <strong>{{ c.priority }}</strong>
+            </div>
+          </div>
+
+          {% if c.last_public_update %}
+          <div class="mc-note">
+            <b>آخر تحديث ظاهر للمواطن</b>
+            <div>{{ c.last_public_update }}</div>
+          </div>
+          {% endif %}
+
+          {% if c.resolution_summary and c.status in ['Resolved', 'Closed'] %}
+          <div class="mc-resolution">
+            <b>خلاصة المعالجة</b>
+            <div>{{ c.resolution_summary }}</div>
+          </div>
+          {% endif %}
+
+          <div class="mc-case-actions">
+            <a class="mc-btn mc-btn-outline" href="/case-timeline?case_id={{ c.name }}">عرض الخط الزمني</a>
+            <a class="mc-btn mc-btn-outline" href="/track-complaint">التتبع العام</a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="mc-empty" style="display:block;">
+        لا توجد طلبات مرتبطة بحسابك حالياً. يمكنك البدء الآن بتقديم شكوى أو تظلم جديد.
+      </div>
+      {% endif %}
+    </section>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+function applyPortalFilters() {
+  const query = (document.getElementById('case-search')?.value || '').trim().toLowerCase();
+  const status = document.getElementById('case-status-filter')?.value || '';
+  const type = document.getElementById('case-type-filter')?.value || '';
+  const cards = Array.from(document.querySelectorAll('.portal-case-card'));
+  let visible = 0;
+
+  cards.forEach((card) => {
+    const matchesQuery = !query || (card.dataset.search || '').includes(query);
+    const matchesStatus = !status || card.dataset.status === status;
+    const matchesType = !type || card.dataset.type === type;
+    const show = matchesQuery && matchesStatus && matchesType;
+    card.style.display = show ? 'block' : 'none';
+    if (show) visible += 1;
+  });
+
+  const empty = document.getElementById('portal-empty-state');
+  if (empty) empty.style.display = cards.length && visible === 0 ? 'block' : 'none';
+}
+
+function resetPortalFilters() {
+  document.getElementById('case-search').value = '';
+  document.getElementById('case-status-filter').value = '';
+  document.getElementById('case-type-filter').value = '';
+  applyPortalFilters();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  ['case-search', 'case-status-filter', 'case-type-filter'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener(id === 'case-search' ? 'input' : 'change', applyPortalFilters);
+  });
+});
+</script>

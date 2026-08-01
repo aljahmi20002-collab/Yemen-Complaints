@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دليل المواطن - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {font-family:'DroidArabicKufi';src:url('../yemen_complaints/public/fonts/DroidKufi-Regular.ttf') format('truetype');font-weight:400;}
+    @font-face {font-family:'DroidArabicKufi';src:url('../yemen_complaints/public/fonts/DroidKufi-Bold.ttf') format('truetype');font-weight:700;}
+    body{margin:0;background:#f8fafc;color:#111827;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;line-height:1.95}.wrap{max-width:1000px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,#9b1c1c,#c2410c);color:#fff;border-radius:24px;padding:28px}.section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:20px}h1,h2{margin:0 0 10px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827}.btn.primary{background:#9b1c1c;color:#fff;border-color:#9b1c1c}@media print {.toolbar{display:none}}
+  
+    .page-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:14px 16px;box-shadow:0 10px 25px rgba(15,23,42,.04)}
+    .page-brand img{width:88px;max-width:22vw;height:auto}
+    .page-brand .brand-title{font-size:18px;font-weight:700;margin-bottom:4px}
+    .page-brand .brand-sub{font-size:13px;color:#6b7280;line-height:1.8}
+    .print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print{.print-footer{display:block;position:fixed;bottom:0;right:0;left:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">منصة اليمن للشكاوى والتظلمات — وثائق النظام — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <div class="page-brand">
+      <img src="../yemen_complaints/public/images/official_emblem.png" alt="Official Emblem" />
+      <div>
+        <div class="brand-title">منصة اليمن للشكاوى والتظلمات</div>
+        <div class="brand-sub">نسخة توثيق رسمية معتمدة للاستخدام الداخلي والطباعة</div>
+      </div>
+    </div>
+    <section class="hero"><h1>دليل المواطن</h1><p>دليل مبسط لتقديم الشكوى أو التظلم، التحقق من الهوية، متابعة الطلب، وإرسال الملاحظات.</p></section>
+    <div class="toolbar"><button class="btn primary" onclick="window.print()">طباعة</button><a class="btn" href="DOCUMENTATION_INDEX_AR.html">فهرس الوثائق</a></div>
+    <section class="section"><h2>1. تقديم شكوى</h2><ol><li>افتح <code>/submit-complaint</code>.</li><li>أدخل بياناتك الصحيحة.</li><li>اختر قناة التحقق من الهوية.</li><li>أرسل رمز التحقق وأكّده.</li><li>أكمل بيانات الموضوع والتفاصيل والجهة.</li><li>اضغط إرسال الطلب.</li></ol></section>
+    <section class="section"><h2>2. تقديم تظلم</h2><ol><li>افتح <code>/submit-appeal</code>.</li><li>أدخل المرجع السابق وسبب التظلم.</li><li>تحقق من الهوية.</li><li>أرسل الطلب.</li></ol></section>
+    <section class="section"><h2>3. التحقق من الهوية</h2><ul><li>يمكن التحقق عبر البريد الإلكتروني أو الرسائل القصيرة أو واتساب أو تيليجرام.</li><li>يمكن استخدام الشاشة المستقلة <code>/verify-identity</code>.</li><li>لا يمكن إرسال الطلب قبل أن تصبح حالة التحقق: <b>Verified</b>.</li></ul></section>
+    <section class="section"><h2>4. متابعة الحالة</h2><ul><li>من الصفحة العامة: <code>/track-complaint</code></li><li>من بوابة المواطن: <code>/my-cases</code></li><li>من الخط الزمني: <code>/case-timeline</code></li></ul></section>
+    <section class="section"><h2>5. نصائح مهمة</h2><ul><li>أدخل بريدك أو رقمك بشكل صحيح.</li><li>احفظ رقم الحالة بعد الإرسال.</li><li>لا تشارك رمز التحقق مع أي شخص آخر.</li><li>أرفق المستندات الداعمة إن كانت متاحة.</li></ul></section>
+  </div>
+</body>
+</html>

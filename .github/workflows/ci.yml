@@ -1,0 +1,29 @@
+name: Yemen Complaints CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate Python syntax
+        run: python -m compileall yemen_complaints
+
+      - name: Validate JSON
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          for p in pathlib.Path('yemen_complaints').rglob('*.json'):
+              json.loads(p.read_text())
+          print('JSON validation passed')
+          PY

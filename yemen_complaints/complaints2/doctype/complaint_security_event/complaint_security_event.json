@@ -1,0 +1,41 @@
+{
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "module": "Complaints2",
+  "name": "Complaint Security Event",
+  "field_order": [
+    "event_type",
+    "severity",
+    "status",
+    "endpoint",
+    "scope",
+    "identifier",
+    "ip_address",
+    "user",
+    "occurred_on",
+    "message",
+    "metadata_json"
+  ],
+  "fields": [
+    {"fieldname":"event_type","fieldtype":"Data","label":"Event Type","in_list_view":1,"reqd":1},
+    {"fieldname":"severity","fieldtype":"Select","label":"Severity","options":"Low\nMedium\nHigh\nCritical","default":"Low","in_list_view":1},
+    {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Allowed\nBlocked\nObserved","default":"Observed","in_list_view":1},
+    {"fieldname":"endpoint","fieldtype":"Data","label":"Endpoint","in_list_view":1},
+    {"fieldname":"scope","fieldtype":"Data","label":"Scope","in_list_view":1},
+    {"fieldname":"identifier","fieldtype":"Data","label":"Identifier","in_list_view":1},
+    {"fieldname":"ip_address","fieldtype":"Data","label":"IP Address","in_list_view":1},
+    {"fieldname":"user","fieldtype":"Link","label":"User","options":"User","in_list_view":1},
+    {"fieldname":"occurred_on","fieldtype":"Datetime","label":"Occurred On","in_list_view":1},
+    {"fieldname":"message","fieldtype":"Small Text","label":"Message"},
+    {"fieldname":"metadata_json","fieldtype":"Code","label":"Metadata JSON","options":"JSON"}
+  ],
+  "permissions": [
+    {"role":"Complaint System Manager","read":1,"write":1,"create":1,"delete":1,"report":1,"export":1},
+    {"role":"Advisor","read":1,"report":1}
+  ],
+  "search_fields":"event_type,endpoint,scope,identifier,ip_address,user",
+  "sort_field":"creation",
+  "sort_order":"DESC",
+  "title_field":"event_type",
+  "track_changes":1
+}

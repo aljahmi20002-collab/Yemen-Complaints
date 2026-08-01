@@ -1,0 +1,7 @@
+{
+  "title_ar": "تقديم تظلم",
+  "title_en": "Submit Appeal",
+  "public_route": "/submit-appeal",
+  "desk_page_ref": "complaints2/page/submit_appeal_portal/",
+  "purpose": "نقطة دخول تقديم التظلم عبر Web Form."
+}

@@ -1,0 +1,30 @@
+{
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "assigned_to",
+    "role_type",
+    "assigned_on",
+    "due_date",
+    "status",
+    "instructions",
+    "accepted_on",
+    "completed_on"
+  ],
+  "fields": [
+    {"fieldname": "assigned_to", "fieldtype": "Link", "label": "Assigned To", "options": "User", "in_list_view": 1, "reqd": 1},
+    {"fieldname": "role_type", "fieldtype": "Select", "label": "Role Type", "options": "Advisor\nAgency Officer\nFollow-up Officer\nManager", "in_list_view": 1, "reqd": 1},
+    {"fieldname": "assigned_on", "fieldtype": "Datetime", "label": "Assigned On", "in_list_view": 1},
+    {"fieldname": "due_date", "fieldtype": "Date", "label": "Due Date", "in_list_view": 1},
+    {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Open\nAccepted\nCompleted\nReassigned\nOverdue", "default": "Open", "in_list_view": 1},
+    {"fieldname": "instructions", "fieldtype": "Small Text", "label": "Instructions"},
+    {"fieldname": "accepted_on", "fieldtype": "Datetime", "label": "Accepted On"},
+    {"fieldname": "completed_on", "fieldtype": "Datetime", "label": "Completed On"}
+  ],
+  "istable": 1,
+  "module": "Complaints2",
+  "name": "Complaint Assignment",
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

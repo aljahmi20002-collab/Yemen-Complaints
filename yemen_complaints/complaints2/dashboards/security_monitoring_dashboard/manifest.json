@@ -1,0 +1,7 @@
+{
+  "title_ar": "داشبورد مراقبة الأمن والحماية",
+  "title_en": "Security Monitoring Dashboard",
+  "route": "/app/security-monitoring-dashboard",
+  "runtime_page_path": "yemen_complaints/yemen_complaints/complaints2/page/security_monitoring_dashboard/",
+  "purpose": "لوحة لمتابعة إساءة الاستخدام، rate limiting، OTP abuse، النشاطات الأمنية، والأحداث المحظورة أو المرصودة."
+}

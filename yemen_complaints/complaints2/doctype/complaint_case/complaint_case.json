@@ -1,0 +1,632 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "section_case",
+    "case_type",
+    "status",
+    "priority",
+    "confidentiality_level",
+    "channel",
+    "section_citizen",
+    "citizen_user",
+    "citizen_full_name",
+    "citizen_national_id",
+    "passport_number",
+    "mobile_number",
+    "email",
+    "telegram_id",
+    "identity_verification_channel",
+    "identity_verification_status",
+    "identity_verification_reference",
+    "identity_verification_token",
+    "identity_verified_on",
+    "verified_contact",
+    "current_country",
+    "citizen_governorate",
+    "citizen_district",
+    "preferred_language",
+    "section_case_details",
+    "category",
+    "government_entity",
+    "subject",
+    "details",
+    "incident_date",
+    "incident_governorate",
+    "incident_district",
+    "against_employee",
+    "source_reference",
+    "section_assignment",
+    "advisor_user",
+    "agency_officer_user",
+    "follow_up_user",
+    "target_response_on",
+    "target_resolution_date",
+    "first_response_on",
+    "resolved_on",
+    "is_overdue",
+    "last_public_update",
+    "section_ai_assistant",
+    "ai_case_summary",
+    "ai_subject_classification",
+    "ai_suggested_priority",
+    "ai_suggested_category",
+    "ai_suggested_entity",
+    "ai_key_elements",
+    "ai_risk_flags",
+    "ai_recommended_actions",
+    "ai_suggested_reply",
+    "ai_citizen_message",
+    "ai_reasoning",
+    "ai_analysis_json",
+    "ai_last_provider",
+    "ai_last_run_on",
+    "section_resolution",
+    "grievance_reason",
+    "resolution_summary",
+    "satisfaction_score",
+    "internal_notes",
+    "section_children",
+    "assignments",
+    "updates"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Data",
+      "label": "Naming Series",
+      "hidden": 1
+    },
+    {
+      "fieldname": "section_case",
+      "fieldtype": "Section Break",
+      "label": "Case Overview"
+    },
+    {
+      "fieldname": "case_type",
+      "fieldtype": "Select",
+      "label": "Case Type",
+      "options": "Complaint\nAppeal\nInquiry",
+      "default": "Complaint",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "New\nUnder Review\nAssigned\nIn Progress\nWaiting Citizen\nResolved\nRejected\nClosed\nOverdue",
+      "default": "New",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "label": "Priority",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "default": "Medium",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "confidentiality_level",
+      "fieldtype": "Select",
+      "label": "Confidentiality Level",
+      "options": "Public\nInternal\nConfidential\nHighly Confidential",
+      "default": "Internal"
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Select",
+      "label": "Channel",
+      "options": "Web Form\nEmail\nCall Center\nDesk\nOther",
+      "default": "Web Form"
+    },
+    {
+      "fieldname": "section_citizen",
+      "fieldtype": "Section Break",
+      "label": "Citizen Information"
+    },
+    {
+      "fieldname": "citizen_user",
+      "fieldtype": "Link",
+      "label": "Citizen User",
+      "options": "User"
+    },
+    {
+      "fieldname": "citizen_full_name",
+      "fieldtype": "Data",
+      "label": "Citizen Full Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "citizen_national_id",
+      "fieldtype": "Data",
+      "label": "National ID"
+    },
+    {
+      "fieldname": "passport_number",
+      "fieldtype": "Data",
+      "label": "Passport Number"
+    },
+    {
+      "fieldname": "mobile_number",
+      "fieldtype": "Data",
+      "label": "Mobile Number",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "telegram_id",
+      "fieldtype": "Data",
+      "label": "Telegram ID"
+    },
+    {
+      "fieldname": "identity_verification_channel",
+      "fieldtype": "Select",
+      "label": "Identity Verification Channel",
+      "options": "Email\nSMS\nWhatsApp\nTelegram"
+    },
+    {
+      "fieldname": "identity_verification_status",
+      "fieldtype": "Data",
+      "label": "Identity Verification Status",
+      "read_only": 1,
+      "hidden": 1
+    },
+    {
+      "fieldname": "identity_verification_reference",
+      "fieldtype": "Data",
+      "label": "Identity Verification Reference",
+      "read_only": 1,
+      "hidden": 1
+    },
+    {
+      "fieldname": "identity_verification_token",
+      "fieldtype": "Data",
+      "label": "Identity Verification Token",
+      "read_only": 1,
+      "hidden": 1
+    },
+    {
+      "fieldname": "identity_verified_on",
+      "fieldtype": "Datetime",
+      "label": "Identity Verified On",
+      "read_only": 1,
+      "hidden": 1
+    },
+    {
+      "fieldname": "verified_contact",
+      "fieldtype": "Data",
+      "label": "Verified Contact",
+      "read_only": 1,
+      "hidden": 1
+    },
+    {
+      "fieldname": "current_country",
+      "fieldtype": "Data",
+      "label": "Current Country"
+    },
+    {
+      "fieldname": "citizen_governorate",
+      "fieldtype": "Link",
+      "label": "Citizen Governorate",
+      "options": "Yemen Governorate"
+    },
+    {
+      "fieldname": "citizen_district",
+      "fieldtype": "Link",
+      "label": "Citizen District",
+      "options": "Yemen District"
+    },
+    {
+      "fieldname": "preferred_language",
+      "fieldtype": "Select",
+      "label": "Preferred Language",
+      "options": "Arabic\nEnglish",
+      "default": "Arabic"
+    },
+    {
+      "fieldname": "section_case_details",
+      "fieldtype": "Section Break",
+      "label": "Case Details"
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Link",
+      "label": "Category",
+      "options": "Complaint Category",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "government_entity",
+      "fieldtype": "Link",
+      "label": "Government Entity",
+      "options": "Government Entity",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "subject",
+      "fieldtype": "Data",
+      "label": "Subject",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "details",
+      "fieldtype": "Text Editor",
+      "label": "Details",
+      "reqd": 1
+    },
+    {
+      "fieldname": "incident_date",
+      "fieldtype": "Date",
+      "label": "Incident Date"
+    },
+    {
+      "fieldname": "incident_governorate",
+      "fieldtype": "Link",
+      "label": "Incident Governorate",
+      "options": "Yemen Governorate"
+    },
+    {
+      "fieldname": "incident_district",
+      "fieldtype": "Link",
+      "label": "Incident District",
+      "options": "Yemen District"
+    },
+    {
+      "fieldname": "against_employee",
+      "fieldtype": "Data",
+      "label": "Against Employee / Department"
+    },
+    {
+      "fieldname": "source_reference",
+      "fieldtype": "Data",
+      "label": "Source Reference"
+    },
+    {
+      "fieldname": "section_assignment",
+      "fieldtype": "Section Break",
+      "label": "Routing & SLA",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "advisor_user",
+      "fieldtype": "Link",
+      "label": "Advisor User",
+      "options": "User",
+      "in_list_view": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "agency_officer_user",
+      "fieldtype": "Link",
+      "label": "Agency Officer User",
+      "options": "User",
+      "in_list_view": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "follow_up_user",
+      "fieldtype": "Link",
+      "label": "Follow-up User",
+      "options": "User",
+      "in_list_view": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "target_response_on",
+      "fieldtype": "Datetime",
+      "label": "Target First Response On",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "target_resolution_date",
+      "fieldtype": "Date",
+      "label": "Target Resolution Date",
+      "in_list_view": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "first_response_on",
+      "fieldtype": "Datetime",
+      "label": "First Response On",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "resolved_on",
+      "fieldtype": "Datetime",
+      "label": "Resolved On",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "is_overdue",
+      "fieldtype": "Check",
+      "label": "Is Overdue",
+      "read_only": 1,
+      "in_list_view": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "last_public_update",
+      "fieldtype": "Small Text",
+      "label": "Last Public Update",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "section_ai_assistant",
+      "fieldtype": "Section Break",
+      "label": "AI Assistant",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_case_summary",
+      "fieldtype": "Small Text",
+      "label": "AI Case Summary",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_subject_classification",
+      "fieldtype": "Data",
+      "label": "AI Subject Classification",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_suggested_priority",
+      "fieldtype": "Select",
+      "label": "AI Suggested Priority",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_suggested_category",
+      "fieldtype": "Data",
+      "label": "AI Suggested Category",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_suggested_entity",
+      "fieldtype": "Data",
+      "label": "AI Suggested Entity",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_key_elements",
+      "fieldtype": "Small Text",
+      "label": "AI Key Elements",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_risk_flags",
+      "fieldtype": "Small Text",
+      "label": "AI Risk Flags",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_recommended_actions",
+      "fieldtype": "Small Text",
+      "label": "AI Recommended Actions",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_suggested_reply",
+      "fieldtype": "Text Editor",
+      "label": "AI Suggested Reply",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_citizen_message",
+      "fieldtype": "Text Editor",
+      "label": "AI Citizen Message",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_reasoning",
+      "fieldtype": "Small Text",
+      "label": "AI Reasoning",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_analysis_json",
+      "fieldtype": "Code",
+      "label": "AI Analysis JSON",
+      "options": "JSON",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_last_provider",
+      "fieldtype": "Data",
+      "label": "AI Last Provider",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "ai_last_run_on",
+      "fieldtype": "Datetime",
+      "label": "AI Last Run On",
+      "read_only": 1,
+      "permlevel": 1
+    },
+    {
+      "fieldname": "section_resolution",
+      "fieldtype": "Section Break",
+      "label": "Resolution"
+    },
+    {
+      "fieldname": "grievance_reason",
+      "fieldtype": "Small Text",
+      "label": "Appeal / Grievance Reason"
+    },
+    {
+      "fieldname": "resolution_summary",
+      "fieldtype": "Text Editor",
+      "label": "Resolution Summary",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "satisfaction_score",
+      "fieldtype": "Rating",
+      "label": "Satisfaction Score"
+    },
+    {
+      "fieldname": "internal_notes",
+      "fieldtype": "Text Editor",
+      "label": "Internal Notes",
+      "permlevel": 2
+    },
+    {
+      "fieldname": "section_children",
+      "fieldtype": "Section Break",
+      "label": "Assignments & Updates",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "assignments",
+      "fieldtype": "Table",
+      "label": "Assignments",
+      "options": "Complaint Assignment",
+      "permlevel": 1
+    },
+    {
+      "fieldname": "updates",
+      "fieldtype": "Table",
+      "label": "Updates",
+      "options": "Complaint Update",
+      "permlevel": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "module": "Complaints2",
+  "name": "Complaint Case",
+  "permissions": [
+    {
+      "role": "Citizen",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 0
+    },
+    {
+      "role": "Advisor",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Agency Officer",
+      "read": 1,
+      "write": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Follow-up Officer",
+      "read": 1,
+      "write": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Complaint System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "share": 1
+    },
+    {
+      "role": "Advisor",
+      "permlevel": 1,
+      "read": 1,
+      "write": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Agency Officer",
+      "permlevel": 1,
+      "read": 1,
+      "write": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Follow-up Officer",
+      "permlevel": 1,
+      "read": 1,
+      "write": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Complaint System Manager",
+      "permlevel": 1,
+      "read": 1,
+      "write": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1
+    },
+    {
+      "role": "Advisor",
+      "permlevel": 2,
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "Agency Officer",
+      "permlevel": 2,
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "Follow-up Officer",
+      "permlevel": 2,
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "Complaint System Manager",
+      "permlevel": 2,
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "quick_entry": 0,
+  "search_fields": "subject,citizen_full_name,mobile_number,email,telegram_id,source_reference,verified_contact",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "subject",
+  "track_changes": 1
+}

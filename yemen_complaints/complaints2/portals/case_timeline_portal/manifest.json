@@ -1,0 +1,7 @@
+{
+  "title_ar": "الخط الزمني للحالة",
+  "title_en": "Case Timeline",
+  "runtime_www_path": "yemen_complaints/yemen_complaints/www/case_timeline.html",
+  "public_route": "/case-timeline",
+  "purpose": "عرض تسلسل التحديثات العامة والداخلية حسب صلاحية المستخدم."
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Delivery Pack - منصة اليمن للشكاوى والتظلمات</title>
+  <style>
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Regular.ttf') format('truetype');font-weight:400;}
+    @font-face {font-family:'DroidArabicKufi';src:url('/assets/yemen_complaints/fonts/DroidKufi-Bold.ttf') format('truetype');font-weight:700;}
+    body{margin:0;background:#f8fafc;color:#111827;font-family:'DroidArabicKufi',Tahoma,Arial,sans-serif;line-height:1.95}
+    .wrap{max-width:1180px;margin:0 auto;padding:24px}
+    .hero{background:linear-gradient(135deg,#111827,#9b1c1c 55%,#c2410c);color:#fff;border-radius:28px;padding:30px;box-shadow:0 24px 60px rgba(15,23,42,.18)}
+    .brand{display:flex;align-items:center;gap:16px;margin-bottom:18px}.brand img{width:88px;height:auto}.brand .t1{font-size:18px;font-weight:700}.brand .t2{font-size:13px;opacity:.92}
+    .hero h1{margin:0 0 8px;font-size:34px}.hero p{margin:0;max-width:900px;color:rgba(255,255,255,.94)}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.btn{display:inline-flex;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #e5e7eb;background:#fff;color:#111827;cursor:pointer}.btn.primary{background:#9b1c1c;color:#fff;border-color:#9b1c1c}
+    .section{margin-top:18px;background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:22px;box-shadow:0 12px 28px rgba(15,23,42,.04)}
+    h2{margin:0 0 12px;color:#9b1c1c;font-size:24px}h3{margin:16px 0 8px;font-size:18px}.muted{color:#6b7280}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.card{border:1px solid #e5e7eb;border-radius:18px;padding:16px;background:#fff}.card b{display:block;margin-bottom:6px}
+    ul,ol{padding-right:22px}.chip{display:inline-flex;padding:6px 10px;border-radius:999px;background:#fef2f2;color:#9b1c1c;font-size:12px;font-weight:700;margin:0 0 8px}.callout{padding:16px;border-radius:18px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412}
+    table{width:100%;border-collapse:collapse;margin-top:10px}th,td{border:1px solid #e5e7eb;padding:10px;text-align:right;vertical-align:top}th{background:#f8fafc}
+    .footer{margin:26px 0 8px;color:#6b7280;font-size:13px;text-align:center}.print-footer{display:none}
+    @page{size:A4;margin:14mm}
+    @media print {.toolbar{display:none}.section,.hero{box-shadow:none}.print-footer{display:block;position:fixed;bottom:0;left:0;right:0;border-top:1px solid #ddd;padding:6px 0;background:#fff;color:#6b7280;font-size:11px;text-align:center}.page-number:after{content:counter(page)}}
+  </style>
+</head>
+<body>
+  <div class="print-footer">Executive Delivery Pack — منصة اليمن للشكاوى والتظلمات — صفحة <span class="page-number"></span></div>
+  <div class="wrap">
+    <section class="hero">
+      <div class="brand">
+        <img src="/assets/yemen_complaints/images/official_emblem.png" alt="Official Emblem" />
+        <div>
+          <div class="t1">منصة اليمن للشكاوى والتظلمات</div>
+          <div class="t2">حزمة تسليم نهائية تنفيذية وإدارية</div>
+        </div>
+      </div>
+      <h1>Executive Delivery Pack</h1>
+      <p>ملف تسليم تنفيذي موحد يختصر ما تم بناؤه وتسليمه، ويعرض الجاهزية الحالية، والمخاطر، والتوصيات، والوثائق المرجعية اللازمة للإطلاق والدعم والتسليم الإداري.</p>
+    </section>
+
+    <div class="toolbar">
+      <button class="btn primary" onclick="window.print()">طباعة الحزمة</button>
+      <a class="btn" href="/docs">فهرس الوثائق</a>
+      <a class="btn" href="/docs">حزمة Go-Live</a>
+      <a class="btn" href="/application-docs">التدقيق النهائي</a>
+    </div>
+
+    <section class="section">
+      <h2>1) التعريف المختصر</h2>
+      <table>
+        <tr><th>اسم التطبيق</th><td><code>yemen_complaints</code></td></tr>
+        <tr><th>الموديول التشغيلي</th><td><code>Complaints2</code></td></tr>
+        <tr><th>الإطار</th><td>Frappe Framework</td></tr>
+        <tr><th>الفئة المستهدفة</th><td>المواطنون اليمنيون والجهات المختصة</td></tr>
+        <tr><th>الطبيعة</th><td>منصة لاستقبال ومتابعة الشكاوى والتظلمات</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>2) القيمة المؤسسية</h2>
+      <div class="grid">
+        <div class="card"><span class="chip">تحول رقمي</span><b>استقبال وإدارة إلكترونية</b><span class="muted">رقمنة دورة حياة الشكوى من التقديم حتى الإغلاق.</span></div>
+        <div class="card"><span class="chip">موثوقية</span><b>تحقق من هوية مقدم الشكوى</b><span class="muted">OTP عبر البريد وSMS وWhatsApp وTelegram.</span></div>
+        <div class="card"><span class="chip">تحكم</span><b>لوحات تشغيلية وتنفيذية</b><span class="muted">داشبوردات داخلية وتنفيذية وأمنية لدعم القرار.</span></div>
+        <div class="card"><span class="chip">ذكاء داعم</span><b>تكامل AI</b><span class="muted">أدوات نصية ومساعد ذكي لمستشار استقبال الشكاوى.</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>3) ما تم تسليمه</h2>
+      <div class="grid">
+        <div class="card"><b>واجهات المواطن</b><ul><li>الصفحة الرئيسية</li><li>تقديم شكوى</li><li>تقديم تظلم</li><li>طلباتي</li><li>التتبع العام</li><li>الخط الزمني</li><li>التحقق OTP</li></ul></div>
+        <div class="card"><b>إدارة الحالة</b><ul><li>Complaint Case</li><li>Assignments</li><li>Updates</li><li>Workflow رسمي</li></ul></div>
+        <div class="card"><b>الذكاء الاصطناعي</b><ul><li>ChatGPT</li><li>DeepSeek</li><li>Gemini</li><li>Smart Intake Assistant</li><li>AI Logs</li></ul></div>
+        <div class="card"><b>التحقق والإشعارات</b><ul><li>OTP records</li><li>Notification settings</li><li>Security events</li></ul></div>
+        <div class="card"><b>التحليلات</b><ul><li>Workspaces</li><li>Number Cards</li><li>Dashboard Charts</li><li>Script Reports</li></ul></div>
+        <div class="card"><b>التوثيق</b><ul><li>وثائق عربية شاملة</li><li>بوابة docs داخلية</li><li>سياسة الخصوصية</li><li>شروط الاستخدام</li><li>دليل API</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4) الأدوار التشغيلية</h2>
+      <table>
+        <tr><th>الدور</th><th>الوظيفة الأساسية</th></tr>
+        <tr><td>Citizen</td><td>التقديم والمتابعة والتفاعل العام مع الحالة</td></tr>
+        <tr><td>Advisor</td><td>الفرز والتصنيف والإحالة وتشغيل Smart Intake Assistant</td></tr>
+        <tr><td>Agency Officer</td><td>المعالجة التشغيلية للحالة داخل الجهة</td></tr>
+        <tr><td>Follow-up Officer</td><td>المراقبة والمتابعة وسجلات التأخير</td></tr>
+        <tr><td>Complaint System Manager</td><td>إدارة المنصة والإعدادات واللوحات التنفيذية</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>5) لوحات القيادة المتاحة</h2>
+      <div class="grid">
+        <div class="card"><b>Internal Operations Dashboard</b><span class="muted">لوحة تشغيلية للمستشار والموظفين مع فلاتر، alerts، وaction center.</span></div>
+        <div class="card"><b>Executive Leadership Dashboard</b><span class="muted">لوحة قيادة عليا بمؤشرات KPI وSLA وAI وOTP واتجاهات وقرارات دعم.</span></div>
+        <div class="card"><b>Security Monitoring Dashboard</b><span class="muted">لوحة مراقبة إساءة الاستخدام، الحظر، OTP abuse، وتتبع AI activity.</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>6) حالة الجاهزية الحالية</h2>
+      <div class="callout">
+        النظام في وضع متقدم وقابل للتشغيل المؤسسي، لكن الإطلاق النهائي يتطلب تهيئة إنتاجية نهائية للمزودات الخارجية، واختبار قبول المستخدم، والتحقق من القنوات والإعدادات والسياسات قبل Go-Live.
+      </div>
+      <ul>
+        <li>البنية الأساسية والدوكتايبات والبوابات جاهزة.</li>
+        <li>OTP وAI والداشبوردات والتوثيق متوفرة.</li>
+        <li>ينصح بإكمال UAT وتشغيل backup وHTTPS قبل الإطلاق.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>7) المخاطر المتبقية والتوصيات</h2>
+      <div class="grid">
+        <div class="card"><b>مخاطر تكاملية</b><span class="muted">تعتمد القنوات الخارجية والـ AI على مزودات فعلية يجب اعتمادها واختبارها.</span></div>
+        <div class="card"><b>مخاطر تشغيلية</b><span class="muted">تحتاج workspaces/pages/charts إلى sync نهائي داخل بيئة الإنتاج.</span></div>
+        <div class="card"><b>مخاطر أمنية</b><span class="muted">يستحسن توسيع rate limiting وإضافة مراجعة دورية لسجلات الأمن والحماية.</span></div>
+      </div>
+      <ol>
+        <li>تنفيذ UAT كاملة قبل Go-Live.</li>
+        <li>اختبار قنوات OTP الحقيقية.</li>
+        <li>اختبار مزود AI المختار وتكلفته.</li>
+        <li>تشغيل النسخ الاحتياطي اليومي وHTTPS والمراقبة.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>8) أوامر الإطلاق والتشغيل</h2>
+      <pre>bench --site your-site migrate
+bench build
+bench --site your-site clear-cache
+bench --site your-site clear-website-cache
+bash scripts/rebuild_complaints2_records.sh your-site</pre>
+    </section>
+
+    <section class="section">
+      <h2>9) المراجع الأساسية المصاحبة</h2>
+      <ul>
+        <li><code>docs/GO_LIVE_FINAL_PACKAGE_AR.md</code></li>
+        <li><code>docs/FINAL_PRODUCTION_AUDIT_AR.md</code></li>
+        <li><code>docs/UAT_CHECKLIST_AR.md</code></li>
+        <li><code>docs/RELEASE_NOTES_AR.md</code></li>
+        <li><code>docs/ROLLBACK_NOTES_AR.md</code></li>
+        <li><code>docs/ADMIN_HANDOVER_NOTES_AR.md</code></li>
+        <li><code>docs/SUPPORT_RUNBOOK_SUMMARY_AR.md</code></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>10) الخلاصة التنفيذية النهائية</h2>
+      <p>المنصة تمثل حلًا متقدمًا ومتكاملًا لاستقبال ومتابعة الشكاوى والتظلمات، مع لوحات تشغيلية وتنفيذية وأمنية، والتحقق من الهوية، ودعم الذكاء الاصطناعي، وتوثيق عربي شامل. يوصى بالمضي نحو الإطلاق فقط بعد اعتماد القنوات الخارجية، وإكمال UAT، والتأكد من جاهزية فرق التشغيل والدعم.</p>
+    </section>
+
+    <div class="footer">Executive Delivery Pack — منصة اليمن للشكاوى والتظلمات</div>
+  </div>
+</body>
+</html>

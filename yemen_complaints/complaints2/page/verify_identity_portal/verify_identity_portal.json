@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "verify_identity_portal",
+  "page_name": "verify_identity_portal",
+  "title": "التحقق من الهوية",
+  "module": "Complaints2",
+  "standard": "Yes",
+  "system_page": 0
+}

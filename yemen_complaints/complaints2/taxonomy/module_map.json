@@ -1,0 +1,60 @@
+{
+  "module": "Complaints2",
+  "sections": {
+    "portals": [
+      "home_portal",
+      "my_cases_portal",
+      "track_complaint_portal",
+      "case_timeline_portal",
+      "verify_identity_portal",
+      "submit_complaint_portal",
+      "submit_appeal_portal"
+    ],
+    "docs_pages": [
+      "docs_center",
+      "application_docs",
+      "user_guide_portal",
+      "citizen_guide_portal",
+      "admin_guide_portal",
+      "executive_brief_portal",
+      "executive_brief_en_portal",
+      "privacy_policy_portal",
+      "terms_of_use_portal",
+      "api_guide_portal"
+    ],
+    "dashboards": [
+      "internal_operations_dashboard",
+      "executive_leadership_dashboard",
+      "security_monitoring_dashboard"
+    ],
+    "ai": [
+      "complaint_ai_settings",
+      "complaint_ai_log"
+    ],
+    "security": [
+      "complaint_identity_verification",
+      "complaint_security_event",
+      "complaint_notification_settings"
+    ],
+    "reference_data": [
+      "yemen_governorate",
+      "yemen_district",
+      "government_entity",
+      "complaint_category"
+    ],
+    "reporting": [
+      "complaint_summary",
+      "sla_breaches",
+      "officer_workload",
+      "citizen_satisfaction"
+    ],
+    "workspaces": [
+      "citizen_complaints_portal",
+      "advisor_complaint_desk",
+      "agency_officer_desk",
+      "follow_up_desk",
+      "yemen_complaints_manager_desk",
+      "yemen_complaints_command_center"
+    ]
+  }
+}
